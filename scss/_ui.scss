@@ -1,0 +1,28 @@
+.ui-text-red {
+	color: $secondaryColor;
+}
+
+.ui-text-gold,
+.ui-text-yellow {
+	color: $mainColor
+}
+
+.ui-text-white {
+	color: $white;
+}
+
+.ui-text-black {
+	color: $black;
+}
+
+.ui-text-bold {
+	font-weight: 800;
+}
+
+.ui-text-light {
+	font-weight: 100;
+}
+
+.ui-text-regular {
+	font-weight: 400;
+}

@@ -1,0 +1,22 @@
+@import '_vars';
+@import '_reset';
+@import '_mobile';
+@import '_mixins';
+@import '_defaults';
+@import '_header';
+@import '_footer';
+@import '_ui';
+@import 'sections/_home';
+
+body {
+	font: {
+		family: $mainFont;
+		size: 13px;
+	}
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font: {
+		family: $headerFont;
+	}
+}

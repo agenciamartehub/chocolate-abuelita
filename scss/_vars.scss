@@ -1,0 +1,17 @@
+$mainColor: #ffb500;
+$secondaryColor: #a1172e;
+$mainColorHover: #e49600;
+
+$white: #fff;
+$black: #000;
+
+$mainFont: 'Open sans', sans-serif;
+$headerFont: 'Anton', 'Open sans', sans-serif;
+
+
+$onlyMobile: ( max-width: 770px );
+$onlyDesktop: ( max-width: 771px );
+$onlyTablet: ( min-width: 415px ) and ( max-width: 770px );
+$onlyfromTablet: ( min-width: 415px );
+$onlyPhone: ( max-width: 414px );
+$onlyiPhone5: ( max-width: 320px );

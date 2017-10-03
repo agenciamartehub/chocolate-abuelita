@@ -26,3 +26,63 @@
 .ui-text-regular {
 	font-weight: 400;
 }
+
+//background colors {
+.ui-bg-red {
+	background-color: $secondaryColor;
+}
+
+.ui-bg-gold,
+.ui-bg-yellow {
+	background-color: $mainColor
+}
+
+.ui-bg-white {
+	background-color: $white;
+}
+
+.ui-bg-black {
+	background-color: $black;
+}
+// Botónes (default es rojo)
+
+.ui-btn,
+.ui-button {
+	color: $secondaryColor;
+	font-weight: 800;
+	font-size: 16px;
+	padding: 18px 60px;
+	@include transition;
+	background: $secondaryColor;
+	color: $white;
+	&:hover {
+	    background-color: $secondaryColorHover;
+	}
+}
+
+.ui-btn-gold,
+.ui-btn-yellow {
+	@extend .ui-btn;
+	background-color: $mainColor;
+	color: $secondaryColor;
+	&:hover {
+		background-color: $mainColorHover;
+	}
+}
+
+// Icons
+
+.ui-icon {
+	color: $mainColor;
+	background-color: $secondaryColor;
+	font-size: 13px;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	display: table;
+	border-radius: 30px;
+	&.ui-icon:before {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}

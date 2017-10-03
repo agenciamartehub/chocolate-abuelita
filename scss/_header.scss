@@ -17,6 +17,7 @@
 		right: 0;
 		margin: auto;
 		width: 140px;
+		z-index: 11;
 		.logo {
 			width: 100%;
 			height: auto;
@@ -27,21 +28,6 @@
 		.menu {
 			.menu-item {
 				margin-right: 10px;
-				.fa {
-					color: $mainColor;
-					background-color: $secondaryColor;
-					font-size: 13px;
-					width: 30px;
-					height: 30px;
-					text-align: center;
-					display: table;
-					border-radius: 30px;
-				}
-
-				.fa:before {
-					display: table-cell;
-					vertical-align: middle;
-				}
 			}
 		}
 	}

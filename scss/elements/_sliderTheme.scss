@@ -1,0 +1,37 @@
+.slider,
+.slider-mobile {
+	.slide {
+		.slide-img {
+		    width: 100%;
+		    height: auto;
+		}
+	}
+	.slide {
+		.ui-btn {
+			position: absolute;
+			bottom: 70px;
+			left: 16%;
+		}
+	}
+}
+
+
+
+
+
+
+.slick-arrow {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: 10;
+	cursor: pointer;
+	&.slick-arrow-left {
+		left: 30px;
+	}
+
+	&.slick-arrow-right {
+		right: 30px;
+	}
+}

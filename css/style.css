@@ -243,6 +243,38 @@ a {
   bottom: 70px;
   left: 16%; }
 
+.slick-active .animate, .slick-active .animate-top, .slick-active .animate-bottom, .slick-active .animate-left, .slick-active .animate-right {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px); }
+
+.animate, .animate-top, .animate-bottom, .animate-left, .animate-right {
+  opacity: 0;
+  -webkit-transition-delay: .25s;
+  -o-transition-delay: .25s;
+  transition-delay: .25s; }
+
+.animate-top {
+  -webkit-transform: translateY(-50px);
+  -ms-transform: translateY(-50px);
+  transform: translateY(-50px); }
+
+.animate-bottom {
+  -webkit-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  transform: translateY(50px); }
+
+.animate-left {
+  -webkit-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  transform: translateX(-50px); }
+
+.animate-right {
+  -webkit-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  transform: translateX(-50px); }
+
 .slick-arrow {
   position: absolute;
   top: 0;

@@ -16,10 +16,39 @@
 }
 
 
+// Animación
+.slick-active .animate {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.animate {
+    opacity: 0;
+    transition-delay: .25s;
+}
+
+.animate-top {
+	@extend .animate;
+	transform: translateY(-50px);
+}
+
+.animate-bottom {
+	@extend .animate;
+	transform: translateY(50px);
+}
+
+.animate-left {
+	@extend .animate;
+	transform: translateX(-50px);
+}
+
+.animate-right {
+	@extend .animate;
+	transform: translateX(-50px);
+}
 
 
-
-
+// Navegación
 .slick-arrow {
 	position: absolute;
 	top: 0;

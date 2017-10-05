@@ -135,10 +135,7 @@
 }
 
 [class*="ui-subtitle"] {
-	font {
-		family: $secondaryfont;
-		weight: 100;
-	}
+	@include ui-font-model-montserrat;
 
 }
 

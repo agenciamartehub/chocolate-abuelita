@@ -37,6 +37,12 @@
 	text-transform: uppercase;
 }
 
+// BLoques
+.ui-align-center {
+	display: block;
+	margin: auto;
+}
+
 //background colors {
 .ui-bg-white,
 .ui-bg-light {
@@ -50,6 +56,7 @@
 
 .ui-bg-red {
 	background-color: $secondaryColor;
+	color: $white;
 }
 
 .ui-bg-gold,
@@ -159,11 +166,11 @@
 }
 
 [class*="ui-title"].ui-title-ornament:before {
-	background-image: url(../img/text-ornament-default-a.png);
+	background-image: url(../img/text-ornament-red-a.png);
 }
 
 [class*="ui-title"].ui-title-ornament:after {
-	background-image: url(../img/text-ornament-default-b.png);
+	background-image: url(../img/text-ornament-red-b.png);
 }
 
 [class*="ui-title"].ui-text-red.ui-title-ornament:before {

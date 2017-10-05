@@ -25,6 +25,9 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1; }
 
+strong {
+  font-weight: 800; }
+
 ol, ul {
   list-style: none; }
 
@@ -188,6 +191,10 @@ mark {
 .ui-text-uppercase {
   text-transform: uppercase; }
 
+.ui-align-center {
+  display: block;
+  margin: auto; }
+
 .ui-bg-white,
 .ui-bg-light {
   background-color: #fff; }
@@ -197,7 +204,8 @@ mark {
   background-color: #000; }
 
 .ui-bg-red {
-  background-color: #a1172e; }
+  background-color: #a1172e;
+  color: #fff; }
 
 .ui-bg-gold,
 .ui-bg-yellow {
@@ -298,10 +306,10 @@ mark {
   background-size: contain; }
 
 [class*="ui-title"].ui-title-ornament:before {
-  background-image: url(../img/text-ornament-default-a.png); }
+  background-image: url(../img/text-ornament-red-a.png); }
 
 [class*="ui-title"].ui-title-ornament:after {
-  background-image: url(../img/text-ornament-default-b.png); }
+  background-image: url(../img/text-ornament-red-b.png); }
 
 [class*="ui-title"].ui-text-red.ui-title-ornament:before {
   background-image: url(../img/text-ornament-red-a.png); }
@@ -464,6 +472,12 @@ mark {
       #main-icon-nav .main-icon-nav-wrap .container * {
         display: block;
         margin: 10px auto; }
+
+#plan-cacao {
+  background-image: url(../img/bg-textura.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom left; }
 
 #plan-cacao-gallery img {
   width: 100%;

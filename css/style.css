@@ -223,10 +223,49 @@ a {
   height: 30px;
   text-align: center;
   display: table;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   border-radius: 30px; }
   .ui-icon.ui-icon:before {
     display: table-cell;
     vertical-align: middle; }
+  .ui-icon > * {
+    font-family: "Times New Roman", serif;
+    font-weight: 800;
+    font-style: italic; }
+
+[class*="ui-title-"] {
+  font-family: "Times New Roman", serif;
+  font-weight: 800;
+  font-style: italic; }
+
+.ui-title-big {
+  font-size: 50px; }
+
+.ui-title-mid {
+  font-size: 40px; }
+
+.ui-title-small {
+  font-size: 30px; }
+
+[class*="ui-subtitle"] {
+  font-family: "Montserrat Light", "Lato", sans-serif; }
+
+.ui-subtitle {
+  font-size: 30px; }
+
+.ui-subtitle-small {
+  font-size: 18px; }
 
 .slider .slide .slide-img,
 .slider-mobile .slide .slide-img {
@@ -346,9 +385,11 @@ a {
         display: block;
         margin: 10px auto; }
 
-body {
-  font-family: "Open sans", sans-serif;
-  font-size: 13px; }
+#plan-cacao-gallery img {
+  width: 100%;
+  height: auto; }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Anton", "Open sans", sans-serif; }
+body {
+  font-family: "Open sans", "Lato", sans-serif;
+  font-size: 13px;
+  background-color: #ffb500; }

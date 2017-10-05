@@ -29,3 +29,9 @@
 	width: $width;
 	height: $height;
 }
+
+@mixin ui-font-model-times-new-roman {
+	font-family: $mainFont;
+	font-weight: 800;
+	font-style: italic;
+}

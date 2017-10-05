@@ -6,18 +6,14 @@
 @import '_header';
 @import '_footer';
 @import '_ui';
-@import 'elements/_sliderTheme.scss';
+@import 'elements/_sliderTheme';
 @import 'sections/_home';
+@import 'sections/_plan-cacao';
 
 body {
 	font: {
-		family: $mainFont;
+		family: $textFont;
 		size: 13px;
 	}
-}
-
-h1,h2,h3,h4,h5,h6 {
-	font: {
-		family: $headerFont;
-	}
+	background-color: $mainColor;
 }

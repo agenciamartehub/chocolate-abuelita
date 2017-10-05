@@ -44,6 +44,8 @@
 .ui-bg-black {
 	background-color: $black;
 }
+
+
 // Botónes (default es rojo)
 
 .ui-btn,
@@ -80,9 +82,44 @@
 	height: 30px;
 	text-align: center;
 	display: table;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	border-radius: 30px;
 	&.ui-icon:before {
 		display: table-cell;
 		vertical-align: middle;
 	}
+	> * {
+		@include ui-font-model-times-new-roman;
+	}
+}
+
+
+[class*="ui-title-"] {
+	@include ui-font-model-times-new-roman;
+}
+
+.ui-title-big {
+	font-size: 50px
+}
+
+.ui-title-mid {
+	font-size: 40px;
+}
+
+.ui-title-small {
+	font-size:30px;
+}
+
+[class*="ui-subtitle"] {
+	font-family: $secondaryfont;
+}
+
+.ui-subtitle {
+	font-size: 30px;
+}
+
+.ui-subtitle-small {
+	font-size: 18px;
 }

@@ -6,15 +6,18 @@
 @import '_header';
 @import '_footer';
 @import '_ui';
+@import 'elements/_content-blocks';
 @import 'elements/_sliderTheme';
 @import 'sections/_home';
 @import 'sections/_plan-cacao';
+@import 'sections/_el-ritual-abuelita';
+@import 'sections/_recetas';
+@import 'sections/_receta';
 
 body {
-	font: {
-		family: $textFont;
-		size: 13px;
-	}
+	font-size: 13px;
+	@include ui-font-model-montserrat;
+	font-size: 24px;
 	line-height: 1.25;
 	color: $secondaryColor;
 	background-color: $mainColor;

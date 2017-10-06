@@ -1,0 +1,74 @@
+// Banner header
+.ui-section-header {
+	position: relative;
+	.ui-section-content {
+	    position: absolute;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    justify-content: center;
+	}
+}
+
+// Bloque con textura de fondo
+.ui-block-texture {
+	background-image: url(../img/bg-textura.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom left;
+}
+
+.ui-block-texture-cover {
+	@extend .ui-block-texture;
+	background-size: cover;
+}
+
+.ui-block-texture-invert {
+	background-image: url(../img/bg-textura-invert.png);
+	background-size: 40%;
+	background-repeat: no-repeat;
+	background-position: top right;
+	@media #{$onlyMobile} {
+		background-size: 100%;
+	}
+}
+
+// Posts (recetas)
+.ui-post-excerpt {
+	display: block;
+	position: relative;
+	margin: $boxModel;
+	overflow: hidden;
+	.ui-post-thumb {
+		width: 100%;
+		height: auto;
+		@include transition;
+	}
+	&:hover {
+		.ui-post-thumb {
+			transform: scale(1.3) rotate(3deg);
+		}
+	}
+	.ui-post-excerpt-content {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		.ui-post-read-more {
+			color: $white;
+			background: $secondaryColor;
+			width: 100%;
+			padding: 20px;
+			text-align: center;
+			font-size: 22px;
+			text-transform: uppercase;
+		}
+		.ui-post-title {
+			text-align: center;
+			color: white;
+			padding: 20px 0;
+		}
+	}
+}

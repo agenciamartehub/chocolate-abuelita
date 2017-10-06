@@ -82,11 +82,16 @@
 	font-weight: 800;
 	font-size: 16px;
 	padding: 18px 60px;
-	@include transition;
 	background: $secondaryColor;
 	color: $white;
+	display: inline-block;
+	@include transition;
 	&:hover {
 	    background-color: $secondaryColorHover;
+	}
+	img {
+		vertical-align: middle;
+		margin: 0 20px;
 	}
 }
 
@@ -103,11 +108,11 @@
 // Icons
 
 .ui-icon {
-	color: $mainColor;
+	color: $white;
 	background-color: $secondaryColor;
-	font-size: 13px;
-	width: 30px;
-	height: 30px;
+	font-size: 24px;
+	width: 60px;
+	height: 60px;
 	text-align: center;
 	display: table;
 	display: inline-flex;
@@ -229,14 +234,18 @@
 
 // Layout
 
-$paddingX: 20px;
 
 .ui-block-padding {
     box-sizing: border-box;
-    padding: 40px $paddingX;
+    padding: 40px $boxModel;
 }
 
 .ui-row-padding {
 	box-sizing: border-box;
-	padding: 100px $paddingX;
+	padding: 100px $boxModel;
+}
+
+.ui-box-model {
+	padding-left: $boxModel;
+	padding-right: $boxModel;
 }

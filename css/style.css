@@ -51,6 +51,10 @@ mark {
   background-color: transparent;
   color: black; }
 
+iframe {
+  width: 100%;
+  min-height: 40vw; }
+
 /* Mixins */
 .ui-flex-item {
   display: -webkit-box;
@@ -146,6 +150,7 @@ mark {
     justify-content: flex-end; }
 
 #main-footer {
+  font-size: 13px;
   background-color: #a1172e;
   color: #fff;
   -webkit-box-sizing: border-box;
@@ -228,15 +233,21 @@ mark {
   font-weight: 800;
   font-size: 16px;
   padding: 18px 60px;
+  background: #a1172e;
+  color: #fff;
+  display: inline-block;
   -webkit-transition: all .25s linear;
   -o-transition: all .25s linear;
-  transition: all .25s linear;
-  background: #a1172e;
-  color: #fff; }
+  transition: all .25s linear; }
   .ui-btn:hover, .ui-btn-gold:hover,
   .ui-btn-yellow:hover,
   .ui-button:hover {
     background-color: #750215; }
+  .ui-btn img, .ui-btn-gold img,
+  .ui-btn-yellow img,
+  .ui-button img {
+    vertical-align: middle;
+    margin: 0 20px; }
 
 .ui-btn-gold,
 .ui-btn-yellow {
@@ -247,11 +258,11 @@ mark {
     background-color: #e49d14; }
 
 .ui-icon {
-  color: #ffb500;
+  color: #fff;
   background-color: #a1172e;
-  font-size: 13px;
-  width: 30px;
-  height: 30px;
+  font-size: 24px;
+  width: 60px;
+  height: 60px;
   text-align: center;
   display: table;
   display: -webkit-inline-box;
@@ -368,6 +379,85 @@ mark {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 100px 20px; }
+
+.ui-box-model {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.ui-section-header {
+  position: relative; }
+  .ui-section-header .ui-section-content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+
+.ui-block-texture, .ui-block-texture-cover {
+  background-image: url(../img/bg-textura.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left; }
+
+.ui-block-texture-cover {
+  background-size: cover; }
+
+.ui-block-texture-invert {
+  background-image: url(../img/bg-textura-invert.png);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: top right; }
+  @media (max-width: 770px) {
+    .ui-block-texture-invert {
+      background-size: 100%; } }
+
+.ui-post-excerpt {
+  display: block;
+  position: relative;
+  margin: 20px;
+  overflow: hidden; }
+  .ui-post-excerpt .ui-post-thumb {
+    width: 100%;
+    height: auto;
+    -webkit-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    transition: all .25s linear; }
+  .ui-post-excerpt:hover .ui-post-thumb {
+    -webkit-transform: scale(1.3) rotate(3deg);
+    -ms-transform: scale(1.3) rotate(3deg);
+    transform: scale(1.3) rotate(3deg); }
+  .ui-post-excerpt .ui-post-excerpt-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%; }
+    .ui-post-excerpt .ui-post-excerpt-content .ui-post-read-more {
+      color: #fff;
+      background: #a1172e;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      font-size: 22px;
+      text-transform: uppercase; }
+    .ui-post-excerpt .ui-post-excerpt-content .ui-post-title {
+      text-align: center;
+      color: white;
+      padding: 20px 0; }
 
 .slider .slide .slide-img,
 .slider-mobile .slide .slide-img {
@@ -487,36 +577,69 @@ mark {
         display: block;
         margin: 10px auto; }
 
-#plan-cacao {
-  background-image: url(../img/bg-textura.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom left; }
-  #plan-cacao .ui-title {
-    min-height: 100px; }
-  #plan-cacao .ui-icon {
-    color: #fff;
-    margin-bottom: 60px;
-    -webkit-transform: scale(2);
-    -ms-transform: scale(2);
-    transform: scale(2); }
+#plan-cacao .ui-title {
+  min-height: 100px; }
+
+#plan-cacao .ui-icon {
+  margin-bottom: 60px; }
 
 #plan-cacao-gallery img {
   width: 100%;
   height: auto; }
 
-#plan-cacao-leyend {
-  background-image: url(../img/bg-textura-invert.png);
-  background-size: 40%;
-  background-repeat: no-repeat;
-  background-position: top right; }
+#como-preparar .ui-title {
+  font-size: 38px;
+  min-height: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+#como-preparar img {
+  width: 100%;
+  height: auto; }
+
+#como-preparar .ui-block-padding {
+  min-height: 230px; }
+
+#receta-ingredientes .ui-title {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+
+#receta-ingredientes [src*="img/icon-"] {
+  width: 30px;
+  margin-right: 20px; }
+
+#receta-content .wk-cols {
+  margin-bottom: calc(20px * 2); }
+  @media (min-width: 771px) {
+    #receta-content .wk-cols [class*="wk-col-"]:nth-child(even) {
+      padding-left: 20px; } }
   @media (max-width: 770px) {
-    #plan-cacao-leyend {
-      background-size: 100%; } }
+    #receta-content .wk-cols [class*="wk-col-"]:nth-child(odd) {
+      padding-bottom: 20px; } }
 
 body {
-  font-family: "Open sans", "Lato", sans-serif;
   font-size: 13px;
+  font-family: "Montserrat Light", "Lato", sans-serif;
+  font-weight: 100;
+  font-size: 24px;
   line-height: 1.25;
   color: #a1172e;
   background-color: #ffb500; }

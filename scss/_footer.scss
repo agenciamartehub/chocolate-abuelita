@@ -1,10 +1,11 @@
 #main-footer {
+	font-size: 13px;
 	background-color: $secondaryColor;
 	color: $white;
 	box-sizing: border-box;
 	padding: 20px 0;
 	text-align: center;
-	
+
 	[class*="wk-col-"] {
 		display: flex;
 		align-items: center;

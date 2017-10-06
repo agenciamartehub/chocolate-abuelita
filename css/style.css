@@ -98,7 +98,7 @@ mark {
     left: 0;
     right: 0;
     margin: auto;
-    width: 140px;
+    width: 220px;
     z-index: 11; }
     #main-header #site-logo .logo {
       width: 100%;
@@ -107,7 +107,11 @@ mark {
     margin-right: 10px; }
   #main-header #site-nav {
     height: 100%;
-    text-align: right; }
+    text-align: right;
+    font-family: "Montserrat Light", "Lato", sans-serif;
+    font-weight: 100;
+    font-weight: 800;
+    font-size: 18px; }
     #main-header #site-nav .menu {
       height: 100%; }
       #main-header #site-nav .menu .menu-item {
@@ -329,7 +333,7 @@ mark {
 .ui-title-big.ui-title-ornament:after {
   width: 70px;
   height: 30px;
-  padding: 0 10px; }
+  padding: 0 40px; }
 
 .ui-title.ui-title-ornament:before,
 .ui-title.ui-title-ornament:after {
@@ -354,6 +358,16 @@ mark {
   width: 70px;
   height: 8px;
   padding: 0 10px; }
+
+.ui-block-padding {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px 20px; }
+
+.ui-row-padding {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 100px 20px; }
 
 .slider .slide .slide-img,
 .slider-mobile .slide .slide-img {
@@ -475,16 +489,34 @@ mark {
 
 #plan-cacao {
   background-image: url(../img/bg-textura.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom left; }
+  #plan-cacao .ui-title {
+    min-height: 100px; }
+  #plan-cacao .ui-icon {
+    color: #fff;
+    margin-bottom: 60px;
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2); }
 
 #plan-cacao-gallery img {
   width: 100%;
   height: auto; }
 
+#plan-cacao-leyend {
+  background-image: url(../img/bg-textura-invert.png);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: top right; }
+  @media (max-width: 770px) {
+    #plan-cacao-leyend {
+      background-size: 100%; } }
+
 body {
   font-family: "Open sans", "Lato", sans-serif;
   font-size: 13px;
+  line-height: 1.25;
   color: #a1172e;
   background-color: #ffb500; }

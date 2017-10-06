@@ -16,7 +16,7 @@
 		left: 0;
 		right: 0;
 		margin: auto;
-		width: 140px;
+		width: 220px;
 		z-index: 11;
 		.logo {
 			width: 100%;
@@ -35,7 +35,9 @@
 	#site-nav {
 		height: 100%;
 		text-align: right;
-
+		@include ui-font-model-montserrat;
+		font-weight: 800;
+		font-size: 18px;
 		.menu {
 			height: 100%;
 			.menu-item {

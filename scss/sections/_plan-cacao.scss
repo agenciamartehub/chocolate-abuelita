@@ -4,14 +4,32 @@
 
 #plan-cacao {
 	background-image: url(../img/bg-textura.png);
-	background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom left;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	.ui-title {
+	   min-height: 100px;
+	}
+	.ui-icon {
+		color: $white;
+		margin-bottom: 60px;
+		transform: scale(2);
+	}
 }
 
 #plan-cacao-gallery {
 	img {
 		width: 100%;
 		height: auto;
+	}
+}
+
+#plan-cacao-leyend {
+	background-image: url(../img/bg-textura-invert.png);
+	background-size: 40%;
+	background-repeat: no-repeat;
+	background-position: top right;
+	@media #{$onlyMobile} {
+		background-size: 100%;
 	}
 }

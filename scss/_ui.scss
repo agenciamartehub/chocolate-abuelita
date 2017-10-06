@@ -195,7 +195,7 @@
 .ui-title-big.ui-title-ornament:after {
 	width: 70px;
 	height: 30px;
-	padding: 0 10px;
+	padding: 0 40px;
 }
 
 .ui-title.ui-title-ornament:before,
@@ -224,4 +224,19 @@
 	width: 70px;
 	height: 8px;
 	padding: 0 10px;
+}
+
+
+// Layout
+
+$paddingX: 20px;
+
+.ui-block-padding {
+    box-sizing: border-box;
+    padding: 40px $paddingX;
+}
+
+.ui-row-padding {
+	box-sizing: border-box;
+	padding: 100px $paddingX;
 }

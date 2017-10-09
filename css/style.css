@@ -46,6 +46,8 @@ table {
 a {
   color: inherit;
   text-decoration: inherit; }
+  a:focus {
+    outline: none; }
 
 mark {
   background-color: transparent;

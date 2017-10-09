@@ -19,10 +19,10 @@ main(role="main")
 	+sectionLeyend('productos-leyend', '')
 		strong.ui-text-gold Lorem ipsum dolor sit amet, consectetur adipiscing 
 		span Donec vel ipsum eu enim faucibus semper sed non leo. Maecenas vehicula, nisi ut ullamcorper molestie.
-	
+
 	mixin producto( title, description, image )
 		.ui-block-padding
-			a(href="#"): img.producto(src='' + image + '' alt='' + title + '' )
+			a(href='' + image + '' data-fancybox): img.producto(src='' + image + '' alt='' + title + '' )
 			span.ui-title-small.wk-block= title
 			if description
 				span= description

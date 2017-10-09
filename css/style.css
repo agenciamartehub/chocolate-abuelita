@@ -394,14 +394,6 @@ iframe {
   padding-left: 20px;
   padding-right: 20px; }
 
-.fancybox-bg {
-  background-color: #ffb500;
-  background-image: url(../img/bg-textura.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  opacity: 1 !important; }
-
 .ui-section-header {
   position: relative;
   background-size: cover;

@@ -1,0 +1,21 @@
+mixin sectionHeader( id, classes, title, leyend, background, imageURL )
+	section(id=id class='"wk-section ' + classes + '"')
+		.wk-section-wrap
+			.ui-section-header(style='background-image: url(' + background + ');')
+				.ui-section-content
+					if imageURL
+						span: img.ui-section-icon.ui-align-center(src= imageURL)
+					if title
+						h1.ui-title-big.ui-title-ornament.ui-text-gold= title 
+					if leyend
+						h3.ui-title.ui-text-white= leyend
+
+mixin sectionLeyend( id, classes )
+	section(id=id, class='"wk-section.wk-wrap-1100 ui-bg-red wk-text-center ui-block-texture-invert ' + classes + '"')
+		.wk-section-wrap
+			.ui-row-padding 
+				h2.ui-subtitle
+					block
+					
+
+					

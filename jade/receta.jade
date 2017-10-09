@@ -1,14 +1,19 @@
 include header.jade
 
++metatags(
+	'Receta', 
+	'Descripción'
+	)
 main#receta(role="main")
-	header#receta-banner.wk-section.ui-bg-gold
-		.wk-section-wrap
-			.ui-section-header(style="background-image: url(img/banner-recetas.jpg);")
-				.ui-section-content
-					span
-						img.ui-section-icon.ui-align-center(src="img/icon-recetas.png")
-					h1.ui-title-big.ui-title-ornament.ui-text-gold Recetas
-					h3.ui-title.ui-text-white Cómo preparar chocolate Abuelita
+
+	+sectionHeader(
+			'receta-banner', 
+			'ui-bg-bold', 
+			'Receta', 
+			'Cómo preparar chocolate abuelita', 
+			'img/banner-recetas.jpg', 
+			'img/icon-receta.png'
+		)
 
 	.ui-block-texture-cover
 		section#receta-video.wk-section.ui-box-model.wk-wrap-1100.wk-margin-y-40

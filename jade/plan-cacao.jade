@@ -1,5 +1,10 @@
 include header.jade
 
++metatags(
+	'Plan Cacao', 
+	'Descripción'
+	)
+
 main(role="main")
 	section#plan-cacao-banner.wk-section 
 		.wk-section-wrap
@@ -43,14 +48,10 @@ main(role="main")
 						.wk-col
 							img(src="img/plan-cacao-4-nestle.jpg" alt="Plan Cacao Nestle")
 
-	section#plan-cacao-leyend.wk-section.wk-wrap-1100.ui-block-texture-invert.ui-bg-red.wk-text-center
-		.wk-section-wrap
-			.ui-row-padding 
-				h2.ui-subtitle 
-					p Con estas acciones 
-						strong.ui-text-gold Nestlé apoya el esfuerzo por incrementar la productividad del campo cacaotero 
-						| con el potencial de triplicar su capacidad 
-						span y que vuelva a producir más de 30,000 toneladas anueales, pasando de una producción de 250Kg a 750Kg por hectárea.
+	+sectionLeyend('plan-cacao-leyend', '') Con estas acciones 
+		strong.ui-text-gold Nestlé apoya el esfuerzo por incrementar la productividad del campo cacaotero 
+		| con el potencial de triplicar su capacidad 
+		span y que vuelva a producir más de 30,000 toneladas anueales, pasando de una producción de 250Kg a 750Kg por hectárea.
 		
 	section#plan-cacao-logo.wk-section.wk-wrap-1100.wk-text-center
 		.wk-section-wrap

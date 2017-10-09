@@ -1,70 +1,72 @@
+include _mixins.jade
+
 doctype html
 html
-	head
-		-var title = 'Home'
-		<!-- info -->
-		meta(charset="UTF-8")
-		meta(http-equiv="content-type" content="text/html; charset=UTF-8")
-		meta(http-equiv="language" content="es-MX")
-		<!-- Site info -->
-		title #{$title}
-		meta(name="description" content="Descripción")
-		<!-- Móbil -->
-		meta(name="HandheldFriendly" content="True")
-		meta(name="MobileOptimized" content="756")
-		meta(name="viewport" content="width=device-width, initial-scale=1.0")
-		meta(name="apple-touch-fullscreen" content="yes")
-		meta(name="apple-mobile-web-app-status-bar-style" content="#000000")
-		meta(name="format-detection" content="telephone=no")
-		<!-- Scripts -->
-		script(type="text/javascript" src="js/jquery-3.1.1.min.js")
-		script(type="text/javascript" src="js/scripts.js")
-		<!-- Libraries -->
-		// WPKit ui
-		link(rel="stylesheet" href="assets/wpkitui2/wpkitui.css")
-		script(type="text/javascript" src="assets/wpkitui2/wpkitui.js")
-		//slick
-		link(rel="stylesheet" href="assets/slick/slick-theme.css")
-		link(rel="stylesheet" href="assets/slick/slick.css")
-		script(type="text/javascript" src="assets/slick/slick.min.js")
-		// Google pretify
-		link(href="assets/prettyprint/theme.css" rel="stylesheet" )
-		script(type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
-		<!-- Fonts -->
-		// Fonts
-		link(href="fonts/font-awesome/font-awesome.css" rel="stylesheet")
-		link(href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet")
-		link(href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet")
-		<!-- Styles -->
-		link(rel="stylesheet" href="css/style.css")
+	mixin metatags(title, description)
+		head
+			<!-- info -->
+			meta(charset="UTF-8")
+			meta(http-equiv="content-type" content="text/html; charset=UTF-8")
+			meta(http-equiv="language" content="es-MX")
+			<!-- Site info -->
+			title= title + ' | Chocolate Abuelita sssd'
+			meta(name="description" content=description)
+			<!-- Móbil -->
+			meta(name="HandheldFriendly" content="True")
+			meta(name="MobileOptimized" content="756")
+			meta(name="viewport" content="width=device-width, initial-scale=1.0")
+			meta(name="apple-touch-fullscreen" content="yes")
+			meta(name="apple-mobile-web-app-status-bar-style" content="#000000")
+			meta(name="format-detection" content="telephone=no")
+			<!-- Scripts -->
+			script(type="text/javascript" src="js/jquery-3.1.1.min.js")
+			script(type="text/javascript" src="js/scripts.js")
+			<!-- Libraries -->
+			// WPKit ui
+			link(rel="stylesheet" href="assets/wpkitui2/wpkitui.css")
+			script(type="text/javascript" src="assets/wpkitui2/wpkitui.js")
+			//slick
+			link(rel="stylesheet" href="assets/slick/slick-theme.css")
+			link(rel="stylesheet" href="assets/slick/slick.css")
+			script(type="text/javascript" src="assets/slick/slick.min.js")
+			// Google pretify
+			link(href="assets/prettyprint/theme.css" rel="stylesheet" )
+			script(type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
+			<!-- Fonts -->
+			// Fonts
+			link(href="fonts/font-awesome/font-awesome.css" rel="stylesheet")
+			link(href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet")
+			link(href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet")
+			<!-- Styles -->
+			link(rel="stylesheet" href="css/style.css")
 
-body.wk-wrap-1920
-	header#main-header.wk-section.ui-box-model
-		section.wk-section-wrap
-			#site-logo
-				a(href="#"): img.logo(src="img/logo-abuelita-nestle.png" alt="Chocolate Abuelita")
-			.wk-cols-m
-				.wk-col
-					nav#social-nav
-						ul.menu
-							li.menu-item: a(href="#"): i.ui-icon.fa.fa-facebook
-							li.menu-item: a(href="#"): i.ui-icon.fa.fa-instagram
-							li.menu-item: a(href="#"): i.ui-icon.fa.fa-twitter
-							li.menu-item: a(href="#"): i.ui-icon.fa.fa-youtube
-				.wk-col.wk-d 
-					nav#site-nav
-						ul.menu
-							li.menu-item: a(href="#") Historia
-							li.menu-item: a(href="#") Productos
-							li.menu-item: a(href="#") Ritual
-							li.menu-item: a(href="#") Recetas
-							li.menu-item: a(href="#") Plan Cacao
-				
-				.wk-col-1.wk-m 
-					.off-canvas-icon
-						span.fa.fa-bars
-	
-	
-							
-				
-    
+	body.wk-wrap-1920
+		header#main-header.wk-section.ui-box-model
+			section.wk-section-wrap
+				#site-logo
+					a(href="#"): img.logo(src="img/logo-abuelita-nestle.png" alt="Chocolate Abuelita")
+				.wk-cols-m
+					.wk-col
+						nav#social-nav
+							ul.menu
+								li.menu-item: a(href="#"): i.ui-icon.fa.fa-facebook
+								li.menu-item: a(href="#"): i.ui-icon.fa.fa-instagram
+								li.menu-item: a(href="#"): i.ui-icon.fa.fa-twitter
+								li.menu-item: a(href="#"): i.ui-icon.fa.fa-youtube
+					.wk-col.wk-d 
+						nav#site-nav
+							ul.menu
+								li.menu-item: a(href="#") Historia
+								li.menu-item: a(href="#") Productos
+								li.menu-item: a(href="#") Ritual
+								li.menu-item: a(href="#") Recetas
+								li.menu-item: a(href="#") Plan Cacao
+					
+					.wk-col-1.wk-m 
+						.off-canvas-icon
+							span.fa.fa-bars
+		
+		
+								
+					
+	    

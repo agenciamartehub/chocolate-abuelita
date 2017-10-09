@@ -1,22 +1,24 @@
 include header.jade
 
++metatags(
+	'El Ritual Abuelita', 
+	'Descripción'
+	)
+
 main(role="main")
-	section#ritual-abuelita-banner.wk-section.ui-bg-red
-		.wk-section-wrap
-			.ui-section-header(style="background-image: url(img/banner-ritual-abuelita.jpg);")
-				.ui-section-content
-					span
-						img.ui-section-icon.ui-align-center(src="img/icon-ritual-abuelita.png")
-					h1.ui-title-big.ui-title-ornament.ui-text-gold El ritual Abuelita
+	+sectionHeader(
+			'ritual-abuelita-banner', 
+			'ui-bg-red', 
+			'El ritual Abuelita', 
+			'', 
+			'img/banner-ritual-abuelita.jpg', 
+			'img/icon-ritual-abuelita.png'
+		)
 					
 				
-	section#ritual-abuelita-leyend.wk-section.wk-wrap-1100.ui-bg-red.wk-text-center.ui-block-texture-invert
-		.wk-section-wrap
-			.ui-row-padding 
-				h2.ui-subtitle 
-					p Los mejores momentos se viven con la familia, por eso Chocolate Abuelita&reg; hace más ricos los instantes que pasamos con nuestros seres queridos. 
-						strong.ui-text-gold Hacer chocolate caliente es una tradición que las familias mexicanas han compartido por generaciones.
-				
+	+sectionLeyend( 'ritual-abuelita-leyend', '') Los mejores momentos se viven con la familia, por eso Chocolate Abuelita&reg; hace más ricos los instantes que pasamos con nuestros seres queridos. 
+			strong.ui-text-gold Hacer chocolate caliente es una tradición que las familias mexicanas han compartido por generaciones.
+	
 	section#como-preparar.wk-children-text-center.ui-block-texture-cover
 		.wk-section-wrap.wk-padding-top-40
 			h1.ui-title Cómo preparar chocolate Abuelita&reg;

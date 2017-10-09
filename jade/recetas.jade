@@ -1,22 +1,22 @@
 include header.jade
 
++metatags(
+	'Recetas', 
+	'Descripción'
+	)
 main(role="main")
-	section#recetas-banner.wk-section.ui-bg-red
-		.wk-section-wrap
-			.ui-section-header(style="background-image: url(img/banner-recetas.jpg)")
-				.ui-section-content
-					span
-						img.ui-section-icon.ui-align-center(src="img/icon-recetas.png")
-					h1.ui-title-big.ui-title-ornament.ui-text-gold Recetas
-					
+	+sectionHeader(
+			'recetas-banner', 
+			'ui-bg-red', 
+			'Recetas', 
+			'', 
+			'img/banner-recetas.jpg', 
+			'img/icon-recetas.png'
+		)
 				
-	section#recetas-leyend.wk-section.wk-wrap-1100.ui-bg-red.wk-text-center.ui-block-texture-invert
-		.wk-section-wrap
-			.ui-row-padding 
-				h2.ui-subtitle 
-					p
-						strong.ui-text-gold Lorem ipsum dolor sit amet, consectetur adipiscing 
-						span Donec vel ipsum eu enim faucibus semper sed non leo. Maecenas vehicula, nisi ut ullamcorper molestie.
+	+sectionLeyend('recetas-leyend', '')
+		strong.ui-text-gold Lorem ipsum dolor sit amet, consectetur adipiscing 
+		span Donec vel ipsum eu enim faucibus semper sed non leo. Maecenas vehicula, nisi ut ullamcorper molestie.
 					
 	section#recetas.ui-block-texture-cover.wk-wrap-1100.wk-margin-y-40
 		.wk-section-wrap

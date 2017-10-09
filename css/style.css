@@ -95,6 +95,9 @@ iframe {
   #main-header .menu li a {
     display: inline-block;
     padding: 24px 0; }
+    @media (max-width: 840px) {
+      #main-header .menu li a {
+        padding: 24px 0px 70px; } }
   #main-header #site-logo {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -109,15 +112,30 @@ iframe {
     #main-header #site-logo .logo {
       width: 100%;
       height: auto; }
+    @media (max-width: 840px) {
+      #main-header #site-logo {
+        width: 120px;
+        top: 70px; } }
   #main-header #social-nav .menu .menu-item {
     margin-right: 10px; }
+  #main-header #social-nav .ui-icon {
+    width: 34px;
+    height: 34px;
+    color: gold;
+    font-size: 12px; }
   #main-header #site-nav {
     height: 100%;
     text-align: right;
     font-family: "Montserrat Light", "Lato", sans-serif;
     font-weight: 100;
     font-weight: 800;
-    font-size: 18px; }
+    font-size: 22px; }
+    @media (max-width: 1420px) and (min-width: 1080px) {
+      #main-header #site-nav {
+        font-size: 16px; } }
+    @media (max-width: 1079px) and (min-width: 770px) {
+      #main-header #site-nav {
+        font-size: 14px; } }
     #main-header #site-nav .menu {
       height: 100%; }
       #main-header #site-nav .menu .menu-item {
@@ -295,7 +313,7 @@ iframe {
 
 .ui-title-big {
   font-size: 70px; }
-  @media (max-width: 770px) {
+  @media (max-width: 840px) {
     .ui-title-big {
       font-size: 36px; } }
 
@@ -324,7 +342,7 @@ iframe {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain; }
-  @media (max-width: 770px) {
+  @media (max-width: 840px) {
     [class*="ui-title"].ui-title-ornament:after,
     [class*="ui-title"].ui-title-ornament:before,
     [class*="ui-subtitle"].ui-title-ornament:after,
@@ -447,7 +465,7 @@ iframe {
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: top right; }
-  @media (max-width: 770px) {
+  @media (max-width: 840px) {
     .ui-block-texture-invert {
       background-size: 100%; } }
 
@@ -659,7 +677,7 @@ iframe {
   @media (min-width: 771px) {
     #receta-content .wk-cols [class*="wk-col-"]:nth-child(even) {
       padding-left: 20px; } }
-  @media (max-width: 770px) {
+  @media (max-width: 840px) {
     #receta-content .wk-cols [class*="wk-col-"]:nth-child(odd) {
       padding-bottom: 20px; } }
 

@@ -6,6 +6,9 @@
 	.menu li a {
 		display: inline-block;
 		padding: 24px 0;
+		@media #{$onlyMobile} {
+			padding: 24px 0px 70px;
+		}
 	}
 
 	#site-logo {
@@ -22,6 +25,10 @@
 			width: 100%;
 			height: auto;
 		}
+		@media #{$onlyMobile} {
+			width: 120px;
+			top: 70px;
+		}
 	}
 
 	#social-nav {
@@ -30,14 +37,28 @@
 				margin-right: 10px;
 			}
 		}
+		.ui-icon {
+			width: 34px;
+			height: 34px;
+			color: gold;
+			font-size: 12px;
+		}
 	}
+
 
 	#site-nav {
 		height: 100%;
 		text-align: right;
 		@include ui-font-model-montserrat;
 		font-weight: 800;
-		font-size: 18px;
+		font-size: 22px;
+		@media ( max-width: 1420px ) and ( min-width: 1080px ) {
+			font-size: 16px;
+		}
+
+		@media ( max-width: 1079px ) and ( min-width: 770px ) {
+			font-size: 14px;
+		}
 		.menu {
 			height: 100%;
 			.menu-item {

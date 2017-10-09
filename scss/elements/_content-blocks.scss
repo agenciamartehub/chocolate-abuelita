@@ -1,15 +1,21 @@
 // Banner header
 .ui-section-header {
 	position: relative;
+	background: {
+		size: cover;
+		position: center;
+	}
+	height: 55vh;
 	.ui-section-content {
-	    position: absolute;
-	    top: 0;
-	    width: 100%;
-	    height: 100%;
-	    display: flex;
-	    flex-direction: column;
-	    align-items: center;
-	    justify-content: center;
+		text-align: center;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 }
 
@@ -33,6 +39,14 @@
 	background-position: top right;
 	@media #{$onlyMobile} {
 		background-size: 100%;
+	}
+}
+
+// Video
+.ui-video-container {
+	img {
+		width: 100%;
+		height: auto;
 	}
 }
 

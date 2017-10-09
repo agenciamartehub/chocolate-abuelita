@@ -135,7 +135,10 @@
 }
 
 .ui-title-big {
-	font-size: 70px
+	font-size: 70px;
+	@media #{$onlyMobile} {
+		font-size: 36px;
+	}
 }
 
 .ui-title {
@@ -168,6 +171,10 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+	@media #{$onlyMobile} {
+		display: block;
+		margin: 20px auto;
+	}
 }
 
 [class*="ui-title"].ui-title-ornament:before {

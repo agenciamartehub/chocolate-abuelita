@@ -1,0 +1,19 @@
+#productos-leyend {
+
+}
+
+#nuestros-productos {
+	a {
+		display: inline-block;
+		&:hover {
+			.producto {
+				transform: scale(1.1);
+			}
+		}
+	}
+	.producto {
+		width: 100%;
+		height: auto;
+		transition: all .25s linear;
+	}
+}

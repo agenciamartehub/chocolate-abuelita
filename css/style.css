@@ -653,6 +653,20 @@ iframe {
     #receta-content .wk-cols [class*="wk-col-"]:nth-child(odd) {
       padding-bottom: 20px; } }
 
+#nuestros-productos a {
+  display: inline-block; }
+  #nuestros-productos a:hover .producto {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); }
+
+#nuestros-productos .producto {
+  width: 100%;
+  height: auto;
+  -webkit-transition: all .25s linear;
+  -o-transition: all .25s linear;
+  transition: all .25s linear; }
+
 body {
   font-size: 13px;
   font-family: "Montserrat Light", "Lato", sans-serif;

@@ -1,0 +1,50 @@
+include header.jade
+
++metatags(
+	'Nuestros productos', 
+	'Descripción'
+	)
+
+main(role="main")
+	+sectionHeader(
+			'nuestros-productos-banner', 
+			'ui-bg-red', 
+			'Nuestros productos', 
+			'', 
+			'img/banner-productos.jpg', 
+			'img/icon-productos.png'
+		)
+					
+				
+	+sectionLeyend('productos-leyend', '')
+		strong.ui-text-gold Lorem ipsum dolor sit amet, consectetur adipiscing 
+		span Donec vel ipsum eu enim faucibus semper sed non leo. Maecenas vehicula, nisi ut ullamcorper molestie.
+	
+	mixin producto( title, description, image )
+		.ui-block-padding
+			a(href="#"): img.producto(src='' + image + '' alt='' + title + '' )
+			span.ui-title-small.wk-block= title
+			if description
+				span= description
+	
+	section#nuestros-productos.ui-block-texture-cover.ui-box-model.wk-text-center
+		.wk-section-wrap
+			.wk-cols
+				.wk-col-3
+					+producto( 'Abuelita Clásico', '540g', 'img/chocolate-abuelita-clasico-nestle.png' )
+				.wk-col-3
+					+producto( 'Abuelita Duo Pack', '540g', 'img/chocolate-abuelita-duo-pack-nestle.png' )
+				.wk-col-3
+					+producto( 'Abuelita Clásico', '360g', 'img/chocolate-abuelita-clasico-small-nestle.png' )
+				.wk-col-3
+					+producto( 'Abuelita Granulado', '320g', 'img/chocolate-abuelita-granulado-nestle.png' )
+			.wk-cols
+				.wk-col-3
+					+producto( 'Abuelita Marqueta', '180g', 'img/chocolate-abuelita-marqueta-nestle.png' )
+				.wk-col-3
+					+producto( 'Abuelita Duo Pack', '', 'img/chocolate-abuelita-duo-pack.png' )
+				.wk-col-3
+					+producto( 'Abuelita Instantaneo', '40g', 'img/chocolate-abuelita-instantaneo-nestle.png' )
+				.wk-col-3
+					+producto( 'Abuelita Promoción', '630g', 'img/chocolate-abuelita-promocion-nestle.png' )
+include footer.jade

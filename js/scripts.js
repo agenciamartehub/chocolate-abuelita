@@ -33,6 +33,8 @@ jQuery(document).ready(function($){
 		]
 	});
 
-
+	$('.off-canvas-icon').click(function(){
+		$('body').toggleClass('off-canvas-is-active');
+	});
 
 });

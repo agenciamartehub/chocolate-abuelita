@@ -184,29 +184,37 @@
 	}
 }
 
-[class*="ui-title"].ui-title-ornament:before {
+.ui-title-ornament:before {
 	background-image: url(../img/text-ornament-red-a.png);
 }
 
-[class*="ui-title"].ui-title-ornament:after {
+.ui-title-ornament:after {
 	background-image: url(../img/text-ornament-red-b.png);
 }
 
-[class*="ui-title"].ui-text-red.ui-title-ornament:before {
+.ui-text-red.ui-title-ornament:before {
 	background-image: url(../img/text-ornament-red-a.png);
 }
 
-[class*="ui-title"].ui-text-red.ui-title-ornament:after {
+.ui-text-red.ui-title-ornament:after {
 	background-image: url(../img/text-ornament-red-b.png);
 }
 
-[class*="ui-title"].ui-text-gold.ui-title-ornament:before,
-[class*="ui-title"].ui-text-yellow.ui-title-ornament:before {
+.ui-text-white.ui-title-ornament:before {
+	background-image: url(../img/text-ornament-white-a.png);
+}
+
+.ui-text-white.ui-title-ornament:after {
+	background-image: url(../img/text-ornament-white-b.png);
+}
+
+.ui-text-gold.ui-title-ornament:before,
+.ui-text-yellow.ui-title-ornament:before {
 	background-image: url(../img/text-ornament-gold-a.png);
 }
 
-[class*="ui-title"].ui-text-gold.ui-title-ornament:after,
-[class*="ui-title"].ui-text-yellow.ui-title-ornament:after {
+.ui-text-gold.ui-title-ornament:after,
+.ui-text-yellow.ui-title-ornament:after {
 	background-image: url(../img/text-ornament-gold-b.png);
 }
 

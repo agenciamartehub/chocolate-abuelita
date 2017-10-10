@@ -57,6 +57,9 @@ iframe {
   width: 100%;
   min-height: 40vw; }
 
+.safari iframe {
+  min-height: 500px; }
+
 img {
   vertical-align: middle; }
 
@@ -507,8 +510,13 @@ img {
     -ms-flex-pack: center;
     justify-content: center; }
     .ui-section-header .ui-section-content .container {
+      width: 100%;
       position: absolute;
-      bottom: 40px; }
+      bottom: 40px;
+      left: 0; }
+
+.safari .ui-section-header {
+  height: 600px; }
 
 .ui-block-texture, .ui-block-texture-cover {
   background-image: url(../img/bg-textura.png);

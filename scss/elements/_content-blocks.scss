@@ -18,10 +18,16 @@
 		align-items: center;
 		justify-content: center;
 		.container {
+			width: 100%;
 			position: absolute;
 			bottom: 40px;
+			left: 0;
 		}
 	}
+}
+
+.safari .ui-section-header {
+	height: 600px;
 }
 
 // Bloque con textura de fondo

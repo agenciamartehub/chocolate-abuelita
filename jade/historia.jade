@@ -14,80 +14,70 @@ main#receta(role="main")
 			'img/banner-historia.jpg', 
 			'img/icon-historia.png'
 		)
+		
+	
+	mixin uiTimeline( side, date, thumb, content )
+		div(class='ui-timeline-row-' + side )
+			.wk-cols-m
+				if side == 'left'
+					.wk-col
+						header.ui-timeline-header
+							img.ui-timeline-thumb(src='' + thumb + '' alt="Fábrica de Chocolates La Azteca - Nestle" width="200")
+							time.ui-timeline-date.ui-title-big= date
+						h3.ui-timeline-excerpt.ui-subtitle-small!= content 
+				else 
+					.wk-col.wk-d
+				.wk-col-1
+					.ui-timeline-guide
+						span.ui-timeline-line-before
+						span.ui-timeline-dot
+						span.ui-timeline-line-after
+				if side == 'right'
+					.wk-col 
+						header.ui-timeline-header
+							time.ui-timeline-date.ui-title-big= date
+							img.ui-timeline-thumb(src='' + thumb + '' alt="Fábrica de Chocolates La Azteca - Nestle" width="200")
+						h3.ui-timeline-excerpt.ui-subtitle-small!= content 
+				else
+					.wk-col.wk-d
+		
 
-	.ui-block-texture-cover
-		section#receta-video.wk-section.ui-box-model.wk-wrap-1100.wk-margin-y-40
+	.ui-block-texture-cover.ui-row-padding
+		section#historia-timeline.ui-timeline.wk-wrap-1100
 			.wk-section-wrap
-				iframe(src="https://www.youtube.com/embed/ng8QwoqBnNA?rel=0&amp;start=4" frameborder="0" allowfullscreen)
-		aside#receta-ingredientes.wk-wrap-1100.wk-margin-y-40.ui-box-model
-			.wk-section-wrap
-				
-				h6.ui-title
-					img(src="img/icon-ingredientes.png")
-					| Ingredientes
-				
-				ul
-					li 4 cucharadas de levadura en polvo
-					li 1 taza de azucar
-					li 1 taza de agua
-					li 360g de harina de trigo
-					li 1 lata de leche evaporada CARNATION&reg; CLAVEL&reg;
-					li 1 huevo
-					li 3 cucharadas de ralladura de naranja
-					li 90g de mantequilla
-					li 1 barra de chocolate para mesa ABUELITA&reg;
+				+uiTimeline( 
+					'right', 
+					'1919', 
+					'img/Nestle-1929-fabrica-la-azteca-ciudad-de-mexico.png', 
+					'Se funda la Fábrica de Chocolates <strong>La Azteca </strong>por los hermanos Gonzáles Barragán en Orizaba, Veracruz.' 
+					)
 					
-					.ui-title
-						img(src="img/icon-hornear.png")
-						| Horno precalentado a 180°C
-				
-				h6.ui-title
-					img(src="img/icon-preparacion.png")
-					| Preparación
-				
-		section#receta-content.wk-wrap-1100.ui-box-model.wk-m-text-center
-			.wk-section-wrap
-				.wk-cols
-					.wk-col-1.wk-text-center 
-						.ui-icon: i 1
-					.wk-col-11
-						| Mezcla la levadura con el azúcar y el agua tibia y espera hasta que doble su volumen. Forma una fuente con el harina y la azucar vierte en el centro la levadura, la Leche Evaporada CARNATION&reg; CLAVEL&reg;, el huevo, la yema, la ralladura y la mantequilla. Mezcla todos los Ingredientes  hasta formar una pasta. Amásala y golpéala contra la mesa hasta que esté tersa, elástica y no se pegue en los dedos. Déjala reposar en un lugar tibio hasta que doble su volumen.
-						
-				.wk-cols
-					.wk-col-1.wk-text-center
-						.ui-icon: i 2
-					.wk-col-11
-						| Reserva una cuarta parte de la masa para formar los huesos. Agrega el Chocolate para Mesa ABUELITA&reg; troceando el resto de la masa. Divide en 10 partes iguales y forma bolas, colócalas en charolas previamente engrasadas y enharinadas. Con la masa que reservaste forma 20 tiras para los huesitos y colócalas cruzadas sobre los panes que formaste y en la parte superior coloca una bolita muy pequeña. Deja reposar hasta que esponje.
-						
-				.wk-cols
-					.wk-col-1.wk-text-center
-						.ui-icon: i 3
-					.wk-col-11
-						| Barniza con huevo y hornea durante 30 minutos. Retira del horno, barniza con la mantequilla y espolvorea con azúcar.
-						
-		section#receta-buttons.wk-wrap-1100.wk-text-center.ui-d-row-padding
-			.wk-section-wrap
-				.wk-cols
-					.wk-col.ui-box-model.wk-d
-						a.ui-btn 
-							img(src="img/icon-imprimir.png" alt="Imprimir")
-							span Imprimir
-							
-					.wk-col.ui-box-model
-						a.ui-btn 
-							img(src="img/icon-compartir.png" alt="Comparte")
-							span Compartir
-							
-					.wk-col.ui-box-model
-						a.ui-btn 
-							img(src="img/icon-conoce-mas-recetas.png" alt="Más recetas")
-							span Conoce más recetas						
-				
-		+sectionLeyend('receta-leyend', '')
-			img.wk-margin-y-20(src="img/icon-consejo.png" alt="Consejo de Abuelita - Nestle")
-			h3.ui-title.ui-text-gold Consejo de Abuelita&reg;
-			p
-				span.ui-text-gold Lorem ipsum dolor sit amet, consectetur adipsicing.
-				span Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-												
+				+uiTimeline( 
+					'left', 
+					'1929', 
+					'img/Nestle-1919-fabrica-la-azteca.png', 
+					'<strong>La Fábrica de Chocolates La Azteca</strong> es trasladada a la Ciudad de México.' 
+					)
+					
+				+uiTimeline(
+					'right',
+					'1939',
+					'img/Nestle-1939-Chocolate-abuelita.png',
+					'Nace la marca <strong>Chocolate Abuelita&reg;</strong>'
+					)
+					
+				+uiTimeline(
+					'left',
+					'2013',
+					'img/Nestle-2013-plan-cacao.png',
+					'Se lanza <strong>Plan Cacao Nestlé</strong>, reforzando el compromiso de la compañía con la recuperación del cacao originario de México.'
+					)
+						 
+				+uiTimeline(
+					'right',
+					'2017',
+					'img/Nestle-2017-toluca-mexico.png',
+					'<strong>Chocolate Abuelita&reg;</strong> actualmente es producido en México, en las fábricas de Toluca. Lleva más de 75 años incitando la unión de las familias mexicanas a través de su auténtico <strong>sabor, aroma y espuma</strong>.'
+					)
+													
 include footer.jade

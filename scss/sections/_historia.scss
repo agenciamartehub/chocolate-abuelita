@@ -1,0 +1,76 @@
+#historia-banner {
+
+}
+
+#historia-timeline {
+
+}
+
+.ui-timeline {
+	[class*="ui-timeline-row-"]:first-child {
+		.ui-timeline-line-before {
+		    visibility: hidden;
+		}
+	}
+	.ui-timeline-row-left {
+		.ui-timeline-header {
+		    text-align: right;
+		}
+		@media #{$onlyMobile} {
+			[class*="wk-cols-"] {
+				flex-direction: row-reverse;
+			}
+			.ui-timeline-header {
+				display: flex;
+				justify-content: flex-end;
+				align-items: baseline;
+				flex-direction: row-reverse;
+			}
+		}
+	}
+	.ui-timeline-row-right {
+
+	}
+	.ui-timeline-thumb {
+		vertical-align: baseline;
+	}
+	.ui-timeline-guide {
+		.ui-timeline-dot {
+			display: block;
+			width: 40px;
+			height: 40px;
+			background: #a20f2a;
+			border-radius: 30px;
+			position: relative;
+			margin: auto;
+			&:after {
+				content: "";
+				display: block;
+				width: 8px;
+				height: 8px;
+				background: gold;
+				border-radius: 10px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+			}
+		}
+		.ui-timeline-line {
+			display: block;
+			width: 4px;
+			background-color: #a30726;
+			margin: auto;
+		}
+		.ui-timeline-line-before {
+			@extend .ui-timeline-line;
+			height: 200px;
+		}
+		.ui-timeline-line-after {
+			@extend .ui-timeline-line;
+			height: 100px;
+		}
+	}
+}

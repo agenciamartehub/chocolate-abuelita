@@ -33,8 +33,10 @@
 
 	#social-nav {
 		.menu {
-			.menu-item {
-				margin-right: 10px;
+			@media #{$onlyDesktop} {
+				.menu-item {
+					margin-right: 10px;
+				}				
 			}
 		}
 		.ui-icon {
@@ -83,6 +85,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
+		@media #{$onlyMobile} {
+			padding: 24px 0px 70px;
 		}
+	}
 
 }

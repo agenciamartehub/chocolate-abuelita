@@ -14,6 +14,8 @@ main(role="main")
 			'img/banner-productos.jpg', 
 			'img/icon-productos.png'
 		)
+		.container.ui-box-model
+			a.ui-btn-gold(href="#") Conoce nuestras <br> promociones
 					
 				
 	+sectionLeyend('productos-leyend', '')
@@ -47,4 +49,8 @@ main(role="main")
 					+producto( 'Abuelita Instantaneo', '40g', 'img/chocolate-abuelita-instantaneo-nestle.png' )
 				.wk-col-3
 					+producto( 'Abuelita Promoción', '630g', 'img/chocolate-abuelita-promocion-nestle.png' )
+					
+			.ui-block-padding
+				a.ui-btn(href="#") Comprar
+				
 include footer.jade

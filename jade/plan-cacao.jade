@@ -6,11 +6,18 @@ include header.jade
 	)
 
 main(role="main")
-	section#plan-cacao-banner.wk-section 
-		.wk-section-wrap
-			a(href="#"): img.wk-img-responsive(src="img/plan-cacao-video-poster-nestle.png" alt="Poster Plan Cacao Nesltle")
+	+sectionHeader(
+			'plan-cacao-banner', 
+			'ui-bg-gold', 
+			'', 
+			'', 
+			'img/plan-cacao-video-poster-nestle.png', 
+			''
+		)
+		.container.ui-box-model
+			a.ui-btn(href="https://www.youtube.com/watch?v=92yYF9o6Jng" data-fancybox) Más información
 	
-	section#plan-cacao.wk-wrap-1100.wk-children-text-center.ui-block-texture
+	section#plan-cacao.wk-wrap-1100.wk-children-text-center.ui-m-block-texture-cover.ui-d-block-texture
 		.wk-section-wrap
 			.ui-block-padding
 				img.ui-section-icon.ui-align-center.wk-padding-y-40(width="100" src="img/icon-cocoa-plan.png")
@@ -38,13 +45,13 @@ main(role="main")
 				.wk-col 
 					.wk-cols-m
 						.wk-col
-							img(src="img/plan-cacao-3-nestle.jpg" alt="Plan Cacao Nestle")
-						.wk-col
 							img(src="img/plan-cacao-1-nestle.jpg" alt="Plan Cacao Nestle")
+						.wk-col
+							img(src="img/plan-cacao-2-nestle.jpg" alt="Plan Cacao Nestle")
 				.wk-col 
 					.wk-cols-m
 						.wk-col
-							img(src="img/plan-cacao-2-nestle.jpg" alt="Plan Cacao Nestle")
+							img(src="img/plan-cacao-3-nestle.jpg" alt="Plan Cacao Nestle")
 						.wk-col
 							img(src="img/plan-cacao-4-nestle.jpg" alt="Plan Cacao Nestle")
 
@@ -55,7 +62,8 @@ main(role="main")
 		
 	section#plan-cacao-logo.wk-section.wk-wrap-1100.wk-text-center
 		.wk-section-wrap
-			.ui-row-padding 				
+			.ui-block-padding 
+				h6.ui-title.wk-m Logros
 				img.wk-padding-y-40(src="img/logo-cocoa-plan.png" alt="Plan Cacao Nestle Logo")
 				
 				h2.ui-subtitle 70% mayor productividad en las parcelas y las cooperativas generaron una derrama económica superior a los 12 millones por el valor agregado a su producto.

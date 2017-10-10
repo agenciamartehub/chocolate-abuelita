@@ -81,10 +81,16 @@
 	color: $secondaryColor;
 	font-weight: 800;
 	font-size: 16px;
+	text-transform: uppercase;
 	padding: 18px 60px;
 	background: $secondaryColor;
 	color: $white;
 	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+	min-height: 68px;
 	@include transition;
 	&:hover {
 	    background-color: $secondaryColorHover;
@@ -92,6 +98,7 @@
 	img {
 		vertical-align: middle;
 		margin: 0 20px;
+		width: 14px
 	}
 }
 
@@ -247,12 +254,54 @@
     padding: 40px $boxModel;
 }
 
+@media #{$onlyMobile} {
+	.ui-m-block-padding {
+	    box-sizing: border-box;
+	    padding: 40px $boxModel;
+	}
+}
+
+@media #{$onlyDesktop} {
+	.ui-d-block-padding {
+	    box-sizing: border-box;
+	    padding: 40px $boxModel;
+	}
+}
+
 .ui-row-padding {
 	box-sizing: border-box;
 	padding: 100px $boxModel;
 }
 
+@media #{$onlyMobile} {
+	.ui-m-row-padding {
+		box-sizing: border-box;
+		padding: 100px $boxModel;
+	}
+}
+
+@media #{$onlyDesktop} {
+	.ui-d-row-padding {
+		box-sizing: border-box;
+		padding: 100px $boxModel;
+	}
+}
+
 .ui-box-model {
 	padding-left: $boxModel;
 	padding-right: $boxModel;
+}
+
+@media #{$onlyMobile} {
+	.ui-m-box-model {
+		padding-left: $boxModel;
+		padding-right: $boxModel;
+	}
+}
+
+@media #{$onlyDesktop} {
+	.ui-d-box-model {
+		padding-left: $boxModel;
+		padding-right: $boxModel;
+	}
 }

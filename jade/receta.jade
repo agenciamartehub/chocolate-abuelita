@@ -10,9 +10,9 @@ main#receta(role="main")
 			'receta-banner', 
 			'ui-bg-bold', 
 			'Receta', 
-			'Cómo preparar chocolate abuelita', 
-			'img/banner-recetas.jpg', 
-			'img/icon-receta.png'
+			'Cómo preparar chocolate abuelita®', 
+			'img/banner-recetas-pan.jpg', 
+			'img/icon-recetas.png'
 		)
 
 	.ui-block-texture-cover
@@ -45,7 +45,7 @@ main#receta(role="main")
 					img(src="img/icon-preparacion.png")
 					| Preparación
 				
-		section#receta-content.wk-wrap-1100.ui-box-model
+		section#receta-content.wk-wrap-1100.ui-box-model.wk-m-text-center
 			.wk-section-wrap
 				.wk-cols
 					.wk-col-1.wk-text-center 
@@ -65,31 +65,29 @@ main#receta(role="main")
 					.wk-col-11
 						| Barniza con huevo y hornea durante 30 minutos. Retira del horno, barniza con la mantequilla y espolvorea con azúcar.
 						
-		section#receta-buttons.wk-wrap-1100.wk-text-center.ui-row-padding
+		section#receta-buttons.wk-wrap-1100.wk-text-center.ui-d-row-padding
 			.wk-section-wrap
 				.wk-cols
-					.wk-col
+					.wk-col.ui-box-model.wk-d
 						a.ui-btn 
 							img(src="img/icon-imprimir.png" alt="Imprimir")
 							span Imprimir
 							
-					.wk-col
+					.wk-col.ui-box-model
 						a.ui-btn 
 							img(src="img/icon-compartir.png" alt="Comparte")
 							span Compartir
 							
-					.wk-col
+					.wk-col.ui-box-model
 						a.ui-btn 
 							img(src="img/icon-conoce-mas-recetas.png" alt="Más recetas")
 							span Conoce más recetas						
-						  
-		section#receta-leyend.wk-section.wk-wrap-1100.ui-bg-red.wk-text-center.ui-block-texture-invert
-			.wk-section-wrap
-				.ui-row-padding 
-					img(src="img/icon-consejo.png" alt="Consejo de Abuelita - Nestle")
-					h3.ui-title.ui-text-gold Consejo de Abuelita&reg;
-					p
-						span.ui-text-gold Lorem ipsum dolor sit amet, consectetur adipsicing.
-						span Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+				
+		+sectionLeyend('receta-leyend', '')
+			img.wk-margin-y-20(src="img/icon-consejo.png" alt="Consejo de Abuelita - Nestle")
+			h3.ui-title.ui-text-gold Consejo de Abuelita&reg;
+			p
+				span.ui-text-gold Lorem ipsum dolor sit amet, consectetur adipsicing.
+				span Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
 												
 include footer.jade

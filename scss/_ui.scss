@@ -137,7 +137,7 @@
 
 
 // Títulos
-[class*="ui-title"] {
+[class*="ui-title"]:not(.ui-title-ornament) {
 	@include ui-font-model-times-new-roman;
 }
 
@@ -169,10 +169,10 @@
 	font-size: 18px;
 }
 
-[class*="ui-title"].ui-title-ornament:after,
-[class*="ui-title"].ui-title-ornament:before,
-[class*="ui-subtitle"].ui-title-ornament:after,
-[class*="ui-subtitle"].ui-title-ornament:before {
+.ui-title-ornament:after,
+.ui-title-ornament:before,
+.ui-title-ornament:after,
+.ui-title-ornament:before {
 	content: "";
 	display: inline-block;
 	background-repeat: no-repeat;

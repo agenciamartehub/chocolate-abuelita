@@ -1,4 +1,10 @@
-.off-canvas-menu 
-	.ui-box-model
-		ul.ui-menu 
-			li.ui-subtitle-small.ui-title-ornament.ui-text-white Historia
+mixin menuItem( title, link )
+	li.ui-subtitle-small.ui-title-ornament.ui-text-white.ui-box-model: a(href='' + link + '')= title
+
+.off-canvas-menu.wk-m
+	ul.ui-menu 
+		+menuItem( 'Historia', '/historia.html' )
+		+menuItem( 'Productos', '/productos.html' )
+		+menuItem( 'Ritual', '/el-ritual-abuelita.html' )
+		+menuItem( 'Recetas', '/recetas.html' )
+		+menuItem( 'Plan Cacao', '/plan-cacao.html' )

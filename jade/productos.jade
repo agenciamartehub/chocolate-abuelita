@@ -31,13 +31,14 @@ main(role="main")
 				
 				El template de este mixin se encuentra en jade/_mixins.jade
 				
-			a.ui-btn-gold(href="javascript:;" data-fancybox data-src="#promociones-modal") Conoce nuestras <br> promociones
+			a#lightbox-call-to-action.ui-btn-gold(href="#") Conoce nuestras <br> promociones
 			
-			+modalPromocion( 
-				'promociones-modal',
-				'Promoción', 
-				'contenido' 
-				)
+			//
+				+modalPromocion( 
+					'promociones-modal',
+					'Promoción', 
+					'contenido' 
+					)
 					
 				
 	+sectionLeyend('productos-leyend', '')

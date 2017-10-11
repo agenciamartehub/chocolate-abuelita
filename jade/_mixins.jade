@@ -1,4 +1,4 @@
-// Encabzado de página ejemplo aquí http://prntscr.com/gw5x53
+//- Encabzado de página ejemplo aquí http://prntscr.com/gw5x53
 mixin sectionHeader( id, classes, title, leyend, background, imageURL )
 	section(id=id class='"ui-section-header wk-section ' + classes + '"')
 		.wk-section-wrap
@@ -12,7 +12,7 @@ mixin sectionHeader( id, classes, title, leyend, background, imageURL )
 						h3.ui-title.ui-text-white= leyend
 					block
 
-// Sección Leyend, recuadro de texto con fondo rojo y textura de fondo ejemplo aquí http://prntscr.com/gw5wof
+//- Sección Leyend, recuadro de texto con fondo rojo y textura de fondo ejemplo aquí http://prntscr.com/gw5wof
 mixin sectionLeyend( id, classes )
 	section(id=id, class='"wk-section wk-wrap-1100 ui-bg-red wk-text-center ui-block-texture-invert ' + classes + '"')
 		.wk-section-wrap
@@ -21,7 +21,7 @@ mixin sectionLeyend( id, classes )
 					block
 					
 	
-// 
+//- 
 	Productos, solo imprime un producto, es necesario un mixin por cada producto y estructurar un layout previamente
 
 	Los productos se imprimen con un mixin con la siguiente estructura:
@@ -46,7 +46,7 @@ mixin producto( id, title, description, image, modalContent )
 		p.wk-text-center.wk-margin-y-40: a.ui-btn(href="#") Comprar					
 
 
-// 
+//-
 	Modal genérico
 	
 	Cómo llamar a un modal:
@@ -71,7 +71,7 @@ mixin modal( id, header )
 		p(data-selectable="true")!= content	
 			block	
 
-// 
+//-
 	Modal con layout de promoción	
 	
 	Cómo llamar a un modal:

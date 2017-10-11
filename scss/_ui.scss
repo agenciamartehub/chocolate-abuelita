@@ -92,6 +92,16 @@
 	color: $white !important;
 }
 
+.ui-bg-red-alt {
+	background-color: $secondaryColorAlt;
+	color: $white;
+}
+
+.ui-bg-red-alt-important {
+	background-color: $secondaryColorAlt !important;
+	color: $white !important;
+}
+
 .ui-bg-gold,
 .ui-bg-yellow {
 	background-color: $mainColor;

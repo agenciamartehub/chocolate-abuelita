@@ -1,23 +1,31 @@
-include _mixins.jade
+include _vars.jade
 
-doctype html
-html
-	mixin metatags(title, description)
+mixin metatags(title, description)
+	doctype html
+	html
 		head
 			<!-- info -->
 			meta(charset="UTF-8")
 			meta(http-equiv="content-type" content="text/html; charset=UTF-8")
 			meta(http-equiv="language" content="es-MX")
+			meta(name="creation_date" content="Wednesday, October 11th, 2017, 4:00 pm")
 			<!-- Site info -->
 			title= title + ' | Chocolate Abuelita sssd'
 			meta(name="description" content=description)
-			<!-- Móbil -->
+			<!-- Device & Browser -->
 			meta(name="HandheldFriendly" content="True")
 			meta(name="MobileOptimized" content="756")
 			meta(name="viewport" content="width=device-width, initial-scale=1.0")
 			meta(name="apple-touch-fullscreen" content="yes")
-			meta(name="apple-mobile-web-app-status-bar-style" content="#000000")
 			meta(name="format-detection" content="telephone=no")
+			meta(http-equiv="X-UA-Compatible" content="IE=edge")
+			meta(http-equiv="X-UA-Compatible" content="IE=EmulateIE10")
+			<!-- Icons & theme -->
+			link(rel="icon" type="image/ico" href= url + 'img/favicon.png')
+			meta(name="theme-color" content="#ffb500")
+			meta(name="apple-mobile-web-app-status-bar-style" content="#ffb500")
+			<!-- Links -->
+			link(rel="canonical" href=url)
 			<!-- Scripts -->
 			script(type="text/javascript" src="js/jquery-3.1.1.min.js")
 			script(type="text/javascript" src="js/scripts.js")
@@ -32,9 +40,7 @@ html
 			link(rel="stylesheet" href="assets/slick/slick-theme.css")
 			link(rel="stylesheet" href="assets/slick/slick.css")
 			script(type="text/javascript" src="assets/slick/slick.min.js")
-			// Google pretify
-			link(href="assets/prettyprint/theme.css" rel="stylesheet" )
-			script(type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
+
 			<!-- Fonts -->
 			// Fonts
 			link(href="fonts/font-awesome/font-awesome.css" rel="stylesheet")
@@ -42,34 +48,35 @@ html
 			link(href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet")
 			<!-- Styles -->
 			link(rel="stylesheet" href="css/style.css")
+			
 
-	body.wk-wrap-1920
-		header#main-header.wk-section.ui-box-model
-			section.wk-section-wrap
-				#site-logo
-					a(href="/index.html"): img.logo(src="img/logo-abuelita-nestle.png" alt="Chocolate Abuelita")
-				.wk-cols-m
-					.wk-col
-						nav#social-nav
-							ul.menu
-								li.menu-item: a(href="#" target="_blank"): i.ui-icon.fa.fa-facebook
-								li.menu-item: a(href="#" target="_blank"): i.ui-icon.fa.fa-instagram
-								li.menu-item: a(href="#" target="_blank"): i.ui-icon.fa.fa-twitter
-								li.menu-item: a(href="#" target="_blank"): i.ui-icon.fa.fa-youtube
-					.wk-col.wk-d 
-						nav#site-nav
-							ul.menu
-								li.menu-item: a(href="/historia.html") Historia
-								li.menu-item: a(href="/productos.html") Productos
-								li.menu-item: a(href="/el-ritual-abuelita.html") Ritual
-								li.menu-item: a(href="/recetas.html") Recetas
-								li.menu-item: a(href="/plan-cacao.html") Plan Cacao
-					
-					.wk-col-1.wk-m 
-						.off-canvas-icon
-							span.fa.fa-bars
-		
+		body.wk-wrap-1920
+			header#main-header.wk-section.ui-box-model
+				section.wk-section-wrap
+					#site-logo
+						a(href= url + 'index.html'): img.logo(src="img/logo-abuelita-nestle.png" alt="Chocolate Abuelita")
+					.wk-cols-m
+						.wk-col
+							nav#social-nav
+								ul.menu
+									li.menu-item: a(href="https://www.fb.me/ChocolateAbuelita/?fref=ts" target="_blank"): i.ui-icon.fa.fa-facebook
+									li.menu-item: a(href="https://www.instagram.com/abuelitamx/?hl=es" target="_blank"): i.ui-icon.fa.fa-instagram
+									li.menu-item: a(href="https://twitter.com/abuelitamx?lang=es" target="_blank"): i.ui-icon.fa.fa-twitter
+									li.menu-item: a(href="https://www.youtube.com/user/chocolateabuelitamx" target="_blank"): i.ui-icon.fa.fa-youtube
+						.wk-col.wk-d 
+							nav#site-nav
+								ul.menu
+									li.menu-item: a(href= url + 'historia.html') Historia
+									li.menu-item: a(href= url + 'productos.html') Productos
+									li.menu-item: a(href= url + 'el-ritual-abuelita.html') Ritual
+									li.menu-item: a(href= url + 'recetas.html') Recetas
+									li.menu-item: a(href= url + 'plan-cacao.html') Plan Cacao
+						
+						.wk-col-1.wk-m 
+							.off-canvas-icon
+								span.fa.fa-bars
+			
 		
 								
 					
-	    
+include _mixins.jade	    

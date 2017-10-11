@@ -12,6 +12,10 @@
 		li {
 			display: flex;
 			align-items: center;
+			opacity: 0;
+			transform: translateX(40px);
+			transition-delay: 0s;
+			@include transition;
 			&:nth-child(odd) {
 				background-color: rgba(0, 0, 0, 0.08);
 			}
@@ -20,8 +24,22 @@
 }
 
 body.off-canvas-is-active {
-    transform: translateX(calc(-100% + 60px));
-    overflow: hidden;
+	transform: translateX(calc(-100% + 60px));
+	overflow: hidden;
+	.off-canvas-menu {
+		.ui-menu {
+			li {
+				opacity: 1;
+				transform: translate(0);
+			}
+			@for $i from 1 through 50 {
+				li:nth-child(#{$i}) {
+					transition-delay: #{($i + 1) / 10}s;
+				}
+			}
+
+		}
+	}
 }
 
 body {

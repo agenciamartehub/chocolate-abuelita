@@ -1,4 +1,54 @@
-<!DOCTYPE html>
+
+<!-- Encabzado de página ejemplo aquí http://prntscr.com/gw5x53-->
+<!-- Sección Leyend, recuadro de texto con fondo rojo y textura de fondo ejemplo aquí http://prntscr.com/gw5wof-->
+<!-- 
+Productos, solo imprime un producto, es necesario un mixin por cada producto y estructurar un layout previamente
+
+Los productos se imprimen con un mixin con la siguiente estructura:
++producto( 'id', 'titulo', 'descripcion', 'imagen', 'ContenidoDeModal' )
+$id - El id del modal, no del producto
+$titulo - EL título del producto, aparecerá en el producto
+$descripcion - La descripción del producto en forma de peso del empaque
+$imagen - URL relativa de la imagen desde la raíz del proyecto
+$contenidoDeModal - El contenido del modal (acepta tags normales de html p.ej. <strong>Texto</strong>)
+El mixin se encuentra en jade/_mixins.jade
+
+-->
+<!-- 
+Modal genérico
+
+Cómo llamar a un modal:
+a(href="javascript:;" data-fancybox data-src="#id-del-modal")
+
+E incluir el mixin en alguna sección del layout con los siguientes argumentos:
+
+El contenido del modal será incluido como uno o varios elementos de html
+indentados en el mixin, como se muestra en el siguiente ejemplo:
+
++modal( 'id', 'titulo' )
+	p Contenido
+	span Contenido
+
+$id - El id al que se hará referencia en el link que abre el modal
+$titulo - El título que aparecerá en el modal
+$contenido - El contenido del modal, acepta tags de html p.ej <strong></strong>
+
+-->
+<!-- 
+Modal con layout de promoción	
+
+Cómo llamar a un modal:
+a(href="javascript:;" data-fancybox data-src="#id-del-modal") Contenido
+
+e incluir el mixin en alguna sección del layout con los siguientes argumentos:
+
++modalPromocion( 'id', 'titulo', 'contenido' )
+
+$id - El id al que se hará referencia en el link que abre el modal
+$titulo - El título que aparecerá en el modal
+$contenido - El contenido del modal, acepta tags de html p.ej <strong></strong>
+	
+--><!DOCTYPE html>
 <html>
   <body class="wk-wrap-1920">
     <header class="wk-section ui-box-model" id="main-header">
@@ -73,7 +123,30 @@
       <div class="ui-section-header ui-box-model" style="background-image: url(img/banner-productos.jpg);">
         <div class="ui-section-content"><span><img class="ui-section-icon ui-align-center" src="img/icon-productos.png"/></span>
           <h1 class="ui-title-big ui-title-ornament ui-text-gold">Nuestros productos</h1>
-          <div class="container ui-box-model"><a class="ui-btn-gold" href="#">Conoce nuestras <br> promociones</a></div>
+          <div class="container ui-box-model">
+            <!-- 
+            Modal con layout de promoción	
+            
+            Cómo llamar a un modal:
+            a(href="javascript:;" data-fancybox data-src="#id-del-modal") Contenido
+            
+            e incluir el mixin en alguna sección del layout con los siguientes argumentos:
+            
+            +modalPromocion( 'id', 'titulo', 'contenido' )
+            
+            $id - El id al que se hará referencia en el link que abre el modal
+            $titulo - El título que aparecerá en el modal
+            $contenido - El contenido del modal, acepta tags de html p.ej <strong></strong>
+            
+            El template de este mixin se encuentra en jade/_mixins.jade
+            
+            --><a class="ui-btn-gold" href="javascript:;" data-fancybox data-src="#promociones-modal">Conoce nuestras <br> promociones</a>
+            <div class="ui-modal ui-block-texture-cover ui-bg-gold-important" id="promociones-modal">
+              <h2 class="ui-modal-header ui-title ui-title-ornament wk-text-center" data-selectable="true">Promoción</h2>
+              <div class="ui-modal-content ui-box-model wk-margin-y-40" data-selectable="true">contenido</div>
+              <p class="wk-text-center wk-margin-y-40"><a class="ui-btn" href="#">Comprar		</a></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -90,38 +163,91 @@
     <div class="wk-section-wrap">
       <div class="wk-cols">
         <div class="wk-col-3">
-            <div class="ui-block-padding"><a href="img/chocolate-abuelita-clasico-nestle.png" data-fancybox><img class="producto" src="img/chocolate-abuelita-clasico-nestle.png" alt="Abuelita Clásico"></a><span class="ui-title-small wk-block">Abuelita Clásico</span><span>540g</span>
-            </div>
+          <!--
+          Los productos se imprimen con un mixin con la siguiente estructura:
+          
+          +producto( 'id', 'titulo', 'descripcion', 'imagen', 'ContenidoDeModal' )
+          
+          $id - El id del modal, no del producto
+          $titulo - EL título del producto, aparecerá en el producto
+          $descripcion - La descripción del producto en forma de peso del empaque
+          $imagen - URL relativa de la imagen desde la raíz del proyecto
+          $contenidoDeModal - El contenido del modal (acepta tags normales de html p.ej. <strong>Texto</strong>)
+          
+          El mixin se encuentra en jade/_mixins.jade
+          -->
+          <div class="ui-block-padding"><a href="javascript:;" data-fancybox="data-fancybox" data-src="#abuelita-clasico"><img class="producto" src="img/chocolate-abuelita-clasico-nestle.png" alt="Abuelita Clásico"/></a><span class="ui-title-small wk-block">Abuelita Clásico</span><span>540g</span>
+          </div>
+          <div class="ui-modal-productos ui-modal ui-block-texture-cover ui-bg-gold-important" id="abuelita-clasico">
+            <h2 class="ui-modal-header ui-title ui-title-ornament wk-text-center" data-selectable="true">Preparación</h2>
+            <div class="ui-modal-content ui-box-model wk-margin-y-40" data-selectable="true"><img src="img/preparacion-tableta-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Clásico - Nestlé"></div>
+            <p class="wk-text-center wk-margin-y-40"><a class="ui-btn" href="#">Comprar					</a></p>
+          </div>
         </div>
         <div class="wk-col-3">
-            <div class="ui-block-padding"><a href="img/chocolate-abuelita-duo-pack-nestle.png" data-fancybox><img class="producto" src="img/chocolate-abuelita-duo-pack-nestle.png" alt="Abuelita Duo Pack"></a><span class="ui-title-small wk-block">Abuelita Duo Pack</span><span>540g</span>
-            </div>
+          <div class="ui-block-padding"><a href="javascript:;" data-fancybox="data-fancybox" data-src="#abuelita-duo"><img class="producto" src="img/chocolate-abuelita-duo-pack-nestle.png" alt="Abuelita Duo Pack"/></a><span class="ui-title-small wk-block">Abuelita Duo Pack</span><span>540g</span>
+          </div>
+          <div class="ui-modal-productos ui-modal ui-block-texture-cover ui-bg-gold-important" id="abuelita-duo">
+            <h2 class="ui-modal-header ui-title ui-title-ornament wk-text-center" data-selectable="true">Preparación</h2>
+            <div class="ui-modal-content ui-box-model wk-margin-y-40" data-selectable="true"><img src="img/preparacion-tableta-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Clásico - Duo Pack 540g - Nestlé"></div>
+            <p class="wk-text-center wk-margin-y-40"><a class="ui-btn" href="#">Comprar					</a></p>
+          </div>
         </div>
         <div class="wk-col-3">
-            <div class="ui-block-padding"><a href="img/chocolate-abuelita-clasico-small-nestle.png" data-fancybox><img class="producto" src="img/chocolate-abuelita-clasico-small-nestle.png" alt="Abuelita Clásico"></a><span class="ui-title-small wk-block">Abuelita Clásico</span><span>360g</span>
-            </div>
+          <div class="ui-block-padding"><a href="javascript:;" data-fancybox="data-fancybox" data-src="#abuelita-clasico-chico"><img class="producto" src="img/chocolate-abuelita-clasico-small-nestle.png" alt="Abuelita Clásico"/></a><span class="ui-title-small wk-block">Abuelita Clásico</span><span>360g</span>
+          </div>
+          <div class="ui-modal-productos ui-modal ui-block-texture-cover ui-bg-gold-important" id="abuelita-clasico-chico">
+            <h2 class="ui-modal-header ui-title ui-title-ornament wk-text-center" data-selectable="true">Preparación</h2>
+            <div class="ui-modal-content ui-box-model wk-margin-y-40" data-selectable="true"><img src="img/preparacion-tableta-360g-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Clásico 360g"></div>
+            <p class="wk-text-center wk-margin-y-40"><a class="ui-btn" href="#">Comprar					</a></p>
+          </div>
         </div>
         <div class="wk-col-3">
-            <div class="ui-block-padding"><a href="img/chocolate-abuelita-granulado-nestle.png" data-fancybox><img class="producto" src="img/chocolate-abuelita-granulado-nestle.png" alt="Abuelita Granulado"></a><span class="ui-title-small wk-block">Abuelita Granulado</span><span>320g</span>
-            </div>
+          <div class="ui-block-padding"><a href="javascript:;" data-fancybox="data-fancybox" data-src="#abuelita-granulado"><img class="producto" src="img/chocolate-abuelita-granulado-nestle.png" alt="Abuelita Granulado"/></a><span class="ui-title-small wk-block">Abuelita Granulado</span><span>320g</span>
+          </div>
+          <div class="ui-modal-productos ui-modal ui-block-texture-cover ui-bg-gold-important" id="abuelita-granulado">
+            <h2 class="ui-modal-header ui-title ui-title-ornament wk-text-center" data-selectable="true">Preparación</h2>
+            <div class="ui-modal-content ui-box-model wk-margin-y-40" data-selectable="true"><img src="img/preparacion-polvo-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Granulado - Nestlé"></div>
+            <p class="wk-text-center wk-margin-y-40"><a class="ui-btn" href="#">Comprar					</a></p>
+          </div>
         </div>
       </div>
       <div class="wk-cols">
         <div class="wk-col-3">
-            <div class="ui-block-padding"><a href="img/chocolate-abuelita-marqueta-nestle.png" data-fancybox><img class="producto" src="img/chocolate-abuelita-marqueta-nestle.png" alt="Abuelita Marqueta"></a><span class="ui-title-small wk-block">Abuelita Marqueta</span><span>180g</span>
-            </div>
+          <div class="ui-block-padding"><a href="javascript:;" data-fancybox="data-fancybox" data-src="#abuelita-marqueta"><img class="producto" src="img/chocolate-abuelita-marqueta-nestle.png" alt="Abuelita Marqueta"/></a><span class="ui-title-small wk-block">Abuelita Marqueta</span><span>180g</span>
+          </div>
+          <div class="ui-modal-productos ui-modal ui-block-texture-cover ui-bg-gold-important" id="abuelita-marqueta">
+            <h2 class="ui-modal-header ui-title ui-title-ornament wk-text-center" data-selectable="true">Preparación</h2>
+            <div class="ui-modal-content ui-box-model wk-margin-y-40" data-selectable="true"><img src="img/preparacion-marqueta-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Marqueta - Nestlé"></div>
+            <p class="wk-text-center wk-margin-y-40"><a class="ui-btn" href="#">Comprar					</a></p>
+          </div>
         </div>
         <div class="wk-col-3">
-            <div class="ui-block-padding"><a href="img/chocolate-abuelita-duo-pack.png" data-fancybox><img class="producto" src="img/chocolate-abuelita-duo-pack.png" alt="Abuelita Duo Pack"></a><span class="ui-title-small wk-block">Abuelita Duo Pack</span>
-            </div>
+          <div class="ui-block-padding"><a href="javascript:;" data-fancybox="data-fancybox" data-src="#abuelita-duo-pack"><img class="producto" src="img/chocolate-abuelita-duo-pack.png" alt="Abuelita Duo Pack"/></a><span class="ui-title-small wk-block">Abuelita Duo Pack</span>
+          </div>
+          <div class="ui-modal-productos ui-modal ui-block-texture-cover ui-bg-gold-important" id="abuelita-duo-pack">
+            <h2 class="ui-modal-header ui-title ui-title-ornament wk-text-center" data-selectable="true">Preparación</h2>
+            <div class="ui-modal-content ui-box-model wk-margin-y-40" data-selectable="true"><img src="img/preparacion-instantaneo-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita - Duo Pack - Nestlé"></div>
+            <p class="wk-text-center wk-margin-y-40"><a class="ui-btn" href="#">Comprar					</a></p>
+          </div>
         </div>
         <div class="wk-col-3">
-            <div class="ui-block-padding"><a href="img/chocolate-abuelita-instantaneo-nestle.png" data-fancybox><img class="producto" src="img/chocolate-abuelita-instantaneo-nestle.png" alt="Abuelita Instantaneo"></a><span class="ui-title-small wk-block">Abuelita Instantaneo</span><span>40g</span>
-            </div>
+          <div class="ui-block-padding"><a href="javascript:;" data-fancybox="data-fancybox" data-src="#abuelita-instantaneo"><img class="producto" src="img/chocolate-abuelita-instantaneo-nestle.png" alt="Abuelita Instantaneo"/></a><span class="ui-title-small wk-block">Abuelita Instantaneo</span><span>40g</span>
+          </div>
+          <div class="ui-modal-productos ui-modal ui-block-texture-cover ui-bg-gold-important" id="abuelita-instantaneo">
+            <h2 class="ui-modal-header ui-title ui-title-ornament wk-text-center" data-selectable="true">Preparación</h2>
+            <div class="ui-modal-content ui-box-model wk-margin-y-40" data-selectable="true"><img src="img/preparacion-instantaneo-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Instantaneo - Nestlé"></div>
+            <p class="wk-text-center wk-margin-y-40"><a class="ui-btn" href="#">Comprar					</a></p>
+          </div>
         </div>
         <div class="wk-col-3">
-            <div class="ui-block-padding"><a href="img/chocolate-abuelita-promocion-nestle.png" data-fancybox><img class="producto" src="img/chocolate-abuelita-promocion-nestle.png" alt="Abuelita Promoción"></a><span class="ui-title-small wk-block">Abuelita Promoción</span><span>630g</span>
-            </div>
+          <div class="ui-block-padding"><a href="javascript:;" data-fancybox="data-fancybox" data-src="#abuelita-promocion"><img class="producto" src="img/chocolate-abuelita-promocion-nestle.png" alt="Abuelita Promoción"/></a><span class="ui-title-small wk-block">Abuelita Promoción</span><span>630g</span>
+          </div>
+          <div class="ui-modal-productos ui-modal ui-block-texture-cover ui-bg-gold-important" id="abuelita-promocion">
+            <h2 class="ui-modal-header ui-title ui-title-ornament wk-text-center" data-selectable="true">Preparación</h2>
+            <div class="ui-modal-content ui-box-model wk-margin-y-40" data-selectable="true"><img src="img/preparacion-tableta-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Clásico - Nestlé"></div>
+            <p class="wk-text-center wk-margin-y-40"><a class="ui-btn" href="#">Comprar					</a></p>
+          </div>
         </div>
       </div>
       <div class="ui-block-padding"><a class="ui-btn" href="#">Comprar</a></div>

@@ -15,42 +15,117 @@ main(role="main")
 			'img/icon-productos.png'
 		)
 		.container.ui-box-model
-			a.ui-btn-gold(href="#") Conoce nuestras <br> promociones
+			// 
+				Modal con layout de promoción	
+				
+				Cómo llamar a un modal:
+				a(href="javascript:;" data-fancybox data-src="#id-del-modal") Contenido
+				
+				e incluir el mixin en alguna sección del layout con los siguientes argumentos:
+				
+				+modalPromocion( 'id', 'titulo', 'contenido' )
+				
+				$id - El id al que se hará referencia en el link que abre el modal
+				$titulo - El título que aparecerá en el modal
+				$contenido - El contenido del modal, acepta tags de html p.ej <strong></strong>
+				
+				El template de este mixin se encuentra en jade/_mixins.jade
+				
+			a.ui-btn-gold(href="javascript:;" data-fancybox data-src="#promociones-modal") Conoce nuestras <br> promociones
+			
+			+modalPromocion( 
+				'promociones-modal',
+				'Promoción', 
+				'contenido' 
+				)
 					
 				
 	+sectionLeyend('productos-leyend', '')
 		strong.ui-text-gold Lorem ipsum dolor sit amet, consectetur adipiscing 
 		span Donec vel ipsum eu enim faucibus semper sed non leo. Maecenas vehicula, nisi ut ullamcorper molestie.
 
-	mixin producto( title, description, image )
-		.ui-block-padding
-			a(href='' + image + '' data-fancybox): img.producto(src='' + image + '' alt='' + title + '' )
-			span.ui-title-small.wk-block= title
-			if description
-				span= description
-	
 	section#nuestros-productos.ui-block-texture-cover.ui-box-model.wk-text-center
 		.wk-section-wrap
 			.wk-cols
 				.wk-col-3
-					+producto( 'Abuelita Clásico', '540g', 'img/chocolate-abuelita-clasico-nestle.png' )
+					//
+						Los productos se imprimen con un mixin con la siguiente estructura:
+						
+						+producto( 'id', 'titulo', 'descripcion', 'imagen', 'ContenidoDeModal' )
+						
+						$id - El id del modal, no del producto
+						$titulo - EL título del producto, aparecerá en el producto
+						$descripcion - La descripción del producto en forma de peso del empaque
+						$imagen - URL relativa de la imagen desde la raíz del proyecto
+						$contenidoDeModal - El contenido del modal (acepta tags normales de html p.ej. <strong>Texto</strong>)
+						
+						El mixin se encuentra en jade/_mixins.jade
+					+producto( 
+						'abuelita-clasico', 
+						'Abuelita Clásico', 
+						'540g', 
+						'img/chocolate-abuelita-clasico-nestle.png', 
+						'<img src="img/preparacion-tableta-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Clásico - Nestlé">' 
+						)
 				.wk-col-3
-					+producto( 'Abuelita Duo Pack', '540g', 'img/chocolate-abuelita-duo-pack-nestle.png' )
+					+producto( 
+						'abuelita-duo', 
+						'Abuelita Duo Pack', 
+						'540g', 
+						'img/chocolate-abuelita-duo-pack-nestle.png', 
+						'<img src="img/preparacion-tableta-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Clásico - Duo Pack 540g - Nestlé">' 
+						)
 				.wk-col-3
-					+producto( 'Abuelita Clásico', '360g', 'img/chocolate-abuelita-clasico-small-nestle.png' )
+					+producto( 
+						'abuelita-clasico-chico', 
+						'Abuelita Clásico', 
+						'360g', 
+						'img/chocolate-abuelita-clasico-small-nestle.png', 
+						'<img src="img/preparacion-tableta-360g-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Clásico 360g">' 
+						)
 				.wk-col-3
-					+producto( 'Abuelita Granulado', '320g', 'img/chocolate-abuelita-granulado-nestle.png' )
+					+producto( 
+						'abuelita-granulado', 
+						'Abuelita Granulado', 
+						'320g', 
+						'img/chocolate-abuelita-granulado-nestle.png', 
+						'<img src="img/preparacion-polvo-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Granulado - Nestlé">' 
+						)
 			.wk-cols
 				.wk-col-3
-					+producto( 'Abuelita Marqueta', '180g', 'img/chocolate-abuelita-marqueta-nestle.png' )
+					+producto( 
+						'abuelita-marqueta', 
+						'Abuelita Marqueta', 
+						'180g', 
+						'img/chocolate-abuelita-marqueta-nestle.png', 
+						'<img src="img/preparacion-marqueta-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Marqueta - Nestlé">' 
+						)
 				.wk-col-3
-					+producto( 'Abuelita Duo Pack', '', 'img/chocolate-abuelita-duo-pack.png' )
+					+producto( 
+						'abuelita-duo-pack', 
+						'Abuelita Duo Pack', 
+						'', 
+						'img/chocolate-abuelita-duo-pack.png', 
+						'<img src="img/preparacion-instantaneo-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita - Duo Pack - Nestlé">' 
+						)
 				.wk-col-3
-					+producto( 'Abuelita Instantaneo', '40g', 'img/chocolate-abuelita-instantaneo-nestle.png' )
+					+producto( 
+						'abuelita-instantaneo', 
+						'Abuelita Instantaneo', 
+						'40g', 
+						'img/chocolate-abuelita-instantaneo-nestle.png', 
+						'<img src="img/preparacion-instantaneo-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Instantaneo - Nestlé">' 
+						)
 				.wk-col-3
-					+producto( 'Abuelita Promoción', '630g', 'img/chocolate-abuelita-promocion-nestle.png' )
+					+producto( 
+						'abuelita-promocion', 
+						'Abuelita Promoción', 
+						'630g', 
+						'img/chocolate-abuelita-promocion-nestle.png', 
+						'<img src="img/preparacion-tableta-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Clásico - Nestlé">' 
+						)
 					
 			.ui-block-padding
 				a.ui-btn(href="#") Comprar
-				
+								
 include footer.jade

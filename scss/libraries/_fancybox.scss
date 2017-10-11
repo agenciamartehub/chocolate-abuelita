@@ -13,3 +13,8 @@
 	max-width  : 80%;
 	max-height : 80%;
 }
+
+.fancybox-close-small:after {
+    background-color: $secondaryColor !important;
+    color: $mainColor !important;
+}

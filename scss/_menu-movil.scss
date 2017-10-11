@@ -10,6 +10,7 @@
 	@include transition;
 	.ui-menu {
 		li {
+			font-style: normal;
 			display: flex;
 			align-items: center;
 			opacity: 0;
@@ -42,6 +43,8 @@ body.off-canvas-is-active {
 	}
 }
 
-body {
-	transition: all .5s cubic-bezier(0.74, 0.02, 0.58, 1);
+@media #{$onlyMobile} {
+	body {
+		transition: all .5s cubic-bezier(0.74, 0.02, 0.58, 1);
+	}	
 }

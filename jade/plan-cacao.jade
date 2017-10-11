@@ -15,7 +15,16 @@ main(role="main")
 			''
 		)
 		.container.ui-box-model
-			a.ui-btn(href="https://www.youtube.com/watch?v=92yYF9o6Jng" data-fancybox) Más información
+			a.ui-btn(href="javascript:;" data-fancybox data-src="#plan-cacao-mas-informacion") Más información
+			+modal( 
+				'plan-cacao-mas-informacion', 
+				'Plan Cacao', 
+				'' 
+				)
+				.wk-text-center
+					p.ui-title-small En 2013 Nestlé lanza "Plan Cacao" en México reforzando el compromiso de la compañia con la recuperación del caco originario de México mediante la inversión de más de 100 millones de pesos.
+					p Plan Cacao es una iniciativa mundial de Nestlé que busca apoyar a los agricultores para asegurar una producción de cacao sustentable, conservar el medio ambiente y contribuir a una buena calidad de vida para los productores como parte de su filosofía de Creación de Valor Compartido.
+					p Esta iniciativa apoya el aumento de la producción del campo cacotero para triplicar su capacidad incrememntando a más de 5,000 el número de familias beneficiadas.
 	
 	section#plan-cacao.wk-wrap-1100.wk-children-text-center.ui-m-block-texture-cover.ui-d-block-texture
 		.wk-section-wrap
@@ -66,8 +75,6 @@ main(role="main")
 				h6.ui-title.wk-m Logros
 				img.wk-padding-y-40(src="img/logo-cocoa-plan.png" alt="Plan Cacao Nestle Logo")
 				
-				h2.ui-subtitle 70% mayor productividad en las parcelas y las cooperativas generaron una derrama económica superior a los 12 millones por el valor agregado a su producto.
-									
+				h2.ui-subtitle 70% mayor productividad en las parcelas y las cooperativas generaron una derrama económica superior a los 12 millones por el valor agregado a su producto.					
 	
-
 include footer.jade

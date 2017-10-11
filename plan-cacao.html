@@ -1,4 +1,54 @@
-<!DOCTYPE html>
+
+<!-- Encabzado de página ejemplo aquí http://prntscr.com/gw5x53-->
+<!-- Sección Leyend, recuadro de texto con fondo rojo y textura de fondo ejemplo aquí http://prntscr.com/gw5wof-->
+<!-- 
+Productos, solo imprime un producto, es necesario un mixin por cada producto y estructurar un layout previamente
+
+Los productos se imprimen con un mixin con la siguiente estructura:
++producto( 'id', 'titulo', 'descripcion', 'imagen', 'ContenidoDeModal' )
+$id - El id del modal, no del producto
+$titulo - EL título del producto, aparecerá en el producto
+$descripcion - La descripción del producto en forma de peso del empaque
+$imagen - URL relativa de la imagen desde la raíz del proyecto
+$contenidoDeModal - El contenido del modal (acepta tags normales de html p.ej. <strong>Texto</strong>)
+El mixin se encuentra en jade/_mixins.jade
+
+-->
+<!-- 
+Modal genérico
+
+Cómo llamar a un modal:
+a(href="javascript:;" data-fancybox data-src="#id-del-modal")
+
+E incluir el mixin en alguna sección del layout con los siguientes argumentos:
+
+El contenido del modal será incluido como uno o varios elementos de html
+indentados en el mixin, como se muestra en el siguiente ejemplo:
+
++modal( 'id', 'titulo' )
+	p Contenido
+	span Contenido
+
+$id - El id al que se hará referencia en el link que abre el modal
+$titulo - El título que aparecerá en el modal
+$contenido - El contenido del modal, acepta tags de html p.ej <strong></strong>
+
+-->
+<!-- 
+Modal con layout de promoción	
+
+Cómo llamar a un modal:
+a(href="javascript:;" data-fancybox data-src="#id-del-modal") Contenido
+
+e incluir el mixin en alguna sección del layout con los siguientes argumentos:
+
++modalPromocion( 'id', 'titulo', 'contenido' )
+
+$id - El id al que se hará referencia en el link que abre el modal
+$titulo - El título que aparecerá en el modal
+$contenido - El contenido del modal, acepta tags de html p.ej <strong></strong>
+	
+--><!DOCTYPE html>
 <html>
   <body class="wk-wrap-1920">
     <header class="wk-section ui-box-model" id="main-header">
@@ -72,7 +122,18 @@
     <div class="wk-section-wrap">
       <div class="ui-section-header ui-box-model" style="background-image: url(img/plan-cacao-video-poster-nestle.png);">
         <div class="ui-section-content">
-          <div class="container ui-box-model"><a class="ui-btn" href="https://www.youtube.com/watch?v=92yYF9o6Jng" data-fancybox>Más información</a></div>
+          <div class="container ui-box-model"><a class="ui-btn" href="javascript:;" data-fancybox data-src="#plan-cacao-mas-informacion">Más información</a>
+            <div class="ui-modal ui-block-texture-cover ui-bg-gold-important" id="plan-cacao-mas-informacion">
+              <h2 class="ui-title-big ui-title-ornament wk-text-center" data-selectable="true">Plan Cacao</h2>
+              <p data-selectable="true">
+                <div class="wk-text-center">
+                  <p class="ui-title-small">En 2013 Nestlé lanza "Plan Cacao" en México reforzando el compromiso de la compañia con la recuperación del caco originario de México mediante la inversión de más de 100 millones de pesos.</p>
+                  <p>Plan Cacao es una iniciativa mundial de Nestlé que busca apoyar a los agricultores para asegurar una producción de cacao sustentable, conservar el medio ambiente y contribuir a una buena calidad de vida para los productores como parte de su filosofía de Creación de Valor Compartido.</p>
+                  <p>Esta iniciativa apoya el aumento de la producción del campo cacotero para triplicar su capacidad incrememntando a más de 5,000 el número de familias beneficiadas.</p>
+                </div>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -128,7 +189,7 @@
     <div class="wk-section-wrap">
       <div class="ui-block-padding"> 
         <h6 class="ui-title wk-m">Logros</h6><img class="wk-padding-y-40" src="img/logo-cocoa-plan.png" alt="Plan Cacao Nestle Logo">
-        <h2 class="ui-subtitle">70% mayor productividad en las parcelas y las cooperativas generaron una derrama económica superior a los 12 millones por el valor agregado a su producto.</h2>
+        <h2 class="ui-subtitle">70% mayor productividad en las parcelas y las cooperativas generaron una derrama económica superior a los 12 millones por el valor agregado a su producto.					</h2>
       </div>
     </div>
   </section>

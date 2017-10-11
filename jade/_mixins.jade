@@ -1,3 +1,4 @@
+// Encabzado de página ejemplo aquí http://prntscr.com/gw5x53
 mixin sectionHeader( id, classes, title, leyend, background, imageURL )
 	section(id=id class='"ui-section-header wk-section ' + classes + '"')
 		.wk-section-wrap
@@ -11,6 +12,7 @@ mixin sectionHeader( id, classes, title, leyend, background, imageURL )
 						h3.ui-title.ui-text-white= leyend
 					block
 
+// Sección Leyend, recuadro de texto con fondo rojo y textura de fondo ejemplo aquí http://prntscr.com/gw5wof
 mixin sectionLeyend( id, classes )
 	section(id=id, class='"wk-section wk-wrap-1100 ui-bg-red wk-text-center ui-block-texture-invert ' + classes + '"')
 		.wk-section-wrap
@@ -18,5 +20,73 @@ mixin sectionLeyend( id, classes )
 				h2.ui-subtitle
 					block
 					
+	
+// 
+	Productos, solo imprime un producto, es necesario un mixin por cada producto y estructurar un layout previamente
 
-					
+	Los productos se imprimen con un mixin con la siguiente estructura:
+	+producto( 'id', 'titulo', 'descripcion', 'imagen', 'ContenidoDeModal' )
+	$id - El id del modal, no del producto
+	$titulo - EL título del producto, aparecerá en el producto
+	$descripcion - La descripción del producto en forma de peso del empaque
+	$imagen - URL relativa de la imagen desde la raíz del proyecto
+	$contenidoDeModal - El contenido del modal (acepta tags normales de html p.ej. <strong>Texto</strong>)
+	El mixin se encuentra en jade/_mixins.jade
+	
+mixin producto( id, title, description, image, modalContent )
+	.ui-block-padding
+		a(href='javascript:;' data-fancybox data-src='#' + id): img.producto(src='' + image + '' alt='' + title + '' )
+		span.ui-title-small.wk-block= title
+		if description
+			span= description
+			
+	.ui-modal-productos.ui-modal.ui-block-texture-cover.ui-bg-gold-important(id=id)
+		h2.ui-modal-header.ui-title.ui-title-ornament.wk-text-center(data-selectable="true") Preparación
+		.ui-modal-content.ui-box-model.wk-margin-y-40(data-selectable="true")!= modalContent
+		p.wk-text-center.wk-margin-y-40: a.ui-btn(href="#") Comprar					
+
+
+// 
+	Modal genérico
+	
+	Cómo llamar a un modal:
+	a(href="javascript:;" data-fancybox data-src="#id-del-modal")
+	
+	E incluir el mixin en alguna sección del layout con los siguientes argumentos:
+	
+	El contenido del modal será incluido como uno o varios elementos de html
+	indentados en el mixin, como se muestra en el siguiente ejemplo:
+	
+	+modal( 'id', 'titulo' )
+		p Contenido
+		span Contenido
+	
+	$id - El id al que se hará referencia en el link que abre el modal
+	$titulo - El título que aparecerá en el modal
+	$contenido - El contenido del modal, acepta tags de html p.ej <strong></strong>
+	
+mixin modal( id, header )
+	.ui-modal.ui-block-texture-cover.ui-bg-gold-important(id=id)
+		h2.ui-title-big.ui-title-ornament.wk-text-center(data-selectable="true")= header
+		p(data-selectable="true")!= content	
+			block	
+
+// 
+	Modal con layout de promoción	
+	
+	Cómo llamar a un modal:
+	a(href="javascript:;" data-fancybox data-src="#id-del-modal") Contenido
+	
+	e incluir el mixin en alguna sección del layout con los siguientes argumentos:
+	
+	+modalPromocion( 'id', 'titulo', 'contenido' )
+	
+	$id - El id al que se hará referencia en el link que abre el modal
+	$titulo - El título que aparecerá en el modal
+	$contenido - El contenido del modal, acepta tags de html p.ej <strong></strong>
+		
+mixin modalPromocion( id, header, content)
+	.ui-modal.ui-block-texture-cover.ui-bg-gold-important(id=id)
+		h2.ui-modal-header.ui-title.ui-title-ornament.wk-text-center(data-selectable="true") Promoción
+		.ui-modal-content.ui-box-model.wk-margin-y-40(data-selectable="true")!= content
+		p.wk-text-center.wk-margin-y-40: a.ui-btn(href="#") Comprar		

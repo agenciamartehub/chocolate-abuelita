@@ -2,18 +2,36 @@
 	color: $secondaryColor;
 }
 
+.ui-text-red-important {
+	color: $secondaryColor !important;
+}
+
 .ui-text-gold,
 .ui-text-yellow {
-	color: $mainColor
+	color: $mainColor;
+}
+
+.ui-text-gold-important,
+.ui-text-yellow-important {
+	color: $mainColor !important;
 }
 
 .ui-text-white {
 	color: $white;
 }
 
+.ui-text-white-important {
+	color: $white !important;
+}
+
 .ui-text-black,
 .ui-text-dark {
 	color: $black;
+}
+
+.ui-text-black-important,
+.ui-text-dark-important {
+	color: $black !important;
 }
 
 // Text style
@@ -49,9 +67,19 @@
 	background-color: $white;
 }
 
+.ui-bg-white-important,
+.ui-bg-light-important {
+	background-color: $white !important;
+}
+
 .ui-bg-black,
 .ui-bg-dark {
 	background-color: $black;
+}
+
+.ui-bg-black-important,
+.ui-bg-dark-important {
+	background-color: $black !important;
 }
 
 .ui-bg-red {
@@ -59,17 +87,36 @@
 	color: $white;
 }
 
+.ui-bg-red-important {
+	background-color: $secondaryColor !important;
+	color: $white !important;
+}
+
 .ui-bg-gold,
 .ui-bg-yellow {
 	background-color: $mainColor;
 }
 
+.ui-bg-gold-important,
+.ui-bg-yellow-important {
+	background-color: $mainColor !important;
+}
+
+
 .ui-bg-blue {
 	background-color: $blue;
 }
 
+.ui-bg-blue-important {
+	background-color: $blue !important;
+}
+
 .ui-bg-gray {
 	background-color: $gray;
+}
+
+.ui-bg-gray-important {
+	background-color: $gray !important;
 }
 
 
@@ -137,7 +184,7 @@
 
 
 // Títulos
-[class*="ui-title"]:not(.ui-title-ornament) {
+[class*="ui-title"] {
 	@include ui-font-model-times-new-roman;
 }
 

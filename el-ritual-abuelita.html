@@ -1,4 +1,54 @@
-<!DOCTYPE html>
+
+<!-- Encabzado de página ejemplo aquí http://prntscr.com/gw5x53-->
+<!-- Sección Leyend, recuadro de texto con fondo rojo y textura de fondo ejemplo aquí http://prntscr.com/gw5wof-->
+<!-- 
+Productos, solo imprime un producto, es necesario un mixin por cada producto y estructurar un layout previamente
+
+Los productos se imprimen con un mixin con la siguiente estructura:
++producto( 'id', 'titulo', 'descripcion', 'imagen', 'ContenidoDeModal' )
+$id - El id del modal, no del producto
+$titulo - EL título del producto, aparecerá en el producto
+$descripcion - La descripción del producto en forma de peso del empaque
+$imagen - URL relativa de la imagen desde la raíz del proyecto
+$contenidoDeModal - El contenido del modal (acepta tags normales de html p.ej. <strong>Texto</strong>)
+El mixin se encuentra en jade/_mixins.jade
+
+-->
+<!-- 
+Modal genérico
+
+Cómo llamar a un modal:
+a(href="javascript:;" data-fancybox data-src="#id-del-modal")
+
+E incluir el mixin en alguna sección del layout con los siguientes argumentos:
+
+El contenido del modal será incluido como uno o varios elementos de html
+indentados en el mixin, como se muestra en el siguiente ejemplo:
+
++modal( 'id', 'titulo' )
+	p Contenido
+	span Contenido
+
+$id - El id al que se hará referencia en el link que abre el modal
+$titulo - El título que aparecerá en el modal
+$contenido - El contenido del modal, acepta tags de html p.ej <strong></strong>
+
+-->
+<!-- 
+Modal con layout de promoción	
+
+Cómo llamar a un modal:
+a(href="javascript:;" data-fancybox data-src="#id-del-modal") Contenido
+
+e incluir el mixin en alguna sección del layout con los siguientes argumentos:
+
++modalPromocion( 'id', 'titulo', 'contenido' )
+
+$id - El id al que se hará referencia en el link que abre el modal
+$titulo - El título que aparecerá en el modal
+$contenido - El contenido del modal, acepta tags de html p.ej <strong></strong>
+	
+--><!DOCTYPE html>
 <html>
   <body class="wk-wrap-1920">
     <header class="wk-section ui-box-model" id="main-header">

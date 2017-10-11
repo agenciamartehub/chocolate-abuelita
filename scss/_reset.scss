@@ -76,3 +76,8 @@ iframe {
 img {
 	vertical-align: middle;
 }
+
+p {
+	margin-top: $boxModel;
+	margin-bottom: $boxModel;
+}

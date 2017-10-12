@@ -26,6 +26,15 @@
 	}
 }
 
+@media print {
+	.ui-section-header {
+		height: 7cm;
+		.ui-section-icon {
+			display: none;
+		}
+	}
+}
+
 .safari .ui-section-header {
 	height: 600px;
 }

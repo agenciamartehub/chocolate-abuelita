@@ -27,3 +27,12 @@ body {
 	color: $secondaryColor;
 	background-color: $mainColor;
 }
+
+@media print {
+	.no-print {
+		display: none;
+	}
+	.print {
+		font-size: 10px !important;
+	}
+}

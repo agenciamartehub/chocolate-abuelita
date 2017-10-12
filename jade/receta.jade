@@ -14,13 +14,8 @@
 -var mensajeDeTwitter = 'Receta de Chocolate abuelita'
 -var receta = 'receta.html'
 
-include header.jade
+include _mixins.jade
 
-+metatags(
-	'Receta', 
-	'Descripción'
-	)
-	
 main#receta(role="main")
 
 	+sectionHeader(

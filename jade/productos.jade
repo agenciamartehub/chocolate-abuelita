@@ -1,10 +1,4 @@
-include header.jade
-
-+metatags(
-	'Nuestros productos', 
-	'Descripción'
-	)
-
+include _mixins.jade
 main(role="main")
 	+sectionHeader(
 			'nuestros-productos-banner', 
@@ -15,7 +9,7 @@ main(role="main")
 			'img/icon-productos.png'
 		)
 		.container.ui-box-model
-			// 
+			//- 
 				Modal con layout de promoción	
 				
 				Cómo llamar a un modal:
@@ -33,7 +27,7 @@ main(role="main")
 				
 			a#lightbox-call-to-action.ui-btn-gold(href="#") Conoce nuestras <br> promociones
 			
-			//
+			//-
 				+modalPromocion( 
 					'promociones-modal',
 					'Promoción', 
@@ -49,7 +43,7 @@ main(role="main")
 		.wk-section-wrap
 			.wk-cols
 				.wk-col-3
-					//
+					//-
 						Los productos se imprimen con un mixin con la siguiente estructura:
 						
 						+producto( 'id', 'titulo', 'descripcion', 'imagen', 'ContenidoDeModal' )

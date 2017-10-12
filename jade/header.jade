@@ -28,6 +28,9 @@ mixin metatags(title, description)
 			link(rel="canonical" href=url)
 			<!-- Scripts -->
 			script(type="text/javascript" src="js/jquery-3.1.1.min.js")
+			script(type="text/javascript" src="http://code.angularjs.org/1.2.13/angular.js")
+			script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js")
+			script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js")
 			script(type="text/javascript" src="js/scripts.js")
 			<!-- Libraries -->
 			// Fancybox
@@ -48,15 +51,19 @@ mixin metatags(title, description)
 			//tweenmax
 			script(type="text/javascript" src=url + 'assets/tweenmax/TweenMax.min.js')
 			script(type="text/javascript" src=url + 'assets/scrollto/ScrollToPlugin.min.js')
+			// Angular 
 			<!-- Styles -->
 			link(rel="stylesheet" href="css/style.css")
+			
+			base(href=url)
+			meta(name="fragment" content="!")
 			
 
 		body.wk-wrap-1920
 			header#main-header.wk-section.ui-box-model.no-print
 				section.wk-section-wrap
 					#site-logo
-						a(href= url + 'index.html'): img.logo(src="img/logo-abuelita-nestle.png" alt="Chocolate Abuelita")
+						a(href="#home"): img.logo(src="img/logo-abuelita-nestle.png" alt="Chocolate Abuelita")
 					.wk-cols-m
 						.wk-col
 							nav#social-nav
@@ -68,6 +75,7 @@ mixin metatags(title, description)
 						.wk-col.wk-d 
 							nav#site-nav
 								ul.menu
+									li.menu-item: a(href= url + 'home.html') Historia
 									li.menu-item: a(href= url + 'historia.html') Historia
 									li.menu-item: a(href= url + 'productos.html') Productos
 									li.menu-item: a(href= url + 'el-ritual-abuelita.html') Ritual
@@ -77,7 +85,7 @@ mixin metatags(title, description)
 						.wk-col-1.wk-m 
 							.off-canvas-icon
 								span.fa.fa-bars
-			
+		
 		
 								
 					

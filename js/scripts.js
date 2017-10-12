@@ -74,4 +74,64 @@ jQuery(document).ready(function($){
 			});
 	});
 
+
+});
+
+var nestleapp = angular.module('nestleapp', ['ngRoute', 'ngAnimate']);
+
+nestleapp.config(function($routeProvider, $locationProvider) {
+
+	$routeProvider
+
+	.when('/', {
+		templateUrl: 'pages/home.html',
+		controller: 'mainController'
+	})
+	.when('/historia', {
+		templateUrl: 'pages/historia.html',
+		controller: 'historiaController'
+	})
+	.when('/ritual-abuelita', {
+		templateUrl: 'pages/el-ritual-abuelita.html',
+		controller: 'ritualController'
+	})
+	.when('/productos', {
+		templateUrl: 'pages/productos.html',
+		controller: 'productosController'
+	})
+	.when('/recetas', {
+		templateUrl: 'pages/recetas.html',
+		controller: 'recetasController'
+	})
+	.when('/plan-cacao', {
+		templateUrl: 'pages/plan-cacao.html',
+		controller: 'plancacaoController'
+	});
+
+	$locationProvider.html5Mode(false);
+
+});
+
+nestleapp.controller('mainController', function($scope) {
+	$scope.pageClass = 'home';
+});
+
+nestleapp.controller('historiaController', function($scope) {
+	$scope.pageClass = 'historia';
+});
+
+nestleapp.controller('ritualController', function($scope) {
+	$scope.pageClass = 'ritual-abuelita';
+});
+
+nestleapp.controller('productosController', function($scope) {
+	$scope.pageClass = 'productos';
+});
+
+nestleapp.controller('recetasController', function($scope) {
+	$scope.pageClass = 'recetas';
+});
+
+nestleapp.controller('plancacaoController', function($scope) {
+	$scope.pageClass = 'plan-cacao';
 });

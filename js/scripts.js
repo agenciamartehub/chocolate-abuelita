@@ -47,4 +47,9 @@ jQuery(document).ready(function($){
 		}
 	});
 
+	// ui-btn-share añade clase al botón de compartir en receta
+	$('.ui-btn-share').click(function(){
+		$(this).toggleClass('is-active');
+	});
+
 });

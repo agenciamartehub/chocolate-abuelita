@@ -1,3 +1,19 @@
+//- 
+	Instrucciones para botón de compartir
+	
+	Abajo encontrarás la variable mensajeDeTwitter, simplemente introduce 
+	el texto que aparecerá al compartir en twitter
+	
+	EL botón se genera desde un mixin en jade/_mixins.jade 
+	
+	El mensaje se puede introducir directamente en el mixin como string pero para practicidad
+	se ha incluido en la variable mencionada.
+	
+	+btnShare( 'ElMensajeDeTwitter' )
+
+-var mensajeDeTwitter = 'Receta de Chocolate abuelita'
+-var receta = 'receta.html'
+
 include header.jade
 
 +metatags(
@@ -75,10 +91,8 @@ main#receta(role="main")
 							span Imprimir
 							
 					.wk-col.ui-box-model
-						a.ui-btn(href="#")
-							img(src="img/icon-compartir.png" alt="Comparte")
-							span Compartir
-							
+						+btnShare( mensajeDeTwitter, receta )
+						
 					.wk-col.ui-box-model
 						a.ui-btn(href="/recetas.html") 
 							img(src="img/icon-conoce-mas-recetas.png" alt="Más recetas")

@@ -35,7 +35,7 @@ body.off-canvas-is-active {
 			}
 			@for $i from 1 through 50 {
 				li:nth-child(#{$i}) {
-					transition-delay: #{($i + 1) / 10}s;
+					transition-delay: #{($i + 4) / 10}s;
 				}
 			}
 
@@ -46,5 +46,5 @@ body.off-canvas-is-active {
 @media #{$onlyMobile} {
 	body {
 		transition: all .5s cubic-bezier(0.74, 0.02, 0.58, 1);
-	}	
+	}
 }

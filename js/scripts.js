@@ -47,6 +47,12 @@ jQuery(document).ready(function($){
 		}
 	});
 
+	$('.off-canvas-menu .ui-menu li a').click(function(){
+		setTimeout(function(){
+			$('body').removeClass('off-canvas-is-active');
+		}, 750);
+	});
+
 	// ui-btn-share añade clase al botón de compartir en receta
 	$('.ui-btn-share').click(function(){
 		$(this).toggleClass('is-active');
@@ -75,8 +81,12 @@ jQuery(document).ready(function($){
 	});
 
 
+
+
 });
 
+
+// Cosas de angular
 var nestleapp = angular.module('nestleapp', ['ngRoute', 'ngAnimate']);
 
 nestleapp.config(function($routeProvider, $locationProvider) {
@@ -135,3 +145,9 @@ nestleapp.controller('recetasController', function($scope) {
 nestleapp.controller('plancacaoController', function($scope) {
 	$scope.pageClass = 'plan-cacao';
 });
+
+
+// Oculta el preloading
+setTimeout(function(){
+	$(".wk-preloading").fadeOut("slow");
+}, 2500);

@@ -57,6 +57,8 @@ html
 		
 
 	body(ng-app="nestleapp").wk-wrap-1920
+		.wk-preloading
+			span.wk-preloading-loader
 		header#main-header.wk-section.ui-box-model.no-print
 			section.wk-section-wrap
 				#site-logo
@@ -83,4 +85,6 @@ html
 							span.fa.fa-bars
 	
 		div(class="page page-{{ pageClass }}" ng-view)
+		
+include menu-movil.jade
 													

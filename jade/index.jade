@@ -30,7 +30,6 @@ html
 		script(type="text/javascript" src="http://code.angularjs.org/1.2.13/angular.js")
 		script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js")
 		script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js")
-		script(type="text/javascript" src="js/scripts.js")
 		<!-- Libraries -->
 		//- Fancybox
 		link(rel="stylesheet" href="assets/fancybox/jquery.fancybox.min.css")
@@ -51,6 +50,7 @@ html
 		script(type="text/javascript" src=url + 'assets/scrollto/ScrollToPlugin.min.js')
 		<!-- Styles -->
 		link(rel="stylesheet" href="css/style.css")
+		script(type="text/javascript" src="js/scripts.js")
 		
 		base(href=url)
 		meta(name="fragment" content="!")
@@ -60,7 +60,7 @@ html
 		header#main-header.wk-section.ui-box-model.no-print
 			section.wk-section-wrap
 				#site-logo
-					a(href= url + 'index.html'): img.logo(src= url + "img/logo-abuelita-nestle.png" alt="Chocolate Abuelita")
+					a(href="#"): img.logo(src= url + "img/logo-abuelita-nestle.png" alt="Chocolate Abuelita")
 				.wk-cols-m
 					.wk-col
 						nav#social-nav
@@ -81,7 +81,6 @@ html
 					.wk-col-1.wk-m 
 						.off-canvas-icon
 							span.fa.fa-bars
-		
+	
 		div(class="page page-{{ pageClass }}" ng-view)
 													
-include footer.jade

@@ -1,5 +1,33 @@
 include _mixins.jade
 main(role="main")
+	script.
+		$('.slider').slick({
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			dots: false,
+			arrows: true,
+			prevArrow: '<span class="ui-icon fa fa-chevron-left slick-arrow-left"></span>',
+			nextArrow: '<span class="ui-icon fa fa-chevron-right slick-arrow-right"></span>',
+			adaptiveHeight: true,
+			fade: true,
+			// asNavFor: '.da-slider-nav',
+			//autoplay: true,
+			responsive: [
+				{
+				  breakpoint: 415,
+				  settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: false,
+					arrows: false,
+					prevArrow: '<span class="fa fa-chevron-left"></span>',
+					nextArrow: '<span class="fa fa-chevron-right"></span>',
+				  }
+				},
+			]
+		});
 	section#main-slider.wk-section 
 		.wk-section-wrap
 			.slider
@@ -16,25 +44,25 @@ main(role="main")
 		.wk-section-wrap
 			.wk-cols
 				.wk-col 
-					a.main-icon-nav-wrap(href= url + 'historia.html')
+					a.main-icon-nav-wrap(href="#historia")
 						img.main-icon-nav-img.wk-img-responsive(src="img/01-image-historia-abuelita-nestle.jpg")
 						.container
 							img(src="img/icon-historia.png" alt="Historia")
 							span.content Historia
 				.wk-col
-					a.main-icon-nav-wrap(href=url + 'productos.html')
+					a.main-icon-nav-wrap(href="#productos")
 						img.main-icon-nav-img.wk-img-responsive(src="img/02-image-productos-abuelita-nestle.jpg")
 						.container
 							img(src="img/icon-productos.png" alt="Productos")
 							span.content Productos
 				.wk-col 
-					a.main-icon-nav-wrap(href= url + 'recetas.html')
+					a.main-icon-nav-wrap(href="#recetas")
 						img.main-icon-nav-img.wk-img-responsive(src="img/03-image-recetas-abuelita-nestle.jpg")
 						.container
 							img(src="img/icon-recetas.png" alt="Recentas")
 							span.content Recetas
 				.wk-col 
-					a.main-icon-nav-wrap(href= url + 'plan-cacao.html')
+					a.main-icon-nav-wrap(href="#plan-cacao")
 						img.main-icon-nav-img.wk-img-responsive(src="img/04-image-cocoa-plan-nestle.jpg")
 						.container
 							img(src="img/icon-cocoa-plan.png" alt="Cocoa Plan")

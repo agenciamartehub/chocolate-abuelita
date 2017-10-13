@@ -277,6 +277,18 @@
 	font-size:24px;
 }
 
+.ui-title-inherit {
+	font-size: inherit;
+}
+
+.ui-title-larger {
+	font-size: larger;
+}
+
+.ui-title-xx-larger {
+	font-size: xx-large;
+}
+
 [class*="ui-subtitle"] {
 	@include ui-font-model-montserrat;
 

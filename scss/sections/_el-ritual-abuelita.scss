@@ -13,4 +13,10 @@
 	.ui-block-padding {
 		min-height: 270px;
 	}
+	[class*="wk-col-"] {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
 }

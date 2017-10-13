@@ -25,14 +25,14 @@ main(role="main")
 				
 				El template de este mixin se encuentra en jade/_mixins.jade
 				
-			a#lightbox-call-to-action.ui-btn-gold(href="#") Conoce nuestras <br> promociones
+			a.ui-btn-gold(href="javascript:;" data-fancybox data-src="#promociones-modal") Conoce nuestras <br> promociones
 			
-			//-
-				+modalPromocion( 
-					'promociones-modal',
-					'Promoción', 
-					'contenido' 
-					)
+			+modalPromocion( 
+				'promociones-modal',
+				'Conoce nuestras promociones', 
+				'<img class="wk-d" src="img/banner-promo-abuelita-nestle.jpg"><img class="wk-m" src="img/banner-movil-promo-abuelita-nestle.jpg">', 
+				'http://abuelita.agenciamarte.com.mx'
+				)
 					
 				
 	+sectionLeyend('productos-leyend', '')
@@ -60,7 +60,7 @@ main(role="main")
 						'Abuelita Clásico', 
 						'540g', 
 						'img/chocolate-abuelita-clasico-nestle.png', 
-						'<img src="img/preparacion-tableta-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Clásico - Nestlé">' 
+						'<img class="wk-d" src="img/preparacion-tableta-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Clásico - Nestlé"><img class="wk-m" src="img/preparacion-tableta-chocolate-abuelita-nestle-movil.png" alt="Preparación Chocolate Abuelita Clásico - Nestlé">' 
 						)
 				.wk-col-3
 					+producto( 
@@ -68,7 +68,7 @@ main(role="main")
 						'Abuelita Duo Pack', 
 						'540g', 
 						'img/chocolate-abuelita-duo-pack-nestle.png', 
-						'<img src="img/preparacion-tableta-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Clásico - Duo Pack 540g - Nestlé">' 
+						'<img class="wk-d" src="img/preparacion-tableta-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Clásico - Duo Pack 540g - Nestlé"><img class="wk-m" src="img/preparacion-tableta-chocolate-abuelita-nestle-movil.png" alt="Preparación Chocolate Abuelita Clásico - Duo Pack 540g - Nestlé">' 
 						)
 				.wk-col-3
 					+producto( 
@@ -76,7 +76,7 @@ main(role="main")
 						'Abuelita Clásico', 
 						'360g', 
 						'img/chocolate-abuelita-clasico-small-nestle.png', 
-						'<img src="img/preparacion-tableta-360g-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Clásico 360g">' 
+						'<img class="wk-d" src="img/preparacion-tableta-360g-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Clásico 360g"><img class="wk-m" src="img/preparacion-tableta-360g-chocolate-abuelita-nestle-movil.png" alt="Preparación Chocolate Abuelita Clásico 360g">' 
 						)
 				.wk-col-3
 					+producto( 
@@ -84,7 +84,7 @@ main(role="main")
 						'Abuelita Granulado', 
 						'320g', 
 						'img/chocolate-abuelita-granulado-nestle.png', 
-						'<img src="img/preparacion-polvo-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Granulado - Nestlé">' 
+						'<img class="wk-d" src="img/preparacion-polvo-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Granulado - Nestlé"><img class="wk-m" src="img/preparacion-polvo-chocolate-abuelita-nestle-movil.png" alt="Preparación Chocolate Abuelita Granulado - Nestlé">' 
 						)
 			.wk-cols
 				.wk-col-3
@@ -93,7 +93,7 @@ main(role="main")
 						'Abuelita Marqueta', 
 						'180g', 
 						'img/chocolate-abuelita-marqueta-nestle.png', 
-						'<img src="img/preparacion-marqueta-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Marqueta - Nestlé">' 
+						'<img class="wk-d" src="img/preparacion-marqueta-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Marqueta - Nestlé"><img class="wk-m" src="img/preparacion-marqueta-chocolate-abuelita-nestle-movil.png" alt="Preparación Chocolate Abuelita Marqueta - Nestlé">' 
 						)
 				.wk-col-3
 					+producto( 
@@ -101,7 +101,7 @@ main(role="main")
 						'Abuelita Duo Pack', 
 						'', 
 						'img/chocolate-abuelita-duo-pack.png', 
-						'<img src="img/preparacion-instantaneo-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita - Duo Pack - Nestlé">' 
+						'<img class="wk-d" src="img/preparacion-instantaneo-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita - Duo Pack - Nestlé"><img class="wk-m" src="img/preparacion-instantaneo-chocolate-abuelita-nestle-movil.jpg" alt="Preparación Chocolate Abuelita - Duo Pack - Nestlé">' 
 						)
 				.wk-col-3
 					+producto( 
@@ -109,7 +109,7 @@ main(role="main")
 						'Abuelita Instantaneo', 
 						'40g', 
 						'img/chocolate-abuelita-instantaneo-nestle.png', 
-						'<img src="img/preparacion-instantaneo-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Instantaneo - Nestlé">' 
+						'<img class="wk-d" src="img/preparacion-instantaneo-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Instantaneo - Nestlé"><img class="wk-m" src="img/preparacion-instantaneo-chocolate-abuelita-nestle-movil.jpg" alt="Preparación Chocolate Abuelita Instantaneo - Nestlé">' 
 						)
 				.wk-col-3
 					+producto( 
@@ -117,10 +117,10 @@ main(role="main")
 						'Abuelita Promoción', 
 						'630g', 
 						'img/chocolate-abuelita-promocion-nestle.png', 
-						'<img src="img/preparacion-tableta-chocolate-abuelita-nestle.png" alt="Preparación Chocolate Abuelita Clásico - Nestlé">' 
+						'<img class="wk-d" src="img/preparacion-tableta-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Clásico - Nestlé"><img class="wk-m" src="img/preparacion-tableta-chocolate-abuelita-nestle-movil.png" alt="Preparación Chocolate Abuelita Clásico - Nestlé">' 
 						)
 					
 			.ui-block-padding
-				a.ui-btn(href="#") Comprar
+				a.ui-btn#lightbox-call-to-action(href="#") Comprar
 								
 include footer.jade

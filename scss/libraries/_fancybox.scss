@@ -18,3 +18,7 @@
     background-color: $secondaryColor !important;
     color: $mainColor !important;
 }
+
+.fancybox-close-small:focus:after {
+    outline: none;
+}

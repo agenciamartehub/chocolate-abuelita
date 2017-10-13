@@ -21,7 +21,7 @@
 		display: inline-block;
 		padding: 24px 0;
 		@media #{$onlyMobile} {
-			padding: 24px 0px 70px;
+			padding: 24px 4px 70px;
 		}
 	}
 
@@ -52,6 +52,16 @@
 			@media #{$onlyDesktop} {
 				.menu-item {
 					margin-right: 10px;
+				}
+			}
+			@media #{$onlyMobile} {
+				.menu-item {
+					a {
+						padding: {
+							left: 4px !important;
+							right: 4px !important;
+						}
+					}
 				}
 			}
 		}

@@ -1,90 +1,55 @@
-include _vars.jade
-doctype html
-html
-	head
-		<!-- info -->
-		meta(charset="UTF-8")
-		meta(http-equiv="content-type" content="text/html; charset=UTF-8")
-		meta(http-equiv="language" content="es-MX")
-		meta(name="creation_date" content="Wednesday, October 11th, 2017, 4:00 pm")
-		<!-- Site info -->
-		title Chocolate Abuelita
-		meta(name="description" content='')
-		<!-- Device & Browser -->
-		meta(name="HandheldFriendly" content="True")
-		meta(name="MobileOptimized" content="756")
-		meta(name="viewport" content="width=device-width, initial-scale=1.0")
-		meta(name="apple-touch-fullscreen" content="yes")
-		meta(name="format-detection" content="telephone=no")
-		meta(http-equiv="X-UA-Compatible" content="IE=edge")
-		meta(http-equiv="X-UA-Compatible" content="IE=EmulateIE10")
-		<!-- Icons & theme -->
-		link(rel="icon" type="image/ico" href= url + 'img/favicon.png')
-		meta(name="theme-color" content="#ffb500")
-		meta(name="apple-mobile-web-app-status-bar-style" content="#ffb500")
-		<!-- Links -->
-		link(rel="canonical" href=url)
-		<!-- Scripts -->
-		script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
-		//- Angular 
-		script(type="text/javascript" src="http://code.angularjs.org/1.2.13/angular.js")
-		script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js")
-		script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js")
-		<!-- Libraries -->
-		//- Fancybox
-		link(rel="stylesheet" href="assets/fancybox/jquery.fancybox.min.css")
-		script(type="text/javascript" src="assets/fancybox/jquery.fancybox.min.js")
-		//- WPKit ui
-		link(rel="stylesheet" href="assets/wpkitui2/wpkitui.css")
-		script(type="text/javascript" src="assets/wpkitui2/wpkitui.js")
-		//-slick
-		link(rel="stylesheet" href="assets/slick/slick-theme.css")
-		link(rel="stylesheet" href="assets/slick/slick.css")
-		script(type="text/javascript" src="assets/slick/slick.min.js")
-		<!-- Fonts -->
-		link(href="fonts/font-awesome/font-awesome.css" rel="stylesheet")
-		link(href="https://fonts.googleapis.com/css?family=Lato:200,400,900" rel="stylesheet")
-		link(href="https://fonts.googleapis.com/css?family=Montserrat:300,400,900" rel="stylesheet")
-		//- Tweenmax
-		script(type="text/javascript" src=url + 'assets/tweenmax/TweenMax.min.js')
-		script(type="text/javascript" src=url + 'assets/scrollto/ScrollToPlugin.min.js')
-		<!-- Styles -->
-		link(rel="stylesheet" href="css/style.css")
-		script(type="text/javascript" src="js/scripts.js")
-		
-		base(href=url)
-		meta(name="fragment" content="!")
-		
+//- index.jade
+extends header.jade
 
-	body(ng-app="nestleapp").wk-wrap-1920
-		.wk-preloading
-			span.wk-preloading-loader
-		header#main-header.wk-section.ui-box-model.no-print
-			section.wk-section-wrap
-				#site-logo
-					a(href="#"): img.logo(src= url + "img/logo-abuelita-nestle.png" alt="Chocolate Abuelita")
-				.wk-cols-m
-					.wk-col
-						nav#social-nav
-							ul.menu
-								li.menu-item: a(href="https://www.fb.me/ChocolateAbuelita/?fref=ts" target="_blank"): i.ui-icon.fa.fa-facebook
-								li.menu-item: a(href="https://www.instagram.com/abuelitamx/?hl=es" target="_blank"): i.ui-icon.fa.fa-instagram
-								li.menu-item: a(href="https://twitter.com/abuelitamx?lang=es" target="_blank"): i.ui-icon.fa.fa-twitter
-								li.menu-item: a(href="https://www.youtube.com/user/chocolateabuelitamx" target="_blank"): i.ui-icon.fa.fa-youtube
-					.wk-col.wk-d 
-						nav#site-nav
-							ul.menu
-								li.menu-item: a(href="#historia") Historia
-								li.menu-item: a(href="#productos") Productos
-								li.menu-item: a(href="#ritual-abuelita") Ritual
-								li.menu-item: a(href="#recetas") Recetas
-								li.menu-item: a(href="#plan-cacao") Plan Cacao
-					
-					.wk-col-1.wk-m 
-						.off-canvas-icon
-							span.fa.fa-bars
+block title
+	title Título
+
+block description
+	meta(name="description" content="Descripción text")
 	
-		div(class="page page-{{ pageClass }}" ng-view)
-		
-include menu-movil.jade
-													
+block content
+
+	main(role="main")
+		section#main-slider.wk-section 
+			.wk-section-wrap
+				.slider
+					.slide
+						img.slide-img.wk-d(src="img/banner-home-abuelita-nestle.jpg")
+						img.slide-img.wk-m(src="img/banner-mobile-home-abuelita-nestle.jpg")
+						a.ui-btn-gold.animate-top(href="#") COMPRAR
+					.slide
+						img.slide-img.wk-d(src="img/banner-promo-abuelita-nestle.jpg")
+						img.slide-img.wk-m(src="img/banner-movil-promo-abuelita-nestle.jpg")
+						a.ui-btn-gold.animate-left(href="#") COMPRAR
+						
+		nav#main-icon-nav.wk-section
+			.wk-section-wrap
+				.wk-cols
+					.wk-col 
+						a.main-icon-nav-wrap(href="#historia")
+							img.main-icon-nav-img.wk-img-responsive(src="img/01-image-historia-abuelita-nestle.jpg")
+							.container
+								img(src="img/icon-historia.png" alt="Historia")
+								span.content Historia
+					.wk-col
+						a.main-icon-nav-wrap(href="#productos")
+							img.main-icon-nav-img.wk-img-responsive(src="img/02-image-productos-abuelita-nestle.jpg")
+							.container
+								img(src="img/icon-productos.png" alt="Productos")
+								span.content Productos
+					.wk-col 
+						a.main-icon-nav-wrap(href="#recetas")
+							img.main-icon-nav-img.wk-img-responsive(src="img/03-image-recetas-abuelita-nestle.jpg")
+							.container
+								img(src="img/icon-recetas.png" alt="Recentas")
+								span.content Recetas
+					.wk-col 
+						a.main-icon-nav-wrap(href="#plan-cacao")
+							img.main-icon-nav-img.wk-img-responsive(src="img/04-image-cocoa-plan-nestle.jpg")
+							.container
+								img(src="img/icon-cocoa-plan.png" alt="Cocoa Plan")
+								img.wk-img-responsive(src="img/logo-cocoa-plan.png" alt="Cocoa Plan Logo")
+	
+	include footer.jade
+
+												

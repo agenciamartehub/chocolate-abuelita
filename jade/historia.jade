@@ -1,78 +1,89 @@
-include _mixins.jade
-main#receta(role="main")
+//- index.jade
+extends header.jade
 
-	+sectionHeader(
-			'historia-banner', 
-			'ui-bg-bold', 
-			'Nuestra historia', 
-			'', 
-			'img/banner-historia.jpg', 
-			'img/icon-historia.png'
-		)
-		
+block title
+	title Historia
+
+block description
+	meta(name="description" content="Historia Chocolate Abuelita - Nestlé")
 	
-	mixin uiTimeline( side, date, thumb, content )
-		div(class='ui-timeline-row-' + side )
-			.wk-cols-m
-				if side == 'left'
-					.wk-col
-						header.ui-timeline-header
-							img.ui-timeline-thumb(src='' + thumb + '' alt="Fábrica de Chocolates La Azteca - Nestle" width="200")
-							time.ui-timeline-date.ui-title-big= date
-						h3.ui-timeline-excerpt.ui-subtitle-small!= content 
-				else 
-					.wk-col.wk-d
-				.wk-col-1
-					.ui-timeline-guide
-						span.ui-timeline-line-before
-						span.ui-timeline-dot
-						span.ui-timeline-line-after
-				if side == 'right'
-					.wk-col 
-						header.ui-timeline-header
-							time.ui-timeline-date.ui-title-big= date
-							img.ui-timeline-thumb(src='' + thumb + '' alt="Fábrica de Chocolates La Azteca - Nestle" width="200")
-						h3.ui-timeline-excerpt.ui-subtitle-small!= content 
-				else
-					.wk-col.wk-d
+block content
+
+	main#receta(role="main")
+
+		+sectionHeader(
+				'historia-banner', 
+				'ui-bg-bold', 
+				'Nuestra historia', 
+				'', 
+				'img/banner-historia.jpg', 
+				'img/icon-historia.png'
+			)
+			
 		
+		mixin uiTimeline( side, date, thumb, content )
+			div(class='ui-timeline-row-' + side )
+				.wk-cols-m
+					if side == 'left'
+						.wk-col
+							header.ui-timeline-header
+								img.ui-timeline-thumb(src='' + thumb + '' alt="Fábrica de Chocolates La Azteca - Nestle" width="200")
+								time.ui-timeline-date.ui-title-big= date
+							h3.ui-timeline-excerpt.ui-subtitle-small!= content 
+					else 
+						.wk-col.wk-d
+					.wk-col-1
+						.ui-timeline-guide
+							span.ui-timeline-line-before
+							span.ui-timeline-dot
+							span.ui-timeline-line-after
+					if side == 'right'
+						.wk-col 
+							header.ui-timeline-header
+								time.ui-timeline-date.ui-title-big= date
+								img.ui-timeline-thumb(src='' + thumb + '' alt="Fábrica de Chocolates La Azteca - Nestle" width="200")
+							h3.ui-timeline-excerpt.ui-subtitle-small!= content 
+					else
+						.wk-col.wk-d
+			
 
-	.ui-block-texture-cover.ui-row-padding
-		section#historia-timeline.ui-timeline.wk-wrap-1100
-			.wk-section-wrap
-				+uiTimeline( 
-					'right', 
-					'1919', 
-					'img/Nestle-1929-fabrica-la-azteca-ciudad-de-mexico.png', 
-					'Se funda la Fábrica de Chocolates <strong>La Azteca </strong>por los hermanos Gonzáles Barragán en Orizaba, Veracruz.' 
-					)
-					
-				+uiTimeline( 
-					'left', 
-					'1929', 
-					'img/Nestle-1919-fabrica-la-azteca.png', 
-					'<strong>La Fábrica de Chocolates La Azteca</strong> es trasladada a la Ciudad de México.' 
-					)
-					
-				+uiTimeline(
-					'right',
-					'1939',
-					'img/Nestle-1939-Chocolate-abuelita.png',
-					'Nace la marca <strong>Chocolate Abuelita&reg;</strong>'
-					)
-					
-				+uiTimeline(
-					'left',
-					'2013',
-					'img/Nestle-2013-plan-cacao.png',
-					'Se lanza <strong>Plan Cacao Nestlé</strong>, reforzando el compromiso de la compañía con la recuperación del cacao originario de México.'
-					)
-						 
-				+uiTimeline(
-					'right',
-					'2017',
-					'img/Nestle-2017-toluca-mexico.png',
-					'<strong>Chocolate Abuelita&reg;</strong> actualmente es producido en México, en las fábricas de Toluca. Lleva más de 75 años incitando la unión de las familias mexicanas a través de su auténtico <strong>sabor, aroma y espuma</strong>.'
-					)
+		.ui-block-texture-cover.ui-row-padding
+			section#historia-timeline.ui-timeline.wk-wrap-1100
+				.wk-section-wrap
+					+uiTimeline( 
+						'right', 
+						'1919', 
+						'img/Nestle-1929-fabrica-la-azteca-ciudad-de-mexico.png', 
+						'Se funda la Fábrica de Chocolates <strong>La Azteca </strong>por los hermanos Gonzáles Barragán en Orizaba, Veracruz.' 
+						)
+						
+					+uiTimeline( 
+						'left', 
+						'1929', 
+						'img/Nestle-1919-fabrica-la-azteca.png', 
+						'<strong>La Fábrica de Chocolates La Azteca</strong> es trasladada a la Ciudad de México.' 
+						)
+						
+					+uiTimeline(
+						'right',
+						'1939',
+						'img/Nestle-1939-Chocolate-abuelita.png',
+						'Nace la marca <strong>Chocolate Abuelita&reg;</strong>'
+						)
+						
+					+uiTimeline(
+						'left',
+						'2013',
+						'img/Nestle-2013-plan-cacao.png',
+						'Se lanza <strong>Plan Cacao Nestlé</strong>, reforzando el compromiso de la compañía con la recuperación del cacao originario de México.'
+						)
+							 
+					+uiTimeline(
+						'right',
+						'2017',
+						'img/Nestle-2017-toluca-mexico.png',
+						'<strong>Chocolate Abuelita&reg;</strong> actualmente es producido en México, en las fábricas de Toluca. Lleva más de 75 años incitando la unión de las familias mexicanas a través de su auténtico <strong>sabor, aroma y espuma</strong>.'
+						)
+	include footer.jade
 
-include footer.jade
+													

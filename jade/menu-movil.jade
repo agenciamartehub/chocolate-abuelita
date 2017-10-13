@@ -3,6 +3,16 @@ mixin menuItem( title, link )
 
 .off-canvas-menu.wk-m
 	ul.ui-menu 
+		+menuItem( 'Inicio', url + 'index.html' )
+		+menuItem( 'Historia', url + 'historia.html' )
+		+menuItem( 'Productos', url + 'productos.html' )
+		+menuItem( 'Ritual', url + 'el-ritual-abuelita.html' )
+		+menuItem( 'Recetas', url + 'recetas.html' )
+		+menuItem( 'Plan Cacao', url + 'plan-cacao.html' )
+	
+	//- 
+		Menú angular
+		
 		+menuItem( 'Inicio', '#' )
 		+menuItem( 'Historia', '#historia' )
 		+menuItem( 'Productos','#productos' )

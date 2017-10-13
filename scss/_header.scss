@@ -1,8 +1,22 @@
 
+.is-scrolled #main-header {
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+	.menu li a {
+		padding: 10px 0;
+	}
+	#site-logo {
+		transform: scale(.7);
+		transition: all .5s linear;
+	}
+}
 
 #main-header {
 	background-color: $mainColor;
       color: $secondaryColor;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
 	.menu li a {
 		display: inline-block;
 		padding: 24px 0;
@@ -21,6 +35,8 @@
 		margin: auto;
 		width: 220px;
 		z-index: 11;
+		transition: all .25s linear;
+		transform-origin: top;
 		.logo {
 			width: 100%;
 			height: auto;

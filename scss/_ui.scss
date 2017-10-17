@@ -113,6 +113,15 @@
 }
 
 
+.ui-bg-pink {
+	background-color: $pink;
+}
+
+.ui-bg-pink-important {
+	background-color: $pink !important;
+}
+
+
 .ui-bg-blue {
 	background-color: $blue;
 }
@@ -166,6 +175,15 @@
 	color: $secondaryColor;
 	&:hover {
 		background-color: $mainColorHover;
+	}
+}
+
+.ui-btn-pink {
+	@extend .ui-btn;
+	background-color: $pink;
+	color: $white;
+	&:hover {
+		background-color: $pinkHover;
 	}
 }
 

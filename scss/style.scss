@@ -28,6 +28,7 @@ body {
 	color: $secondaryColor;
 	background-color: $mainColor;
 	padding-top: 85px;
+	-webkit-font-smoothing: antialiased;
 }
 
 @media print {

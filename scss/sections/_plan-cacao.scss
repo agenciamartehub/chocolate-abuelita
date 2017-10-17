@@ -9,6 +9,11 @@
 			@include flex( column, center, center );
 		}
 	}
+	@media ( max-width: 1000px) and #{$onlyDesktop} {
+		h3.ui-title {
+			font-size: 27px;
+		}
+	}
 	.ui-icon {
 		margin-bottom: 10px;
 	}

@@ -1,0 +1,77 @@
+.slider,
+.slider-mobile {
+	.slide {
+		.slide-img {
+		    width: 100%;
+		    height: auto;
+		}
+	}
+	.slide {
+		.ui-btn {
+			position: absolute;
+			bottom: 40px;
+			left: 16%;
+			@media #{$onlyMobile} {
+				left: 0;
+				right: 0;
+				margin: auto;
+				width: 200px;
+				text-align: center;
+			}
+		}
+	}
+}
+
+
+// Animación
+.slick-active .animate {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.animate {
+    opacity: 0;
+    transition-delay: .25s;
+}
+
+.animate-top {
+	@extend .animate;
+	transform: translateY(-50px);
+}
+
+.animate-bottom {
+	@extend .animate;
+	transform: translateY(50px);
+}
+
+.animate-left {
+	@extend .animate;
+	transform: translateX(-50px);
+}
+
+.animate-right {
+	@extend .animate;
+	transform: translateX(-50px);
+}
+
+
+// Navegación
+.slick-arrow {
+	color: $mainColor;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: 9;
+	font-size: 14px;
+	width: 34px;
+	height: 34px;
+	cursor: pointer;
+	&.slick-arrow-left {
+		left: 30px;
+	}
+
+	&.slick-arrow-right {
+		right: 30px;
+	}
+}

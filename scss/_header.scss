@@ -1,11 +1,34 @@
 
+.is-scrolled #main-header {
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+	.menu li a {
+		padding: 10px 0;
+	}
+	#site-logo {
+		transform: scale(.7);
+		transition: all .5s linear;
+	}
+}
 
 #main-header {
 	background-color: $mainColor;
       color: $secondaryColor;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	@media #{$onlyDesktop} {
+		position: fixed;
+	}
+	@media #{$onlyMobile} {
+		position: absolute;
+
+	}
 	.menu li a {
 		display: inline-block;
 		padding: 24px 0;
+		@media #{$onlyMobile} {
+			padding: 24px 4px 70px;
+		}
 	}
 
 	#site-logo {
@@ -16,40 +39,64 @@
 		left: 0;
 		right: 0;
 		margin: auto;
-		width: 140px;
+		width: 220px;
+		z-index: 11;
+		transition: all .25s linear;
+		transform-origin: top;
 		.logo {
 			width: 100%;
 			height: auto;
+		}
+		@media #{$onlyMobile} {
+			width: 120px;
+			top: 70px;
 		}
 	}
 
 	#social-nav {
 		.menu {
-			.menu-item {
-				margin-right: 10px;
-				.fa {
-					color: $mainColor;
-					background-color: $secondaryColor;
-					font-size: 13px;
-					width: 30px;
-					height: 30px;
-					text-align: center;
-					display: table;
-					border-radius: 30px;
+			@media #{$onlyDesktop} {
+				.menu-item {
+					margin-right: 10px;
 				}
-
-				.fa:before {
-					display: table-cell;
-					vertical-align: middle;
+			}
+			@media #{$onlyMobile} {
+				.menu-item {
+					a {
+						padding: {
+							left: 4px !important;
+							right: 4px !important;
+						}
+					}
 				}
+			}
+		}
+		.ui-icon {
+			width: 34px;
+			height: 34px;
+			color: $mainColor;
+			font-size: 12px;
+			@include transition;
+			&:hover {
+				color: $white;
 			}
 		}
 	}
 
+
 	#site-nav {
 		height: 100%;
 		text-align: right;
+		@include ui-font-model-montserrat;
+		font-weight: 800;
+		font-size: 22px;
+		@media ( max-width: 1420px ) and ( min-width: 1080px ) {
+			font-size: 16px;
+		}
 
+		@media ( max-width: 1079px ) and ( min-width: 770px ) {
+			font-size: 14px;
+		}
 		.menu {
 			height: 100%;
 			.menu-item {
@@ -74,6 +121,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
+		cursor: pointer;
+		@media #{$onlyMobile} {
+			padding: 24px 0px 70px;
 		}
+	}
 
 }

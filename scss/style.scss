@@ -6,17 +6,150 @@
 @import '_header';
 @import '_footer';
 @import '_ui';
+@import '_menu-movil';
+@import 'libraries/_fancybox';
+@import 'libraries/_sliderTheme';
+@import 'libraries/_wpkitui';
+@import 'elements/_content-blocks';
+@import 'elements/_modals';
 @import 'sections/_home';
+@import 'sections/_historia';
+@import 'sections/_plan-cacao';
+@import 'sections/_el-ritual-abuelita';
+@import 'sections/_recetas';
+@import 'sections/_receta';
+@import 'sections/_productos';
 
 body {
-	font: {
-		family: $mainFont;
-		size: 13px;
+	font-size: 13px;
+	@include ui-font-model-montserrat;
+	font-size: 24px;
+	line-height: 1.25;
+	color: $secondaryColor;
+	background-color: $mainColor;
+	padding-top: 85px;
+}
+
+@media print {
+	.no-print {
+		display: none;
+	}
+	.print {
+		font-size: 10px !important;
 	}
 }
 
-h1,h2,h3,h4,h5,h6 {
-	font: {
-		family: $headerFont;
+
+.page        {
+}
+
+.page.ng-enter {
+	transition: all .25s ease-out 1.25s;
+	//transform: translateY(50px);
+	opacity: 0;
+	z-index: 1;
+}
+
+.page.ng-enter.ng-enter-active {
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+.page.ng-leave {
+	transition: all ease-out .5s;
+	opacity: 1;
+	z-index: 10;
+}
+
+.page.ng-leave.ng-leave-active {
+	opacity: 0;
+	transition-delay: .25s;
+}
+
+// Preloader
+
+.no-js .wk-preloading {
+	display: none;
+}
+
+.wk-preloading {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 999999;
+	background-color: $secondaryColorAlt;
+}
+
+.wk-preloading-custom {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	max-width: 400px;
+	height: auto;
+	z-index: 999999;
+}
+
+.wk-preloading-loader {
+	animation-duration: 3s;
+}
+
+.wk-preloading-loader,
+.wk-preloading-loader:before,
+.wk-preloading-loader:after {
+    background-color: transparent;
+    border: 3px solid;
+    border-color: transparent;
+    border-top-color: $mainColor;
+    border-radius: 100px;
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform-origin: center;
+    animation-name: spin;
+    animation-timing-function: cubic-bezier(0.83, 0.01, 0.4, 0.93);
+    animation-iteration-count: infinite;
+}
+
+.wk-preloading-loader:before,
+.wk-preloading-loader:after {
+    content: "";
+    display: block;
+    background-color: transparent;
+}
+
+.wk-preloading-loader:before {
+    /*border-top-color: white;*/
+    width: 60%;
+    height: 60%;
+    animation-duration: 6s;
+}
+
+.wk-preloading-loader:after {
+    /*border-top-color: white;*/
+    width: 80%;
+    height: 80%;
+    animation-duration: 3s;
+}
+
+ @keyframes spin {
+	 0%   {
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(720deg);
+		-ms-transform: rotate(720deg);
+		transform: rotate(720deg);
 	}
 }

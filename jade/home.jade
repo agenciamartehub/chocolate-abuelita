@@ -1,0 +1,73 @@
+include _mixins.jade
+main(role="main")
+	script.
+		$('.slider').slick({
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			dots: false,
+			arrows: true,
+			prevArrow: '<span class="ui-icon fa fa-chevron-left slick-arrow-left"></span>',
+			nextArrow: '<span class="ui-icon fa fa-chevron-right slick-arrow-right"></span>',
+			adaptiveHeight: true,
+			fade: true,
+			// asNavFor: '.da-slider-nav',
+			//autoplay: true,
+			responsive: [
+				{
+					breakpoint: 770,
+					autoplay: true,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						infinite: true,
+						dots: false,
+						arrows: false,
+					}
+				},
+			]
+		});
+	section#main-slider.wk-section 
+		.wk-section-wrap
+			.slider
+				.slide
+					img.slide-img.wk-d(src="img/banner-home-abuelita-nestle.jpg")
+					img.slide-img.wk-m(src="img/banner-mobile-home-abuelita-nestle.jpg")
+					a.ui-btn-gold.animate-top(href="#") COMPRAR
+				.slide
+					img.slide-img.wk-d(src="img/banner-promo-abuelita-nestle.jpg")
+					img.slide-img.wk-m(src="img/banner-movil-promo-abuelita-nestle.jpg")
+					a.ui-btn-pink.animate-left(href="#") COMPRAR
+					
+	nav#main-icon-nav.wk-section
+		.wk-section-wrap
+			.wk-cols
+				.wk-col 
+					a.main-icon-nav-wrap(href="#historia")
+						img.main-icon-nav-img.wk-img-responsive(src="img/01-image-historia-abuelita-nestle.jpg")
+						.container
+							img.main-icon-nav-icon(src="img/icon-historia.png" alt="Historia")
+							span.content Historia
+				.wk-col
+					a.main-icon-nav-wrap(href="#productos")
+						img.main-icon-nav-img.wk-img-responsive(src="img/02-image-productos-abuelita-nestle.jpg")
+						.container
+							img.main-icon-nav-icon(src="img/icon-productos.png" alt="Productos")
+							span.content Productos
+				.wk-col 
+					a.main-icon-nav-wrap(href="#recetas")
+						img.main-icon-nav-img.wk-img-responsive(src="img/03-image-recetas-abuelita-nestle.jpg")
+						.container
+							img.main-icon-nav-icon(src="img/icon-recetas.png" alt="Recentas")
+							span.content Recetas
+				.wk-col 
+					a.main-icon-nav-wrap(href="#plan-cacao")
+						img.main-icon-nav-img.wk-img-responsive(src="img/04-image-cocoa-plan-nestle.jpg")
+						.container
+							img.main-icon-nav-icon(src="img/icon-cocoa-plan.png" alt="Cocoa Plan")
+							img.wk-img-responsive(src="img/logo-cocoa-plan.png" alt="Cocoa Plan Logo")
+
+	
+	
+							
+include footer.jade

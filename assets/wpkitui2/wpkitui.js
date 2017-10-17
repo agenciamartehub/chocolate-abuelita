@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
 			});
 
 		}
-			
+
 		$('.no-flexbox .wk-cols-m').each(function(){
 			items = $(this).children('[class~="wk-col"]').length;
 			width = 100 / items;
@@ -36,14 +36,14 @@ jQuery(document).ready(function($){
 
 		// Solo en tablet
 		if($(window).width() > 415 )  {
-			
+
 			$('.no-flexbox .wk-cols-t').each(function(){
 				items = $(this).children('[class~="wk-col"]').length;
 				width = 100 / items;
 				$(this).children('[class^="wk-col"]').css('width', width + '%');
 			});
 
-		} else { 
+		} else {
 
 			$('.no-flexbox .wk-cols-t').each(function(){
 				$(this).children('[class~="wk-col"]').css('width', '100%');
@@ -51,13 +51,8 @@ jQuery(document).ready(function($){
 		}
 
 
-
-
-
-
-
-
-		$(window).on('resize', function(){ 
+		// Resize
+		$(window).on('resize', function(){
 
 			if($(window).width() > 770 ) {
 
@@ -85,14 +80,14 @@ jQuery(document).ready(function($){
 
 			// Solo en tablet
 			if($(window).width() > 415 )  {
-				
+
 				$('.no-flexbox .wk-cols-t').each(function(){
 					items = $(this).children('[class~="wk-col"]').length;
 					width = 100 / items;
 					$(this).children('[class^="wk-col"]').css('width', width + '%');
 				});
 
-			} else { 
+			} else {
 
 				$('.no-flexbox .wk-cols-t').each(function(){
 					$(this).children('[class~="wk-col"]').css('width', '100%');
@@ -103,7 +98,16 @@ jQuery(document).ready(function($){
 
 		});
 
-	
+		// Clase is-scrolled en body
+			$(window).scroll(function(){
+				var scroll = $(window).scrollTop();
+
+				if( scroll >= 10 ) {
+					$('body').addClass('is-scrolled');
+				} else {
+					$('body').removeClass('is-scrolled');
+				}
+			});
+
+
 });
-
-

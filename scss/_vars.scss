@@ -1,17 +1,40 @@
-$mainColor: #ffb500;
+$mainColor: #FFC600;
+
+// Este fue el amarillo original
+//	$mainColor: #ffb500;
+
+// Rojo claro
 $secondaryColor: #a1172e;
-$mainColorHover: #e49600;
+
+//Rojo osscuro
+$secondaryColorAlt: #750215;
+
+$mainColorHover: #e49d14;
+$secondaryColorHover: #750215;
 
 $white: #fff;
 $black: #000;
+$red: red;
+$yellow: gold;
+$blue: blue;
+$gray: gray;
 
-$mainFont: 'Open sans', sans-serif;
-$headerFont: 'Anton', 'Open sans', sans-serif;
+$pink: #e2007c;
+$pinkHover: #b90066;
+
+$mainFont: 'Times New Roman', serif;
+$secondaryfont: 'Montserrat Light', 'Lato', sans-serif;
+$textFont: 'Open sans', 'Lato', sans-serif;
 
 
 $onlyMobile: ( max-width: 770px );
-$onlyDesktop: ( max-width: 771px );
+$onlyDesktop: ( min-width: 771px );
 $onlyTablet: ( min-width: 415px ) and ( max-width: 770px );
 $onlyfromTablet: ( min-width: 415px );
 $onlyPhone: ( max-width: 414px );
 $onlyiPhone5: ( max-width: 320px );
+
+
+$boxModel: 20px;
+
+$galleryHover: scale(1.3) rotate(3deg);

@@ -1,0 +1,27 @@
+#como-preparar {
+	.ui-title {
+	    font-size: 38px;
+	    min-height: 100px;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+	.ui-block-padding {
+		min-height: 270px;
+	}
+	[class*="wk-col-"] {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.como-preparar-thumb {
+		display: inline-block;
+		width: 100%;
+		height: calc(100vw / 4 - 4px)
+	}
+}

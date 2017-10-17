@@ -1,0 +1,58 @@
+//- productos.jade
+extends header.jade
+
+block title
+	title Recetas - Nestlé
+
+block description
+	meta(name="description" content="Recetas de Chocolate Abuelita")
+	
+block content
+
+	main(role="main")
+		+sectionHeader(
+				'recetas-banner', 
+				'ui-bg-red', 
+				'Recetas', 
+				'', 
+				'img/banner-recetas.jpg', 
+				'img/icon-recetas.png'
+			)
+					
+		+sectionLeyend('recetas-leyend', '')
+			strong Consiente a tu familia y crea momentos únicos e inolvidables utilizando tus dos ingredientes secretos: <span class="ui-title-xx-larger ui-text-gold">amor y chocolate Abuelita.</span>
+						
+		section#recetas.ui-block-texture-cover.wk-wrap-1100.ui-d-block-padding
+			.wk-section-wrap
+				.wk-cols
+					.wk-col
+						a.ui-post-excerpt(href=url + "receta.html")
+							img.ui-post-thumb(src="img/receta-como-preparar.chocolate-abuelita-nestle.jpg" alt="Cómo preparar Chocolate Abuelita - Nestle")
+							.ui-post-excerpt-content
+								h1.ui-post-title.ui-title-small.ui-box-model Cómo preparar chocolate Abuelita&reg;
+								.ui-post-read-more Ver receta
+							
+					.wk-col
+						a.ui-post-excerpt(href=url + "receta.html")
+							img.ui-post-thumb(src="img/receta-como-preparar-una-taza-nestle.jpg" alt="Cómo preparar una taza de Chocolate Abuelita - Nestle")
+							.ui-post-excerpt-content
+								.ui-post-title.ui-title-small.ui-box-model Cómo preparar una taza de Chocolate Abuelita Granulado
+								.ui-post-read-more Ver receta
+					
+				.wk-cols
+					.wk-col
+					
+						a.ui-post-excerpt(href=url + "receta.html")
+							img.ui-post-thumb(src="img/receta-como-preparar-pan-nestle.jpg" alt="Cómo preparar pan con Chocolate Abuelita - Nestle ")
+							.ui-post-excerpt-content
+								.ui-post-title.ui-title-small.ui-box-model Cómo hacer Pan de Muerto con Chocolate Abuelita
+								.ui-post-read-more Ver receta
+					
+					.wk-col
+						a.ui-post-excerpt(href=url + "receta.html")
+							img.ui-post-thumb(src="img/receta-como-preparar-mole-nestle.jpg" alt="Cómo preparar mole con Chocolate Abuelita - Nestle")
+							.ui-post-excerpt-content
+								.ui-post-title.ui-title-small.ui-box-model Cómo hacer mole poblano con Chocolare Abuelita
+								.ui-post-read-more Ver receta
+							
+	include footer.jade

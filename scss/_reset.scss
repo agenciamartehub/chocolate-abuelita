@@ -28,6 +28,10 @@ body {
 	line-height: 1;
 }
 
+strong {
+	font-weight: 900;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -50,4 +54,30 @@ table {
 a {
 	color: inherit;
 	text-decoration: inherit;
+	&:focus {
+		outline: none;
+	}
+}
+
+mark {
+    background-color: transparent;
+    color: black;
+}
+
+iframe {
+    width: 100%;
+    min-height: 700px;
+}
+
+.safari iframe {
+	min-height: 700px;
+}
+
+img {
+	vertical-align: middle;
+}
+
+p {
+	margin-top: $boxModel;
+	margin-bottom: $boxModel;
 }

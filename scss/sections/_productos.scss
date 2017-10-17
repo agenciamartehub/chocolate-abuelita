@@ -1,0 +1,25 @@
+#productos-leyend {
+
+}
+
+#nuestros-productos {
+	a {
+		&:hover {
+			.producto {
+				transform: scale(1.1);
+			}
+		}
+	}
+	.producto {
+		width: 100%;
+		height: auto;
+		transition: all .25s linear;
+	}
+}
+
+#promociones-modal {
+	background-image: initial !important;
+	.ui-modal-content {
+		background-color: transparent;
+	}
+}

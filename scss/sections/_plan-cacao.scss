@@ -1,0 +1,39 @@
+#plan-cacao-banner {
+
+}
+
+#plan-cacao {
+	@media #{$onlyDesktop} {
+		.ui-title {
+			min-height: 100px;
+			@include flex( column, center, center );
+		}
+	}
+	.ui-icon {
+		margin-bottom: 10px;
+	}
+	[class*="wk-col-"] {
+		padding-top: 0 !important;
+	}
+}
+
+#plan-cacao-gallery {
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+#plan-cacao-leyend {
+
+}
+
+#plan-cacao-logo {
+	img {
+		max-width: 300px;
+	}
+}
+
+#plan-cacao-mas-informacion {
+	background-image: initial !important;
+}

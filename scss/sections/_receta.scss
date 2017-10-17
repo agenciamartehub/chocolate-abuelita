@@ -1,0 +1,41 @@
+#receta-ingredientes {
+	.ui-title {
+		margin-top: 60px;
+		margin-bottom: 40px;
+		display: flex;
+		align-items: flex-start;
+	}
+	[src*="img/icon-"] {
+		width: 30px;
+		margin-right: 20px;
+	}
+}
+
+#receta-content {
+	.wk-cols {
+		margin-bottom: calc(#{$boxModel} * 2);
+		@media #{$onlyDesktop} {
+			[class*="wk-col-"]:nth-child(even) {
+				padding-left: $boxModel;
+			}
+		}
+		@media #{$onlyMobile} {
+			[class*="wk-col-"]:nth-child(odd) {
+				padding-bottom: $boxModel;
+			}
+		}
+	}
+}
+
+#receta-buttons {
+	.wk-cols {
+		margin: 20px 0;
+	}
+	.ui-btn {
+		height: 68px;
+		width: 100%;
+		@media #{$onlyMobile} {
+			margin: 20px 0;
+		}
+	}
+}

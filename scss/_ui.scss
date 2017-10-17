@@ -2,27 +2,465 @@
 	color: $secondaryColor;
 }
 
+.ui-text-red-important {
+	color: $secondaryColor !important;
+}
+
 .ui-text-gold,
 .ui-text-yellow {
-	color: $mainColor
+	color: $mainColor;
+}
+
+.ui-text-gold-important,
+.ui-text-yellow-important {
+	color: $mainColor !important;
 }
 
 .ui-text-white {
 	color: $white;
 }
 
-.ui-text-black {
+.ui-text-white-important {
+	color: $white !important;
+}
+
+.ui-text-black,
+.ui-text-dark {
 	color: $black;
 }
 
-.ui-text-bold {
-	font-weight: 800;
+.ui-text-black-important,
+.ui-text-dark-important {
+	color: $black !important;
 }
 
-.ui-text-light {
+// Text style
+
+.ui-text-light,
+.ui-text-100 {
 	font-weight: 100;
 }
 
-.ui-text-regular {
+.ui-text-regular,
+.ui-text-400 {
 	font-weight: 400;
+}
+
+.ui-text-bold,
+.ui-text-800 {
+	font-weight: 400;
+}
+
+.ui-text-uppercase {
+	text-transform: uppercase;
+}
+
+// BLoques
+.ui-align-center {
+	display: block;
+	margin: auto;
+}
+
+//background colors {
+.ui-bg-white,
+.ui-bg-light {
+	background-color: $white;
+}
+
+.ui-bg-white-important,
+.ui-bg-light-important {
+	background-color: $white !important;
+}
+
+.ui-bg-black,
+.ui-bg-dark {
+	background-color: $black;
+}
+
+.ui-bg-black-important,
+.ui-bg-dark-important {
+	background-color: $black !important;
+}
+
+.ui-bg-red {
+	background-color: $secondaryColor;
+	color: $white;
+}
+
+.ui-bg-red-important {
+	background-color: $secondaryColor !important;
+	color: $white !important;
+}
+
+.ui-bg-red-alt {
+	background-color: $secondaryColorAlt;
+	color: $white;
+}
+
+.ui-bg-red-alt-important {
+	background-color: $secondaryColorAlt !important;
+	color: $white !important;
+}
+
+.ui-bg-gold,
+.ui-bg-yellow {
+	background-color: $mainColor;
+}
+
+.ui-bg-gold-important,
+.ui-bg-yellow-important {
+	background-color: $mainColor !important;
+}
+
+
+.ui-bg-pink {
+	background-color: $pink;
+}
+
+.ui-bg-pink-important {
+	background-color: $pink !important;
+}
+
+
+.ui-bg-blue {
+	background-color: $blue;
+}
+
+.ui-bg-blue-important {
+	background-color: $blue !important;
+}
+
+.ui-bg-gray {
+	background-color: $gray;
+}
+
+.ui-bg-gray-important {
+	background-color: $gray !important;
+}
+
+
+
+// Botónes (default es rojo)
+
+.ui-btn,
+.ui-button {
+	color: $secondaryColor;
+	font-weight: 800;
+	font-size: 16px;
+	text-transform: uppercase;
+	padding: 18px 60px;
+	background: $secondaryColor;
+	color: $white;
+	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+	min-height: 68px;
+	@include transition;
+	&:hover {
+	    background-color: $secondaryColorHover;
+	}
+	img {
+		vertical-align: middle;
+		margin: 0 20px;
+		width: 14px
+	}
+}
+
+.ui-btn-gold,
+.ui-btn-yellow {
+	@extend .ui-btn;
+	background-color: $mainColor;
+	color: $secondaryColor;
+	&:hover {
+		background-color: $mainColorHover;
+	}
+}
+
+.ui-btn-pink {
+	@extend .ui-btn;
+	background-color: $pink;
+	color: $white;
+	&:hover {
+		background-color: $pinkHover;
+	}
+}
+
+// btn share
+
+.ui-btn-share {
+	overflow: hidden;
+	padding: 0;
+	cursor: pointer;
+	&:hover {
+		background-color: $secondaryColor;
+	}
+	.ui-btn-share-content {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		position: relative;
+		.ui-btn-copy {
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			transition: all .25s cubic-bezier(0.68, 0.1, 1, 1);
+			padding: 10px 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.ui-btn-icons {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: -60px;
+			transition: all .25s cubic-bezier(0.68, 0.1, 1, 1);
+			.fa {
+				padding: 18px 60px;
+				width: 50%;
+				opacity: .5;
+				height: 100%;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				transition: opacity .25s cubic-bezier(0.68, 0.1, 1, 1) .25s, background .25s linear;;
+				&:hover {
+					color: $mainColor;
+					transition-delay: 0s;
+					background-color: $secondaryColorHover;
+				}
+			}
+		}
+	}
+	&.is-active {
+		.ui-btn-copy {
+			top: 80px;
+		}
+		.ui-btn-icons {
+			top: 0;
+			.fa {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+// Icons
+
+.ui-icon {
+	color: $white;
+	background-color: $secondaryColor;
+	font-size: 24px;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	display: table;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 30px;
+	&.ui-icon:before {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	> * {
+		@include ui-font-model-times-new-roman;
+	}
+}
+
+
+// Títulos
+[class*="ui-title"] {
+	@include ui-font-model-times-new-roman;
+}
+
+.ui-title-big {
+	font-size: 70px;
+	@media #{$onlyMobile} {
+		font-size: 36px;
+	}
+}
+
+.ui-title {
+	font-size: 38px;
+}
+
+.ui-title-small {
+	font-size:24px;
+}
+
+.ui-title-inherit {
+	font-size: inherit;
+}
+
+.ui-title-larger {
+	font-size: larger;
+}
+
+.ui-title-xx-larger {
+	font-size: xx-large;
+}
+
+[class*="ui-subtitle"] {
+	@include ui-font-model-montserrat;
+
+}
+
+.ui-subtitle {
+	font-size: 24px;
+}
+
+.ui-subtitle-small {
+	font-size: 18px;
+}
+
+.ui-title-ornament:after,
+.ui-title-ornament:before,
+.ui-title-ornament:after,
+.ui-title-ornament:before {
+	content: "";
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	@media #{$onlyMobile} {
+		display: block;
+		margin: 20px auto;
+	}
+}
+
+.ui-title-ornament:before {
+	background-image: url(../img/text-ornament-red-a.png);
+}
+
+.ui-title-ornament:after {
+	background-image: url(../img/text-ornament-red-b.png);
+}
+
+.ui-text-red.ui-title-ornament:before {
+	background-image: url(../img/text-ornament-red-a.png);
+}
+
+.ui-text-red.ui-title-ornament:after {
+	background-image: url(../img/text-ornament-red-b.png);
+}
+
+.ui-text-white.ui-title-ornament:before {
+	background-image: url(../img/text-ornament-white-a.png);
+}
+
+.ui-text-white.ui-title-ornament:after {
+	background-image: url(../img/text-ornament-white-b.png);
+}
+
+.ui-text-gold.ui-title-ornament:before,
+.ui-text-yellow.ui-title-ornament:before {
+	background-image: url(../img/text-ornament-gold-a.png);
+}
+
+.ui-text-gold.ui-title-ornament:after,
+.ui-text-yellow.ui-title-ornament:after {
+	background-image: url(../img/text-ornament-gold-b.png);
+}
+
+.ui-title-big.ui-title-ornament:before,
+.ui-title-big.ui-title-ornament:after {
+	width: 70px;
+	height: 30px;
+	padding: 0 40px;
+}
+
+.ui-title.ui-title-ornament:before,
+.ui-title.ui-title-ornament:after {
+	width: 70px;
+	height: 20px;
+	padding: 0 10px;
+}
+
+.ui-title-small.ui-title-ornament:before,
+.ui-title-small.ui-title-ornament:after {
+	width: 70px;
+	height: 10px;
+	padding: 0 10px;
+}
+
+.ui-subtitle.ui-title-ornament:before,
+.ui-subtitle.ui-title-ornament:after {
+	width: 70px;
+	height: 12px;
+	padding: 0 10px;
+}
+
+.ui-subtitle-small.ui-title-ornament:before,
+.ui-subtitle-small.ui-title-ornament:after {
+	width: 70px;
+	height: 8px;
+	padding: 0 10px;
+}
+
+
+// Layout
+
+
+.ui-block-padding {
+    box-sizing: border-box;
+    padding: 40px $boxModel;
+}
+
+@media #{$onlyMobile} {
+	.ui-m-block-padding {
+	    box-sizing: border-box;
+	    padding: 40px $boxModel;
+	}
+}
+
+@media #{$onlyDesktop} {
+	.ui-d-block-padding {
+	    box-sizing: border-box;
+	    padding: 40px $boxModel;
+	}
+}
+
+.ui-row-padding {
+	box-sizing: border-box;
+	padding: 100px $boxModel;
+}
+
+@media #{$onlyMobile} {
+	.ui-m-row-padding {
+		box-sizing: border-box;
+		padding: 100px $boxModel;
+	}
+}
+
+@media #{$onlyDesktop} {
+	.ui-d-row-padding {
+		box-sizing: border-box;
+		padding: 100px $boxModel;
+	}
+}
+
+.ui-box-model {
+	padding-left: $boxModel;
+	padding-right: $boxModel;
+}
+
+@media #{$onlyMobile} {
+	.ui-m-box-model {
+		padding-left: $boxModel;
+		padding-right: $boxModel;
+	}
+}
+
+@media #{$onlyDesktop} {
+	.ui-d-box-model {
+		padding-left: $boxModel;
+		padding-right: $boxModel;
+	}
 }

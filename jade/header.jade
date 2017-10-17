@@ -1,45 +1,133 @@
-doctype html
-html
-	head
-		title Chocolate Abuelita
-		script(type="text/javascript" src="/js/jquery-3.1.1.min.js")
-		link(rel="stylesheet" href="/assets/wpkitui2/wpkitui.css")
-		script(type="text/javascript" src="/assets/wpkitui2/wpkitui.js")
-		link(href="fonts/font-awesome/font-awesome.css" rel="stylesheet")
-		// Google font
-		link(href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet")
-		//slick
-		link(rel="stylesheet" href="/assets/slick/slick-theme.css")
-		link(rel="stylesheet" href="/assets/slick/slick.css")
-		script(type="text/javascript" src="/assets/slick/slick.min.js")
-		// stylesheet
-		link(rel="stylesheet" href="/css/style.css")
+//- header.jade
+include _vars.jade
+include _mixins.jade
 
-body.wk-wrap-1100
-		header#main-header.wk-section
+doctype html
+html(lang="es_ES" dir="ltr" last-update="10-12-17")
+	head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#")
+		//- info -->
+		meta(charset="UTF-8")
+		meta(http-equiv="content-type" content="text/html; charset=UTF-8")
+		meta(http-equiv="language" content="es-MX")
+		meta(name="creation_date" content="Wednesday, October 11th, 2017, 4:00 pm")
+		//- Site info -->
+		block title
+			title Chocolate Abuelita
+		block description
+		meta(name="description" content=description)
+		//- Device & Browser -->
+		meta(name="HandheldFriendly" content="True")
+		meta(name="MobileOptimized" content="756")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(name="apple-touch-fullscreen" content="yes")
+		meta(name="format-detection" content="telephone=no")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(http-equiv="X-UA-Compatible" content="IE=EmulateIE10")
+		//- Icons & theme -->
+		link(rel="icon" type="image/ico" href= url + 'img/favicon.png')
+		meta(name="theme-color" content="#ffb500")
+		meta(name="apple-mobile-web-app-status-bar-style" content="#ffb500")
+		//- Links -->
+		link(rel="canonical" href=url)
+		meta(name="fragment" content="!")
+		//- Scripts -->
+		script(type="text/javascript" src=url + 'js/jquery-3.1.1.min.js')
+		//- Angular 
+			script(type="text/javascript" src="http://code.angularjs.org/1.2.13/angular.js")
+			script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js")
+			script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js")
+		//- Libraries -->
+		//- Fancybox
+		link(rel="stylesheet" href=url + "assets/fancybox/jquery.fancybox.min.css")
+		script(type="text/javascript" src=url + "assets/fancybox/jquery.fancybox.min.js")
+		//- WPKit ui
+		link(rel="stylesheet" href=url + "assets/wpkitui2/wpkitui.css")
+		script(type="text/javascript" src=url + "assets/wpkitui2/wpkitui.js")
+		//-slick
+		link(rel="stylesheet" href=url + "assets/slick/slick-theme.css")
+		link(rel="stylesheet" href=url + "assets/slick/slick.css")
+		script(type="text/javascript" src=url + "assets/slick/slick.min.js")
+		//- Fonts -->
+		link(href=url + "fonts/font-awesome/font-awesome.css" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Montserrat:300,400,900" rel="stylesheet")
+		//- Tweenmax
+		script(type="text/javascript" src=url + 'assets/tweenmax/TweenMax.min.js')
+		script(type="text/javascript" src=url + 'assets/scrollto/ScrollToPlugin.min.js')
+		//- Styles -->
+		link(rel="stylesheet" href=url + "css/style.css")
+		script(type="text/javascript" src=url + "js/scripts.js")
+		//- Facebook open graph
+		meta(name="fb:page_id" content=facebookID)
+		meta(name="article:author" content=facebookURL)
+		meta(name="og:region" content="MX")
+		meta(property="og:site_name" content="Chocolate Abuelita - Nestlé ")
+		meta(property="og:locale" content="es-MX")
+		meta(property="og:url" content=url)
+		meta(name="og:country-name" content="Mexico")
+		block openGraph
+			
+			meta(property="og:title" content="Chocolate ABUELITA®")
+			meta(property="og:description" content="Los mejores momentos se viven con la familia, por eso Chocolate ABUELITA® hace más ricos los instantes que pasamos con nuestros seres queridos. Hacer chocolate caliente es una tradición que las familias mexicanas han compartido…")
+			meta(property="og:type" content="website")
+			meta(property="og:image" content=url + 'img/facebook-share-chocolate-abuelita-nestle.png')
+		block twitterCards
+			meta(name="twitter:card" content="summary_large_image")
+			meta(name="twitter:site" content='@' + twitterUser)
+			meta(name="twitter:creator" content='@' + twitterUser)
+			meta(name="twitter:title" content="Chocolate ABUELITA®")
+			meta(name="twitter:description" content="Los mejores momentos se viven con la familia, por eso Chocolate ABUELITA® hace más ricos los instantes que pasamos con nuestros seres queridos.")
+			meta(name="twitter:image" content=url + 'img/twitter-card-chocolate-abuelita-nestle.png')
+
+		//-
+			base(href=url)
+		
+	//-
+		angular body tag 
+		body(ng-app="nestleapp").wk-wrap-1920
+		
+	body.wk-wrap-1920
+		.wk-preloading
+			span.wk-preloading-loader
+		header#main-header.wk-section.ui-box-model.no-print
 			section.wk-section-wrap
 				#site-logo
-					a(href="#"): img.logo(src="img/logo-abuelita-nestle.png" alt="Chocolate Abuelita")
+					a(href=url): img.logo(src= url + "img/logo-abuelita-nestle.png" alt="Chocolate Abuelita")
 				.wk-cols-m
 					.wk-col
 						nav#social-nav
 							ul.menu
-								li.menu-item: a(href="#"): i.fa.fa-facebook
-								li.menu-item: a(href="#"): i.fa.fa-instagram
-								li.menu-item: a(href="#"): i.fa.fa-twitter
-								li.menu-item: a(href="#"): i.fa.fa-youtube
+								//-
+									Las variables con urls de redes sociales
+									se encuentran en jade/_vars.jade 
+								li.menu-item: a(href=facebookURL target="_blank"): i.ui-icon.fa.fa-facebook
+								li.menu-item: a(href=instagramURL target="_blank"): i.ui-icon.fa.fa-instagram
+								li.menu-item: a(href=twitterURL target="_blank"): i.ui-icon.fa.fa-twitter
+								li.menu-item: a(href=youtubeURL target="_blank"): i.ui-icon.fa.fa-youtube
 					.wk-col.wk-d 
 						nav#site-nav
 							ul.menu
-								li.menu-item: a(href="#") Historia
-								li.menu-item: a(href="#") Productos
-								li.menu-item: a(href="#") Ritual
-								li.menu-item: a(href="#") Recetas
-								li.menu-item: a(href="#") Plan Cacao
+								li.menu-item: a(href=url + "historia.html") Historia
+								li.menu-item: a(href=url + "productos.html") Productos
+								li.menu-item: a(href=url + "el-ritual-abuelita.html") Ritual
+								li.menu-item: a(href=url + "recetas.html") Recetas
+								li.menu-item: a(href=url + "plan-cacao.html") Cocoa Plan
+								
+								//-
+									Menú angular
+									
+									li.menu-item: a(href="#historia") Historia
+									li.menu-item: a(href="#productos") Productos
+									li.menu-item: a(href="#ritual-abuelita") Ritual
+									li.menu-item: a(href="#recetas") Recetas
+									li.menu-item: a(href="#plan-cacao") Cocoa Plan
 					
 					.wk-col-1.wk-m 
 						.off-canvas-icon
 							span.fa.fa-bars
 							
-				
-    
+		block content
+	
+		//-
+			div(class="page page-{{ pageClass }}" ng-view)
+		
+		include menu-movil.jade

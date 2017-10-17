@@ -59,27 +59,31 @@ jQuery(document).ready(function($){
 	});
 
 	//Smooth scroll, depende de tweenmax y de ScrollToPlugin
-	var $window = $(window);
 
-	var scrollTime = .5;			//Timing de scroll
-	var scrollDistance = 500;		//Distancia
+	//if ($(window).width() > 771) {
 
-	$window.on("mousewheel DOMMouseScroll", function(event){
+		// var $window = $(window);
+		//
+		// var scrollTime = .5;			//Timing de scroll
+		// var scrollDistance = 500;		//Distancia
+		//
+		// $window.on("mousewheel DOMMouseScroll", function(event){
+		//
+		// 	event.preventDefault();
+		//
+		// 	var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+		// 	var scrollTop = $window.scrollTop();
+		// 	var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+		//
+		// 	TweenMax.to($window, scrollTime, {
+		// 		scrollTo : { y: finalScroll, autoKill:true },
+		// 			ease: Power1.easeOut,	//For more easing functions see https://api.greensock.com/js/com/greensock/easing/package-detail.html
+		// 			autoKill: true,
+		// 			overwrite: 5
+		// 		});
+		// });
 
-		event.preventDefault();
-
-		var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
-		var scrollTop = $window.scrollTop();
-		var finalScroll = scrollTop - parseInt(delta*scrollDistance);
-
-		TweenMax.to($window, scrollTime, {
-			scrollTo : { y: finalScroll, autoKill:true },
-				ease: Power1.easeOut,	//For more easing functions see https://api.greensock.com/js/com/greensock/easing/package-detail.html
-				autoKill: true,
-				overwrite: 5
-			});
-	});
-
+	//}
 
 
 

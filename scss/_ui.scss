@@ -55,6 +55,15 @@
 	text-transform: uppercase;
 }
 
+// Text underline
+.ui-text-underline {
+	text-decoration: underline;
+}
+
+.ui-text-underline-important {
+	text-decoration: underline !important;
+}
+
 // BLoques
 .ui-align-center {
 	display: block;

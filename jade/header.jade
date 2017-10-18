@@ -84,7 +84,15 @@ html(lang="es_ES" dir="ltr" last-update="10-12-17")
 		body(ng-app="nestleapp").wk-wrap-1920
 		
 	body.wk-wrap-1920
-		.wk-preloading
+		style#antiClickjack body {display:none !important;}
+		script.
+			if (self === top) {
+				var antiClickjack = document.getElementById("antiClickjack");
+				antiClickjack.parentNode.removeChild(antiClickjack);
+			} else {
+				top.location = self.location;
+			}	
+		.wk-preloading.test
 			span.wk-preloading-loader
 		header#main-header.wk-section.ui-box-model.no-print
 			section.wk-section-wrap
@@ -124,7 +132,6 @@ html(lang="es_ES" dir="ltr" last-update="10-12-17")
 							span.fa.fa-bars
 							
 		block content
-	
 		//-
 			div(class="page page-{{ pageClass }}" ng-view)
 		

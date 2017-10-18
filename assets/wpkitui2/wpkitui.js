@@ -109,5 +109,26 @@ jQuery(document).ready(function($){
 				}
 			});
 
+		// Clase .mobile en body
+			$(window).on('resize', function(){
+				var win = $(this);
+				if(win.width() < 770) {
+					$('html').addClass('mobile');
+					$('html').removeClass('desktop');
+				} else {
+					$('html').removeClass('mobile');
+					$('html').addClass('desktop');
+				}
+			});
+
+			// Si se carga inicialmente
+			if ($(window).width() < 770) {
+			   $('html').addClass('mobile');
+			}
+
+			if ($(window).width() > 771) {
+			   $('html').addClass('desktop');
+			}
+
 
 });

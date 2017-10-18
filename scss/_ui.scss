@@ -296,6 +296,12 @@ $btnfaMargin: 10px;
 
 
 // Títulos
+
+/*
+	Las propiedades de peso y estílo se
+	especifican en scss/_mixins.scss / @mixin ui-font-model-times-new-roman
+*/
+
 [class*="ui-title"] {
 	@include ui-font-model-times-new-roman;
 }
@@ -327,6 +333,12 @@ $btnfaMargin: 10px;
 	font-size: xx-large;
 }
 
+
+/*
+	Las propiedades de peso y estílo se
+	especifican en scss/_mixins.scss / @mixin ui-font-model-montserrat
+*/
+
 [class*="ui-subtitle"] {
 	@include ui-font-model-montserrat;
 
@@ -338,6 +350,11 @@ $btnfaMargin: 10px;
 
 .ui-subtitle-small {
 	font-size: 18px;
+}
+
+.mobile [class*="ui-subtitle"] {
+	font-weight: 400;
+
 }
 
 .ui-title-ornament:after,

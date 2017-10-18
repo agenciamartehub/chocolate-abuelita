@@ -22,6 +22,8 @@
 	.como-preparar-thumb {
 		display: inline-block;
 		width: 100%;
-		height: calc(100vw / 4 - 4px)
+		@media #{$onlyDesktop} {
+			height: calc(100vw / 4 - 4px);			
+		}
 	}
 }

@@ -8,9 +8,9 @@
 	}
 	.slide {
 		.ui-btn {
-			position: absolute;
-			bottom: 40px;
 			left: 16%;
+			position: absolute;
+			bottom: 80px;
 			@media #{$onlyMobile} {
 				left: 0;
 				right: 0;

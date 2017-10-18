@@ -43,8 +43,9 @@ mixin producto( id, title, description, image, modalContent )
 	.ui-modal-productos.ui-modal.ui-block-texture.ui-bg-gold-important(id=id)
 		h2.ui-modal-header.ui-title-big.ui-title-ornament.wk-text-center(data-selectable="true") Preparación
 		.ui-modal-content.ui-box-model.wk-margin-y-20(data-selectable="true")!= modalContent
-		p.wk-text-center.wk-margin-bottom-0: a.ui-btn(href="#") Comprar	
-			span.fa.fa-shopping-cart
+		p.wk-text-center.wk-margin-bottom-0: a.ui-btn(href="#") 
+			span.icon.fa.fa-shopping-cart
+			span Comprar	
 
 
 //-
@@ -92,8 +93,9 @@ mixin modalPromocion( id, header, content, link )
 		h2.ui-modal-header.ui-title-big.ui-title-ornament.wk-text-center(data-selectable="true") Promoción
 		.ui-modal-content.ui-box-model.wk-margin-y-20(data-selectable="true")!= content
 		p.wk-text-center.wk-margin-bottom-0
-			a.ui-btn(href=link target="_blank") Comprar
-				span.fa.fa-shopping-cart
+			a.ui-btn(href=link target="_blank") 
+				span.icon.fa.fa-shopping-cart
+				span Comprar
 
 //- 
 	Botón compartir en redes sociales

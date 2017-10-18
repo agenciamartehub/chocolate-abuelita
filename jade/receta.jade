@@ -103,18 +103,23 @@ block content
 			section#receta-buttons.wk-wrap-1100.wk-text-center.ui-d-row-padding
 				.wk-section-wrap
 					.wk-cols
-						.wk-col.ui-box-model.wk-d
+						.wk-col-3.ui-box-model.wk-d
 							a.ui-btn(href="#" onclick="window.print()")
 								img(src="img/icon-imprimir.png" alt="Imprimir")
 								span Imprimir
 								
-						.wk-col.ui-box-model.no-print
+						.wk-col-3.ui-box-model.no-print
 							+btnShare( mensajeDeTwitter, receta )
 							
-						.wk-col.ui-box-model.no-print
+						.wk-col-3.ui-box-model.no-print
 							a.ui-btn(href="/recetas.html") 
 								img(src="img/icon-conoce-mas-recetas.png" alt="Más recetas")
-								span Conoce más recetas						
+								span Conoce más recetas	
+								
+						.wk-col-3.ui-box-model.no-print
+							a.ui-btn(href="#") 
+								span.icon.fa.fa-shopping-cart.ui-text-gold
+								span Comprar			
 					
 			+sectionLeyend('receta-leyend', '')
 				img.wk-margin-y-20(src="img/icon-consejo.png" alt="Consejo de Abuelita - Nestle")

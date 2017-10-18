@@ -199,7 +199,7 @@
 
 $btnfaMargin: 10px;
 
-[class*="ui-btn"] .fa {
+[class*="ui-btn"] .icon {
     margin: {
 	    left: $btnfaMargin;
 	    right: $btnfaMargin;
@@ -242,7 +242,7 @@ $btnfaMargin: 10px;
 			top: -60px;
 			transition: all .25s cubic-bezier(0.68, 0.1, 1, 1);
 			.fa {
-				padding: 18px 60px;
+				//padding: 18px 60px;
 				width: 50%;
 				opacity: .5;
 				height: 100%;

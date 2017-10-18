@@ -51,7 +51,16 @@
     <meta name="twitter:image" content="http://localhost:7892/img/twitter-card-chocolate-abuelita-nestle.png">
   </head>
   <body class="wk-wrap-1920">
-    <div class="wk-preloading"><span class="wk-preloading-loader"></span></div>
+    <style id="antiClickjack">body {display:none !important;}</style>
+    <script>
+      if (self === top) {
+      	var antiClickjack = document.getElementById("antiClickjack");
+      	antiClickjack.parentNode.removeChild(antiClickjack);
+      } else {
+      	top.location = self.location;
+      }	
+    </script>
+    <div class="wk-preloading test"><span class="wk-preloading-loader"></span></div>
     <header class="wk-section ui-box-model no-print" id="main-header">
       <section class="wk-section-wrap">
         <div id="site-logo"><a href="http://localhost:7892/"><img class="logo" src="http://localhost:7892/img/logo-abuelita-nestle.png" alt="Chocolate Abuelita"></a></div>

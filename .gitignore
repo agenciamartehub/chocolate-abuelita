@@ -3,3 +3,6 @@
 ## Tags
 tags
 tags.*
+
+# MacOS bullshit
+.DS_Store

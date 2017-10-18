@@ -196,6 +196,17 @@
 	}
 }
 
+
+$btnfaMargin: 10px;
+
+[class*="ui-btn"] .fa {
+    margin: {
+	    left: $btnfaMargin;
+	    right: $btnfaMargin;
+    }
+    font-size: 120%;
+}
+
 // btn share
 
 .ui-btn-share {

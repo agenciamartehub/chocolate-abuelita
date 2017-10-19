@@ -2,15 +2,15 @@
 extends header.jade
 
 block title
-	title Churros con Salsa de Chocolate Abuelita®  - Nestlé
+	title Churros con Salsa de Chocolate Abuelita<sup>®</sup>  - Nestlé
 
 block description
-	meta(name="description" content=" Descubre cómo hacer Churros con Salsa de Chocolate Abuelita® y otras deliciosas recetas en https://www.abuelita.com.mx/")
+	meta(name="description" content=" Descubre cómo hacer Churros con Salsa de Chocolate Abuelita<sup>®</sup> y otras deliciosas recetas en https://www.abuelita.com.mx/")
 
 block openGraph
 	meta(property="og:url" content=url + 'como-hacer-churros-con-salsa-de-chocolate-abuelita.html')
-	meta(property="og:title" content="Cómo hacer Churros con Salsa de Chocolate Abuelita®  - Nestlé")
-	meta(property="og:description" content=" Descubre cómo hacer Churros con Salsa de Chocolate Abuelita® y otras deliciosas recetas en https://www.abuelita.com.mx/")
+	meta(property="og:title" content="Cómo hacer Churros con Salsa de Chocolate Abuelita<sup>®</sup>  - Nestlé")
+	meta(property="og:description" content=" Descubre cómo hacer Churros con Salsa de Chocolate Abuelita<sup>®</sup> y otras deliciosas recetas en https://www.abuelita.com.mx/")
 	meta(property="og:type" content="article")
 	meta(property="og:image" content=url + 'img/compartir-receta-churros-chocolate-abuelita-nestle.png')
 
@@ -18,8 +18,8 @@ block twitterCards
 	meta(name="twitter:card" content="summary_large_image")
 	meta(name="twitter:site" content='@' + twitterUser)
 	meta(name="twitter:creator" content='@' + twitterUser)
-	meta(name="twitter:title" content="Cómo hacer Churros con Salsa de Chocolate Abuelita®  - Nestlé")
-	meta(name="twitter:description" content=" Descubre cómo hacer Churros con Salsa de Chocolate Abuelita® y otras deliciosas recetas en https://www.abuelita.com.mx/")
+	meta(name="twitter:title" content="Cómo hacer Churros con Salsa de Chocolate Abuelita<sup>®</sup>  - Nestlé")
+	meta(name="twitter:description" content=" Descubre cómo hacer Churros con Salsa de Chocolate Abuelita<sup>®</sup> y otras deliciosas recetas en https://www.abuelita.com.mx/")
 	meta(name="twitter:image" content=url + 'img/compartir-receta-churros-chocolate-abuelita-nestle.png')
 		
 block content
@@ -37,7 +37,7 @@ block content
 		
 		+btnShare( 'ElMensajeDeTwitter' )
 
-	-var mensajeDeTwitter = ' Descubre cómo hacer Churros con Salsa de Chocolate Abuelita® y otras deliciosas recetas en www.abuelita.com.mx'
+	-var mensajeDeTwitter = ' Descubre cómo hacer Churros con Salsa de Chocolate Abuelita<sup>®</sup> y otras deliciosas recetas en www.abuelita.com.mx'
 	-var receta = 'como-hacer-churros-con-salsa-de-chocolate-abuelita.html'
 
 	main#receta(role="main")
@@ -46,7 +46,7 @@ block content
 				'receta-banner', 
 				'ui-bg-bold', 
 				'Receta', 
-				'Cómo hacer Churros con Salsa de Chocolate Abuelita®', 
+				'Cómo hacer Churros con Salsa de Chocolate Abuelita<sup>®</sup>', 
 				'img/receta-banner-como-prepearar-churros-chocolate-abuelita-nestle.jpg', 
 				'img/icon-recetas.png'
 			)
@@ -74,7 +74,7 @@ block content
 					p Salsa:
 					
 					ul
-						li 1 lata con Leche Condensada LA LECHERA®   397  ml
+						li 1 lata con Leche Condensada LA LECHERA<sup>®</sup>   397  ml
 						li 4 piezas de huevos  240 g 
 						
 					h6.ui-title
@@ -91,7 +91,7 @@ block content
 					//
 						+recetaPaso ( 'numeroDePaso', 'Contenido' )
 					
-					+recetaPaso('1','Para la salsa: Mezcla la Leche Condensada LA LECHERA® con el Chocolate ABUELITA® Granulado; reserva.')
+					+recetaPaso('1','Para la salsa: Mezcla la Leche Condensada LA LECHERA<sup>®</sup> con el Chocolate ABUELITA<sup>®</sup> Granulado; reserva.')
 					+recetaPaso('2','En una cacerola calienta la leche con la mantequilla, el azúcar y la vainilla hasta que se funda la grasa; agrega la harina y mezcla fuertemente con una pala hasta formar una masa que se despegue de la cacerola. ')
 					+recetaPaso('3','Bate la masa y agrega los huevos uno a uno hasta que quede una pasta tersa y brillosa. Coloca la pasta en una manga con una duya rizada. ')
 					+recetaPaso('4','Aparte, en una cacerola calienta el aceite; forma los churros con la ayuda de la duya y fríelos hasta que queden dorados')

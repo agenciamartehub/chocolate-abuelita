@@ -2,15 +2,13 @@
 extends header.jade
 
 block title
-	title Chocolate Abuelita - Nestlé
+  title Chocolate Abuelita - Nestlé
 
 block description
-	meta(name="description" content="Chocolate Abuelita")
-	
+  meta(name="description" content="Chocolate Abuelita")
+
 block content
 
-	main(role="main").wk-children-text-center
-			h1 No encontramos lo que estás buscando.
-	include footer.jade
-
-												
+  main(role="main").wk-children-text-center
+      div.error-image
+  include footer.jade

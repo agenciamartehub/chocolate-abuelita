@@ -1,0 +1,14 @@
+.error-image {
+  min-height: 82vh;
+  background-image: url('/img/error-404.jpg');
+  background-position: center;
+  background-size: cover;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .error-image {
+    margin-top: 65px;
+    background-image: url('/img/error-404-mobile.jpg');
+  }
+}

@@ -39,6 +39,15 @@
 	}
 }
 
+.ui-section-leyend {
+	.ui-section-leyend-title {
+		font-size: 42px;
+		span {
+			font-size: 50px;
+		}
+	}
+}
+
 @media print {
 	.ui-section-header {
 		height: 7cm;
@@ -182,4 +191,13 @@
 .ui-modal {
 	display: none;
 	max-width: 900px;
+}
+
+// Páginas con solo texto
+
+.ui-plain-page {
+    padding-top: 210px;
+    padding-bottom: 100px;
+    font-family: 'open sans', 'helvetica', 'arial', sans-serif;
+    font-size: 14px;
 }

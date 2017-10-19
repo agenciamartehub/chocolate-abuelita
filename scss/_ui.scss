@@ -196,6 +196,11 @@
 	}
 }
 
+// iExplorer
+.gecko.win.no-supports [class*="ui-btn"] {
+	padding-top: 26px;
+}
+
 
 $btnfaMargin: 10px;
 

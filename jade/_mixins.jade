@@ -7,9 +7,9 @@ mixin sectionHeader( id, classes, title, leyend, background, imageURL )
 					if imageURL
 						span: img.ui-section-icon.ui-align-center(src= imageURL)
 					if title
-						h1.ui-title-big.ui-title-ornament.ui-text-gold= title 
+						h1.ui-title-big.ui-title-ornament.ui-text-gold!= title 
 					if leyend
-						h3.ui-title.ui-text-white= leyend
+						h3.ui-title.ui-text-white!= leyend
 					block
 
 //- Sección Leyend, recuadro de texto con fondo rojo y textura de fondo ejemplo aquí http://prntscr.com/gw5wof

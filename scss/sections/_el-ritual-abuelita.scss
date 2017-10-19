@@ -1,10 +1,13 @@
 #como-preparar {
 	.ui-title {
 	    font-size: 38px;
-	    min-height: 100px;
+	    min-height: 80px;
 	    display: flex;
 	    align-items: center;
 	    justify-content: center;
+	}
+	p {
+		margin-top: 0;
 	}
 	img {
 		width: 100%;
@@ -23,7 +26,7 @@
 		display: inline-block;
 		width: 100%;
 		@media #{$onlyDesktop} {
-			height: calc(100vw / 4 - 4px);			
+			height: calc(100vw / 4 - 4px);
 		}
 	}
 }

@@ -15,14 +15,14 @@ block content
 				'ui-bg-gold', 
 				'', 
 				'', 
-				'img/plan-cacao-video-poster-nestle.png', 
+				url + 'img/plan-cacao-video-poster-nestle.png',
 				''
 			)
 			a.ui-section-header-modal(href="https://www.youtube.com/watch?v=V8UPG6ef5no" data-fancybox)
 			.container.ui-box-model
 				a.ui-btn(href="javascript:;" data-fancybox data-src="#plan-cacao-mas-informacion") Más información
 				+modal( 
-					'<img class="wk-block wk-margin-auto" src="img/icon-cocoa-plan.png">',
+					'<img class="wk-block wk-margin-auto" src="/img/icon-cocoa-plan.png">',
 					'plan-cacao-mas-informacion', 
 					'Nestlé Cocoa Plan<sup>®</sup>', 
 					'' 
@@ -61,15 +61,15 @@ block content
 					.wk-col 
 						.wk-cols-m
 							.wk-col
-								img(src="img/plan-cacao-1-nestle.jpg" alt="Cocoa Plan Nestle")
+								img(src= url + "img/plan-cacao-1-nestle.jpg" alt="Cocoa Plan Nestle")
 							.wk-col
-								img(src="img/plan-cacao-2-nestle.jpg" alt="Cocoa Plan Nestle")
+								img(src= url + "img/plan-cacao-2-nestle.jpg" alt="Cocoa Plan Nestle")
 					.wk-col 
 						.wk-cols-m
 							.wk-col
-								img(src="img/plan-cacao-3-nestle.jpg" alt="Cocoa Plan Nestle")
+								img(src= url + "img/plan-cacao-3-nestle.jpg" alt="Cocoa Plan Nestle")
 							.wk-col
-								img(src="img/plan-cacao-4-nestle.jpg" alt="Cocoa Plan Nestle")
+								img(src= url + "img/plan-cacao-4-nestle.jpg" alt="Cocoa Plan Nestle")
 
 		+sectionLeyend('plan-cacao-leyend', '') 
 			strong Juntos trabajamos para incrementar la productividad del campo y recuperar la  <span class="ui-title-xx-larger ui-text-gold"> identidad de México </span> como país netamente cacaotero.
@@ -78,7 +78,7 @@ block content
 			.wk-section-wrap
 				.ui-block-padding 
 					h6.ui-title.wk-m Logros
-					img.wk-img-responsive.wk-padding-y-40(src="img/logo-cocoa-plan.png" alt="Cocoa Plan Nestle Logo")
+					img.wk-img-responsive.wk-padding-y-40(src= url + "img/logo-cocoa-plan.png" alt="Cocoa Plan Nestle Logo")
 					
 					h2.ui-subtitle 70% mayor productividad en las parcelas y las cooperativas generaron una derrama económica superior a los 12 millones por el valor agregado a su producto.					
 		

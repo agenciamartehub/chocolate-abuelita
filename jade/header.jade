@@ -28,7 +28,6 @@ html(lang="es_ES" dir="ltr" last-update="10-12-17")
 		meta(name="theme-color" content="#ffb500")
 		meta(name="apple-mobile-web-app-status-bar-style" content="#ffb500")
 		//- Links -->
-		link(rel="canonical" href=url)
 		meta(name="fragment" content="!")
 		//- Scripts -->
 		script(type="text/javascript" src=url + 'js/jquery-3.1.1.min.js')
@@ -55,10 +54,9 @@ html(lang="es_ES" dir="ltr" last-update="10-12-17")
 		script(type="text/javascript" src=url + 'assets/scrollto/ScrollToPlugin.min.js')
 		//- Styles -->
 		link(rel="stylesheet" href=url + "css/style.css")
-		script(type="text/javascript" src=url + "js/scripts.js")
+		script(type="text/javascript" src=url + "js/marteScripts.js")
 		//- Facebook open graph
 		meta(name="fb:page_id" content=facebookID)
-		meta(name="article:author" content=facebookURL)
 		meta(name="og:region" content="MX")
 		meta(property="og:site_name" content="Chocolate Abuelita - Nestlé ")
 		meta(property="og:locale" content="es-MX")
@@ -91,6 +89,14 @@ html(lang="es_ES" dir="ltr" last-update="10-12-17")
 		body(ng-app="nestleapp").wk-wrap-1920
 		
 	body.wk-wrap-1920
+		style#antiClickjack body {display:none !important;}
+		script.
+			if (self === top) {
+				var antiClickjack = document.getElementById("antiClickjack");
+				antiClickjack.parentNode.removeChild(antiClickjack);
+			} else {
+				top.location = self.location;
+			}	
 		//- Tag manager no script
 		noscript
 			iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-NBJJC6" height="0" width="0" style="display:none;visibility:hidden")
@@ -134,7 +140,6 @@ html(lang="es_ES" dir="ltr" last-update="10-12-17")
 							.wk-icon
 						
 		block content
-	
 		//-
 			div(class="page page-{{ pageClass }}" ng-view)
 		

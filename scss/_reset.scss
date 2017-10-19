@@ -32,8 +32,15 @@ strong {
 	font-weight: 900;
 }
 
-ol, ul {
+ul {
 	list-style: none;
+}
+
+ol {
+	list-style-position: inside;
+	li {
+		margin: 10px 0;
+	}
 }
 
 blockquote, q {

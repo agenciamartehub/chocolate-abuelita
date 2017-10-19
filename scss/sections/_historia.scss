@@ -12,6 +12,11 @@
 		    visibility: hidden;
 		}
 	}
+	[class*=ui-timeline-row-]:last-child {
+		.ui-timeline-line-after {
+			visibility: hidden;
+		}
+	}
 	.ui-timeline-row-left {
 		.ui-timeline-header {
 		    text-align: right;

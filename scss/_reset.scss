@@ -66,11 +66,6 @@ mark {
 
 iframe {
     width: 100%;
-    min-height: 700px;
-}
-
-.safari iframe {
-	min-height: 700px;
 }
 
 img {
@@ -80,4 +75,14 @@ img {
 p {
 	margin-top: $boxModel;
 	margin-bottom: $boxModel;
+}
+
+
+hr {
+	border-color: $secondaryColor;
+}
+
+sup {
+    font-size: 70%;
+    vertical-align: super;
 }

@@ -1,10 +1,16 @@
 #como-preparar {
 	.ui-title {
 	    font-size: 38px;
-	    min-height: 100px;
-	    display: flex;
-	    align-items: center;
-	    justify-content: center;
+	    min-height: 80px;
+	    @media #{$onlyDesktop} {
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+
+	    }
+	}
+	p {
+		margin-top: 0;
 	}
 	img {
 		width: 100%;
@@ -22,6 +28,8 @@
 	.como-preparar-thumb {
 		display: inline-block;
 		width: 100%;
-		height: calc(100vw / 4 - 4px)
+		@media #{$onlyDesktop} {
+			height: calc(100vw / 4 - 4px);
+		}
 	}
 }

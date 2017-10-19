@@ -60,24 +60,29 @@ html(lang="es_ES" dir="ltr" last-update="10-12-17")
 		meta(name="og:region" content="MX")
 		meta(property="og:site_name" content="Chocolate Abuelita - Nestlé ")
 		meta(property="og:locale" content="es-MX")
-		meta(property="og:url" content=url)
 		meta(name="og:country-name" content="Mexico")
 		block openGraph
-			
-			meta(property="og:title" content="Chocolate ABUELITA®")
-			meta(property="og:description" content="Los mejores momentos se viven con la familia, por eso Chocolate ABUELITA® hace más ricos los instantes que pasamos con nuestros seres queridos. Hacer chocolate caliente es una tradición que las familias mexicanas han compartido…")
+			meta(property="og:url" content=url)
+			meta(property="og:title" content="Chocolate ABUELITA<sup>®</sup>")
+			meta(property="og:description" content="Los mejores momentos se viven con la familia, por eso Chocolate ABUELITA<sup>®</sup> hace más ricos los instantes que pasamos con nuestros seres queridos. Hacer chocolate caliente es una tradición que las familias mexicanas han compartido…")
 			meta(property="og:type" content="website")
 			meta(property="og:image" content=url + 'img/facebook-share-chocolate-abuelita-nestle.png')
 		block twitterCards
 			meta(name="twitter:card" content="summary_large_image")
 			meta(name="twitter:site" content='@' + twitterUser)
 			meta(name="twitter:creator" content='@' + twitterUser)
-			meta(name="twitter:title" content="Chocolate ABUELITA®")
-			meta(name="twitter:description" content="Los mejores momentos se viven con la familia, por eso Chocolate ABUELITA® hace más ricos los instantes que pasamos con nuestros seres queridos.")
+			meta(name="twitter:title" content="Chocolate ABUELITA<sup>®</sup>")
+			meta(name="twitter:description" content="Los mejores momentos se viven con la familia, por eso Chocolate ABUELITA<sup>®</sup> hace más ricos los instantes que pasamos con nuestros seres queridos.")
 			meta(name="twitter:image" content=url + 'img/twitter-card-chocolate-abuelita-nestle.png')
-
-		//-
-			base(href=url)
+		//- Tag manager
+		script#tag-manager.
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-NBJJC6');
+			
+		//- base(href=url)
 		
 	//-
 		angular body tag 
@@ -92,14 +97,17 @@ html(lang="es_ES" dir="ltr" last-update="10-12-17")
 			} else {
 				top.location = self.location;
 			}	
-		.wk-preloading.test
+		//- Tag manager no script
+		noscript
+			iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-NBJJC6" height="0" width="0" style="display:none;visibility:hidden")
+		.wk-preloading
 			span.wk-preloading-loader
-		header#main-header.wk-section.ui-box-model.no-print
+		header#main-header.wk-section.no-print
 			section.wk-section-wrap
 				#site-logo
 					a(href=url): img.logo(src= url + "img/logo-abuelita-nestle.png" alt="Chocolate Abuelita")
 				.wk-cols-m
-					.wk-col
+					.wk-col.ui-box-model
 						nav#social-nav
 							ul.menu
 								//-
@@ -109,14 +117,14 @@ html(lang="es_ES" dir="ltr" last-update="10-12-17")
 								li.menu-item: a(href=instagramURL target="_blank"): i.ui-icon.fa.fa-instagram
 								li.menu-item: a(href=twitterURL target="_blank"): i.ui-icon.fa.fa-twitter
 								li.menu-item: a(href=youtubeURL target="_blank"): i.ui-icon.fa.fa-youtube
-					.wk-col.wk-d 
+					.wk-col.wk-d.ui-box-model
 						nav#site-nav
 							ul.menu
 								li.menu-item: a(href=url + "historia.html") Historia
 								li.menu-item: a(href=url + "productos.html") Productos
 								li.menu-item: a(href=url + "el-ritual-abuelita.html") Ritual
 								li.menu-item: a(href=url + "recetas.html") Recetas
-								li.menu-item: a(href=url + "plan-cacao.html") Cocoa Plan®
+								li.menu-item: a(href=url + "cocoa-plan.html") Cocoa Plan<sup>®</sup>
 								
 								//-
 									Menú angular
@@ -125,12 +133,12 @@ html(lang="es_ES" dir="ltr" last-update="10-12-17")
 									li.menu-item: a(href="#productos") Productos
 									li.menu-item: a(href="#ritual-abuelita") Ritual
 									li.menu-item: a(href="#recetas") Recetas
-									li.menu-item: a(href="#plan-cacao") Cocoa Plan®
+									li.menu-item: a(href="#plan-cacao") Cocoa Plan<sup>®</sup>
 					
-					.wk-col-1.wk-m 
+					.wk-col-1.wk-m.wk-flex.wk-flex-justify-end
 						.off-canvas-icon
-							span.fa.fa-bars
-							
+							.wk-icon
+						
 		block content
 		//-
 			div(class="page page-{{ pageClass }}" ng-view)

@@ -17,8 +17,8 @@ block twitterCards
 	meta(name="twitter:card" content="summary_large_image")
 	meta(name="twitter:site" content='@' + twitterUser)
 	meta(name="twitter:creator" content='@' + twitterUser)
-	meta(name="twitter:title" content="Chocolate ABUELITA®")
-	meta(name="twitter:description" content="Los mejores momentos se viven con la familia, por eso Chocolate ABUELITA® hace más ricos los instantes que pasamos con nuestros seres queridos.")
+	meta(name="twitter:title" content="Chocolate ABUELITA<sup>®</sup>")
+	meta(name="twitter:description" content="Los mejores momentos se viven con la familia, por eso Chocolate ABUELITA<sup>®</sup> hace más ricos los instantes que pasamos con nuestros seres queridos.")
 	meta(name="twitter:image" content=url + 'img/twitter-card-chocolate-abuelita-nestle.png')
 		
 block content
@@ -45,7 +45,7 @@ block content
 				'receta-banner', 
 				'ui-bg-bold', 
 				'Receta', 
-				'Cómo preparar chocolate abuelita®', 
+				'Cómo preparar chocolate abuelita<sup>®</sup>', 
 				url + 'img/banner-recetas-pan.jpg', 
 				url + 'img/icon-recetas.png'
 			)
@@ -103,18 +103,23 @@ block content
 			section#receta-buttons.wk-wrap-1100.wk-text-center.ui-d-row-padding
 				.wk-section-wrap
 					.wk-cols
-						.wk-col.ui-box-model.wk-d
+						.wk-col-3.ui-box-model.wk-d
 							a.ui-btn(href="#" onclick="window.print()")
 								img(src= url + "img/icon-imprimir.png" alt="Imprimir")
 								span Imprimir
 								
-						.wk-col.ui-box-model.no-print
+						.wk-col-3.ui-box-model.no-print
 							+btnShare( mensajeDeTwitter, receta )
 							
-						.wk-col.ui-box-model.no-print
+						.wk-col-3.ui-box-model.no-print
 							a.ui-btn(href="/recetas.html") 
-								img(src= url + "img/icon-conoce-mas-recetas.png" alt="Más recetas")
-								span Conoce más recetas						
+								img(src=url +"img/icon-conoce-mas-recetas.png" alt="Más recetas")
+								span Conoce más recetas	
+								
+						.wk-col-3.ui-box-model.no-print
+							a.ui-btn(href="#") 
+								span.icon.fa.fa-shopping-cart.ui-text-gold
+								span Comprar			
 					
 			+sectionLeyend('receta-leyend', '')
 				img.wk-margin-y-20(src= url + "img/icon-consejo.png" alt="Consejo de Abuelita - Nestle")

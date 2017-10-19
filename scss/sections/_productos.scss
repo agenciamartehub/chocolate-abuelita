@@ -1,3 +1,11 @@
+#nuestros-productos-banner {
+	[class*="ui-btn"] {
+		@media #{$onlyDesktop} {
+			transform: scale(1.35);
+			transform-origin: top;
+		}
+	}
+}
 #productos-leyend {
 
 }
@@ -12,6 +20,7 @@
 	}
 	.producto {
 		width: 100%;
+		max-width: 320px;
 		height: auto;
 		transition: all .25s linear;
 	}

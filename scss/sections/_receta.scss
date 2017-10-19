@@ -17,6 +17,10 @@
 		@media #{$onlyDesktop} {
 			[class*="wk-col-"]:nth-child(even) {
 				padding-left: $boxModel;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-start;
 			}
 		}
 		@media #{$onlyMobile} {
@@ -32,10 +36,16 @@
 		margin: 20px 0;
 	}
 	.ui-btn {
+		padding: 18px 20px;
 		height: 68px;
 		width: 100%;
 		@media #{$onlyMobile} {
 			margin: 20px 0;
 		}
 	}
+}
+
+
+.gecko.win.no-supports #receta-buttons [class*="ui-btn"] {
+	padding-top: 18px;
 }

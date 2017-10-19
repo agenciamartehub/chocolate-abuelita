@@ -6,7 +6,9 @@
 	@media #{$onlyDesktop} {
 		.ui-title {
 			min-height: 100px;
-			@include flex( column, center, center );
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
 		}
 	}
 	@media ( max-width: 1000px) and #{$onlyDesktop} {
@@ -41,4 +43,7 @@
 
 #plan-cacao-mas-informacion {
 	background-image: initial !important;
+	.ui-title-big {
+		font-size: 60px;
+	}
 }

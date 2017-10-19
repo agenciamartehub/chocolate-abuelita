@@ -70,7 +70,7 @@ mixin producto( id, title, description, image, modalContent )
 mixin modal( preTitle, id, header )
 	.ui-modal.ui-block-texture.ui-bg-gold-important(id=id)
 		.ui-modal-pre-title!= preTitle
-		h2.ui-title-big.ui-title-ornament.wk-text-center(data-selectable="true")= header
+		h2.ui-title-big.ui-title-ornament.wk-text-center(data-selectable="true")!= header
 		p(data-selectable="true")!= content	
 			block	
 

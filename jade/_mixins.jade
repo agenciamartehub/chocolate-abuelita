@@ -110,3 +110,18 @@ mixin btnShare( twitterMessage, recetaURL )
 				a(href="https://twitter.com/home?status=Chocolateabuelita" onclick="window.open('https://twitter.com/home?status=@abuelitamx " + twitterMessage + "','pagename','resizable,height=400,width=480'); return false;").fa.fa-twitter
 				a(href="https://www.facebook.com/sharer/sharer.php?u=" + url + recetaURL onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=" + url + recetaURL + "','pagename','resizable,height=400,width=480'); return false;").fa.fa-facebook
 		
+
+
+
+
+
+// Recetas 
+
+mixin recetaPaso( counter, content )
+	.wk-cols
+		.wk-col-1.wk-text-center 
+			if counter
+				.ui-icon: i= counter
+		.wk-col-11
+			if content
+				span!= content

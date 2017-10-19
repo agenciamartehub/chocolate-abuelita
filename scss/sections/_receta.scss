@@ -17,6 +17,10 @@
 		@media #{$onlyDesktop} {
 			[class*="wk-col-"]:nth-child(even) {
 				padding-left: $boxModel;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-start;
 			}
 		}
 		@media #{$onlyMobile} {

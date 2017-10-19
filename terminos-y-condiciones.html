@@ -19,7 +19,6 @@
     <link rel="icon" type="image/ico" href="http://abuelita.agenciamarte.com.mx/img/favicon.png">
     <meta name="theme-color" content="#ffb500">
     <meta name="apple-mobile-web-app-status-bar-style" content="#ffb500">
-    <link rel="canonical" href="http://abuelita.agenciamarte.com.mx/">
     <meta name="fragment" content="!">
     <script type="text/javascript" src="http://abuelita.agenciamarte.com.mx/js/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" href="http://abuelita.agenciamarte.com.mx/assets/fancybox/jquery.fancybox.min.css">
@@ -34,9 +33,8 @@
     <script type="text/javascript" src="http://abuelita.agenciamarte.com.mx/assets/tweenmax/TweenMax.min.js"></script>
     <script type="text/javascript" src="http://abuelita.agenciamarte.com.mx/assets/scrollto/ScrollToPlugin.min.js"></script>
     <link rel="stylesheet" href="http://abuelita.agenciamarte.com.mx/css/style.css">
-    <script type="text/javascript" src="http://abuelita.agenciamarte.com.mx/js/scripts.js"></script>
+    <script type="text/javascript" src="http://abuelita.agenciamarte.com.mx/js/marteScripts.js"></script>
     <meta name="fb:page_id" content="525841987464010">
-    <meta name="article:author" content="https://www.fb.me/ChocolateAbuelita">
     <meta name="og:region" content="MX">
     <meta property="og:site_name" content="Chocolate Abuelita - Nestlé ">
     <meta property="og:locale" content="es-MX">
@@ -62,6 +60,15 @@
     </script>
   </head>
   <body class="wk-wrap-1920">
+    <style id="antiClickjack">body {display:none !important;}</style>
+    <script>
+      if (self === top) {
+      	var antiClickjack = document.getElementById("antiClickjack");
+      	antiClickjack.parentNode.removeChild(antiClickjack);
+      } else {
+      	top.location = self.location;
+      }	
+    </script>
     <noscript>
       <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBJJC6" height="0" width="0" style="display:none;visibility:hidden;"></iframe>
     </noscript>
@@ -164,7 +171,7 @@
       <section class="wk-section wk-wrap-1100">
         <div class="wk-section-wrap ui-box-model">
           <div class="wk-cols">
-            <div class="wk-col-1" data-layout-mobile="padding-y(40px)" data-layout-desktop="margin-x(20px)"><img width="100" src="img/logo-abuelita-footer-nestle.png" alt="Logo Chocolate Abuelita"></div>
+            <div class="wk-col-1" data-layout-mobile="padding-y(40px)" data-layout-desktop="margin-x(20px)"><img width="100" src="http://abuelita.agenciamarte.com.mx/img/logo-abuelita-footer-nestle.png" alt="Logo Chocolate Abuelita"></div>
             <div class="wk-col-11">
               <div class="container"><span>&copy; NESTLÉ </span><strong><a class="ui-text-gold ui-text-underline" href="http://abuelita.agenciamarte.com.mx/terminos-y-condiciones.html">TÉRMINOS Y CONDICIONES</a></strong><span> / </span><strong><a class="ui-text-gold ui-text-underline" href="https://www.nestle.com.mx/info/tc" target="_black">POLÍTICA DE PRIVACIDAD </a></strong><span>Marcas Registradas usadas bajo licencia de su titular Société des Produits Nestlé S.A., Case Postale 353, 1800 Vevey, Suiza</span><br><span class="ui-text-gold ui-text-bold wk-m">CONTACTO NESTLÉ &copy; | CALL CENTER: <a href="tel:5267 3303">5267 3303 </a>ó <a href="tel:01800 363 7853">01800 363 7853</a></span><span class="ui-text-gold ui-text-bold wk-d">CONTACTO NESTLÉ &copy; | CALL CENTER: <span>5267 3303 </span>ó <span>01800 363 7853</span></span></div>
             </div>

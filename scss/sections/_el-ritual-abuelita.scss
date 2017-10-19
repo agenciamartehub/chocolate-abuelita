@@ -2,9 +2,12 @@
 	.ui-title {
 	    font-size: 38px;
 	    min-height: 80px;
-	    display: flex;
-	    align-items: center;
-	    justify-content: center;
+	    @media #{$onlyDesktop} {
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+
+	    }
 	}
 	p {
 		margin-top: 0;

@@ -76,15 +76,24 @@ html(lang="es_ES" dir="ltr" last-update="10-12-17")
 			meta(name="twitter:title" content="Chocolate ABUELITA®")
 			meta(name="twitter:description" content="Los mejores momentos se viven con la familia, por eso Chocolate ABUELITA® hace más ricos los instantes que pasamos con nuestros seres queridos.")
 			meta(name="twitter:image" content=url + 'img/twitter-card-chocolate-abuelita-nestle.png')
-
-		//-
-			base(href=url)
+		//- Tag manager
+		script#tag-manager.
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-NBJJC6');
+			
+		//- base(href=url)
 		
 	//-
 		angular body tag 
 		body(ng-app="nestleapp").wk-wrap-1920
 		
 	body.wk-wrap-1920
+		//- Tag manager no script
+		noscript
+			iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-NBJJC6" height="0" width="0" style="display:none;visibility:hidden")
 		.wk-preloading
 			span.wk-preloading-loader
 		header#main-header.wk-section.no-print

@@ -91,12 +91,12 @@
 		@include ui-font-model-montserrat;
 		font-weight: 700;
 		font-size: 22px;
-		@media ( max-width: 1420px ) and ( min-width: 1080px ) {
+		@media ( max-width: 1660px ) and ( min-width: 1180px ) {
 			font-size: 16px;
 		}
 
-		@media ( max-width: 1079px ) and ( min-width: 770px ) {
-			font-size: 14px;
+		@media ( max-width: 1179px ) and ( min-width: 770px ) {
+			font-size: 13px;
 		}
 		.menu {
 			height: 100%;
@@ -111,25 +111,20 @@
 					}
 				}
 				&:not(:first-child) a {
-					margin-left: 20px;
+					margin-left: 14px;
 				}
+
 			}
 		}
 	}
 
-	// .off-canvas-icon {
-	// 	height: 100%;
-	// 	display: flex;
-	// 	align-items: center;
-	// 	justify-content: flex-end;
-	// 	cursor: pointer;
-	// 	@media #{$onlyMobile} {
-	// 		padding: 24px 0px 70px;
-	// 	}
-	// }
-
 }
 
+.menu-item {
+	.icon {
+		margin-right: 6px;;
+	}
+}
 
 // Icon off canvas
 

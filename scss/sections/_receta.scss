@@ -7,7 +7,7 @@
 			.ui-section-icon {
 				width: 48px;
 			}
-		}		
+		}
 	}
 }
 
@@ -57,6 +57,11 @@
 		}
 		@media #{$onlyMobile} {
 			margin: 20px 0;
+		}
+		img {
+			vertical-align: middle;
+			margin-right: 20px;
+			width: 14px
 		}
 	}
 }

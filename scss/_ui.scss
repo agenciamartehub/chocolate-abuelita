@@ -170,11 +170,6 @@
 	&:hover {
 	    background-color: $secondaryColorHover;
 	}
-	img {
-		vertical-align: middle;
-		margin: 0 20px;
-		width: 14px
-	}
 }
 
 .ui-btn-gold,
@@ -196,6 +191,13 @@
 	}
 }
 
+.ui-btn-product {
+    min-height: initial;
+    padding: 14px 24px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
 // iExplorer
 .gecko.win.no-supports [class*="ui-btn"] {
 	padding-top: 26px;
@@ -206,7 +208,7 @@ $btnfaMargin: 10px;
 
 [class*="ui-btn"] .icon {
     margin: {
-	    left: $btnfaMargin;
+	    //left: $btnfaMargin;
 	    right: $btnfaMargin;
     }
     font-size: 120%;

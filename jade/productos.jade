@@ -35,7 +35,11 @@ block content
 					
 					El template de este mixin se encuentra en jade/_mixins.jade
 					
-				a.ui-btn-gold(href="javascript:;" data-fancybox data-src="#promociones-modal") Conoce nuestras <br> promociones
+				//- a.ui-btn-gold(href="javascript:;" data-fancybox data-src="#promociones-modal") Conoce nuestras <br> promociones
+				
+				a.ui-btn-gold(href="javascript:;" data-fancybox data-src="#promociones-modal") 
+					img(src=url + 'img/boton-promociones-chocolate-abuelita-nestle.png')
+				 
 					
 				
 				+modalPromocion( 
@@ -56,13 +60,14 @@ block content
 						//-
 							Los productos se imprimen con un mixin con la siguiente estructura:
 							
-							+producto( 'id', 'titulo', 'descripcion', 'imagen', 'ContenidoDeModal' )
+							+producto( 'id', 'titulo', 'descripcion', 'imagen', 'ContenidoDeModal' 'btnLink' )
 							
 							$id - El id del modal, no del producto
 							$titulo - EL título del producto, aparecerá en el producto
 							$descripcion - La descripción del producto en forma de peso del empaque
 							$imagen - URL relativa de la imagen desde la raíz del proyecto
 							$contenidoDeModal - El contenido del modal (acepta tags normales de html p.ej. <strong>Texto</strong>)
+							$btnLink - Link del botón URL
 							
 							El mixin se encuentra en jade/_mixins.jade
 						+producto( 
@@ -70,32 +75,43 @@ block content
 							'Chocolate Abuelita<sup>®</sup> Tableta', 
 							'540g', 
 							url + 'img/chocolate-abuelita-clasico-nestle.png', 
-							'<img class="wk-d" src="/img/preparacion-tableta-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Clásico - Nestlé"><img class="wk-m" src="/img/preparacion-tableta-chocolate-abuelita-nestle-movil.png" alt="Preparación Chocolate Abuelita Clásico - Nestlé">' 
+							'<img class="wk-d" src="/img/preparacion-tableta-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Clásico - Nestlé"><img class="wk-m" src="/img/preparacion-tableta-chocolate-abuelita-nestle-movil.png" alt="Preparación Chocolate Abuelita Clásico - Nestlé">' ,
+							'#'
 							)
+							
+						
 					.wk-col-3
 						+producto( 
 							'abuelita-duo', 
 							'Chocolate Abuelita<sup>®</sup> Duo Pack', 
 							'540g', 
 							url + 'img/chocolate-abuelita-duo-pack-nestle.png', 
-							'<img class="wk-d" src="/img/preparacion-tableta-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Clásico - Duo Pack 540g - Nestlé"><img class="wk-m" src="/img/preparacion-tableta-chocolate-abuelita-nestle-movil.png" alt="Preparación Chocolate Abuelita Clásico - Duo Pack 540g - Nestlé">' 
+							'<img class="wk-d" src="/img/preparacion-tableta-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Clásico - Duo Pack 540g - Nestlé"><img class="wk-m" src="/img/preparacion-tableta-chocolate-abuelita-nestle-movil.png" alt="Preparación Chocolate Abuelita Clásico - Duo Pack 540g - Nestlé">', 
+							'#'
 							)
+							
+						
 					.wk-col-3
 						+producto( 
 							'abuelita-clasico-chico', 
 							'Chocolate Abuelita<sup>®</sup> Tableta', 
 							'360g', 
 							url + 'img/chocolate-abuelita-clasico-small-nestle.png', 
-							'<img class="wk-d" src="/img/preparacion-tableta-360g-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Clásico 360g"><img class="wk-m" src="/img/preparacion-tableta-360g-chocolate-abuelita-nestle-movil.png" alt="Preparación Chocolate Abuelita Clásico 360g">' 
+							'<img class="wk-d" src="/img/preparacion-tableta-360g-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Clásico 360g"><img class="wk-m" src="/img/preparacion-tableta-360g-chocolate-abuelita-nestle-movil.png" alt="Preparación Chocolate Abuelita Clásico 360g">',
+							'#'
 							)
+							
+						
 					.wk-col-3
 						+producto( 
 							'abuelita-granulado', 
 							'Chocolate Abuelita<sup>®</sup> Granulado', 
 							'320g', 
 							url + 'img/chocolate-abuelita-granulado-nestle.png', 
-							'<img class="wk-d" src="/img/preparacion-polvo-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Granulado - Nestlé"><img class="wk-m" src="/img/preparacion-polvo-chocolate-abuelita-nestle-movil.png" alt="Preparación Chocolate Abuelita Granulado - Nestlé">' 
+							'<img class="wk-d" src="/img/preparacion-polvo-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Granulado - Nestlé"><img class="wk-m" src="/img/preparacion-polvo-chocolate-abuelita-nestle-movil.png" alt="Preparación Chocolate Abuelita Granulado - Nestlé">', 
+							'#'
 							)
+							
 				.wk-cols
 					.wk-col-4
 						+producto( 
@@ -103,24 +119,32 @@ block content
 							'Chocolate Abuelita<sup>®</sup> Marqueta', 
 							'180g', 
 							url + 'img/chocolate-abuelita-marqueta-nestle.png', 
-							'<img class="wk-d" src="/img/preparacion-marqueta-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Marqueta - Nestlé"><img class="wk-m" src="/img/preparacion-marqueta-chocolate-abuelita-nestle-movil.png" alt="Preparación Chocolate Abuelita Marqueta - Nestlé">' 
+							'<img class="wk-d" src="/img/preparacion-marqueta-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Marqueta - Nestlé"><img class="wk-m" src="/img/preparacion-marqueta-chocolate-abuelita-nestle-movil.png" alt="Preparación Chocolate Abuelita Marqueta - Nestlé">',
+							'#'
 							)
+						
+						
 					.wk-col-4
 						+producto( 
 							'abuelita-duo-pack', 
 							'Chocolate Abuelita<sup>®</sup> Instantáneo', 
 							'240g', 
 							url + 'img/chocolate-abuelita-duo-pack.png', 
-							'<img class="wk-d" src="/img/preparacion-instantaneo-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita - Duo Pack - Nestlé"><img class="wk-m" src="/img/preparacion-instantaneo-chocolate-abuelita-nestle-movil.jpg" alt="Preparación Chocolate Abuelita - Duo Pack - Nestlé">' 
+							'<img class="wk-d" src="/img/preparacion-instantaneo-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita - Duo Pack - Nestlé"><img class="wk-m" src="/img/preparacion-instantaneo-chocolate-abuelita-nestle-movil.jpg" alt="Preparación Chocolate Abuelita - Duo Pack - Nestlé">', 
+							'#'
 							)
+							
+						
 					.wk-col-4
 						+producto( 
 							'abuelita-instantaneo', 
 							'Chocolate Abuelita<sup>®</sup> Instantáneo', 
 							'40g', 
 							url + 'img/chocolate-abuelita-instantaneo-nestle.png', 
-							'<img class="wk-d" src="/img/preparacion-instantaneo-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Instantaneo - Nestlé"><img class="wk-m" src="/img/preparacion-instantaneo-chocolate-abuelita-nestle-movil.jpg" alt="Preparación Chocolate Abuelita Instantaneo - Nestlé">' 
+							'<img class="wk-d" src="/img/preparacion-instantaneo-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Instantaneo - Nestlé"><img class="wk-m" src="/img/preparacion-instantaneo-chocolate-abuelita-nestle-movil.jpg" alt="Preparación Chocolate Abuelita Instantaneo - Nestlé">', 
+							'#'
 							)
+							
 					//-
 						.wk-col-3
 							+producto( 
@@ -128,12 +152,13 @@ block content
 								'Chocolate Abuelita<sup>®</sup> Tableta Gratis', 
 								'630g', 
 								'img/chocolate-abuelita-promocion-nestle.png', 
-								'<img class="wk-d" src="/img/preparacion-tableta-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Clásico - Nestlé"><img class="wk-m" src="/img/preparacion-tableta-chocolate-abuelita-nestle-movil.png" alt="Preparación Chocolate Abuelita Clásico - Nestlé">' 
+								'<img class="wk-d" src="/img/preparacion-tableta-chocolate-abuelita-nestle.jpg" alt="Preparación Chocolate Abuelita Clásico - Nestlé"><img class="wk-m" src="/img/preparacion-tableta-chocolate-abuelita-nestle-movil.png" alt="Preparación Chocolate Abuelita Clásico - Nestlé">', 
+								'#'
 								)
-						
-				.ui-block-padding
-					a.ui-btn#lightbox-call-to-action(href="#")
-						span.icon.fa.fa-shopping-cart
-						span Comprar
+				//-	
+					.ui-block-padding
+						a.ui-btn#lightbox-call-to-action(href="#")
+							span.icon.fa.fa-shopping-cart
+							span Comprar
 									
 	include footer.jade

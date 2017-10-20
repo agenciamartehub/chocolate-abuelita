@@ -25,25 +25,34 @@ mixin sectionLeyend( id, classes )
 	Productos, solo imprime un producto, es necesario un mixin por cada producto y estructurar un layout previamente
 
 	Los productos se imprimen con un mixin con la siguiente estructura:
-	+producto( 'id', 'titulo', 'descripcion', 'imagen', 'ContenidoDeModal' )
+	
+	+producto( 'id', 'titulo', 'descripcion', 'imagen', 'ContenidoDeModal' 'btnLink' )
+	
 	$id - El id del modal, no del producto
 	$titulo - EL título del producto, aparecerá en el producto
 	$descripcion - La descripción del producto en forma de peso del empaque
 	$imagen - URL relativa de la imagen desde la raíz del proyecto
 	$contenidoDeModal - El contenido del modal (acepta tags normales de html p.ej. <strong>Texto</strong>)
+	$btnLink - Link del botón URL
+	
 	El mixin se encuentra en jade/_mixins.jade
 	
-mixin producto( id, title, description, image, modalContent )
+mixin producto( id, title, description, image, modalContent, btnlink )
 	.ui-block-padding
 		a(href='javascript:;' data-fancybox data-src='#' + id): img.producto(src='' + image + '' alt='' + title + '' )
 		span.wk-block!= title
 		if description
 			strong!= description
+
+		div
+			a.ui-btn.ui-btn-product(href=btnlink target="_blank")
+				span.icon.fa.fa-shopping-cart
+				span Comprar
 			
 	.ui-modal-productos.ui-modal.ui-block-texture.ui-bg-gold-important(id=id)
 		h2.ui-modal-header.ui-title-big.ui-title-ornament.wk-text-center(data-selectable="true") Preparación
 		.ui-modal-content.ui-box-model.wk-margin-y-20(data-selectable="true")!= modalContent
-		p.wk-text-center.wk-margin-bottom-0: a.ui-btn(href="#") 
+		p.wk-text-center.wk-margin-bottom-0: a.ui-btn(href=btnlink) 
 			span.icon.fa.fa-shopping-cart
 			span Comprar	
 
@@ -125,3 +134,35 @@ mixin recetaPaso( counter, content )
 		.wk-col-11
 			if content
 				span!= content
+
+
+// Boton
+
+mixin boton( link, content, color )
+	if color == 'yellow'
+		a.ui-btn-gold(href=link)
+			span!= content
+				
+	else if color == 'gold'
+		a.ui-btn-gold(href=link)
+			span!= content
+	
+	else if color == 'pink'
+		a.ui-btn-pink(href=link)
+			span!= content
+
+	else if color == 'red'
+		a.ui-btn(href=link)
+			span!= content
+			
+	else 
+		a.ui-btn(href=link)
+			span!= content
+
+
+mixin botonProducto( link )
+	a.ui-btn.ui-btn-product(href=link target="_blank")
+		span.icon.fa.fa-shopping-cart
+		span Comprar
+				
+	

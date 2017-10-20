@@ -1,5 +1,5 @@
 mixin menuItem( title, link )
-	li.ui-subtitle-small.ui-title-ornament.ui-text-white.ui-box-model: a(href='' + link + '')!= title
+	li.menu-item.ui-subtitle-small.ui-title-ornament.ui-text-white.ui-box-model: a(href='' + link + '')!= title
 
 .off-canvas-menu.wk-m
 	ul.ui-menu 
@@ -9,6 +9,9 @@ mixin menuItem( title, link )
 		+menuItem( 'Ritual', url + 'el-ritual-abuelita.html' )
 		+menuItem( 'Recetas', url + 'recetas.html' )
 		+menuItem( 'Cocoa Plan<sup>®</sup>', url + 'cocoa-plan.html' )
+		li.menu-item.ui-subtitle-small.ui-title-ornament.ui-text-white.ui-box-model: a(href='#')
+			span.icon.fa.fa-shopping-cart
+			| Comprar
 	
 	//- 
 		Menú angular

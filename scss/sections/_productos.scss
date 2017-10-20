@@ -4,6 +4,9 @@
 			transform: scale(1.35);
 			transform-origin: top;
 		}
+		border-bottom: 6px solid $mainColorSpecial;
+		box-shadow: 1px 1px 18px rgba(0, 0, 0, 0.5);
+		font-weight: 800;
 	}
 }
 #productos-leyend {

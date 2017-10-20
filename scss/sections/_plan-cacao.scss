@@ -11,7 +11,7 @@
 			justify-content: center;
 		}
 	}
-	@media ( max-width: 1000px) and #{$onlyDesktop} {
+	@media #{$onlyMobile} {
 		h3.ui-title {
 			font-size: 27px;
 		}

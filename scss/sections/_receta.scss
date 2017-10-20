@@ -1,3 +1,16 @@
+#receta {
+	@media #{$onlyMobile} {
+		.ui-section-header {
+			.ui-title {
+				font-size: 100%;
+			}
+			.ui-section-icon {
+				width: 48px;
+			}
+		}		
+	}
+}
+
 #receta-ingredientes {
 	.ui-title {
 		margin-top: 60px;

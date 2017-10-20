@@ -125,9 +125,19 @@ block content
 								span Más recetas
 								
 						.wk-col-3.ui-box-model.no-print
-							a.ui-btn(href="#") 
+							a.ui-btn(href="javascript:;" data-fancybox data-src="#comprar-en-superama")
 								span.icon.fa.fa-shopping-cart.ui-text-gold
-								span Comprar en superama			
+								span Comprar en superama
+							+modal( 
+								'',
+								'comprar-en-superama', 
+								'Aviso', 
+								'' 
+								)
+								.wk-text-center.wk-d-padding-x-40
+									
+									p.wk-margin-y-40  Por favor revisa sus términos y condiciones. Nestle<sup>®</sup> no es responsable del contenido y funcionamiento de dicho sitio.			
+									a.ui-btn.wk-margin-y-40(href="#" target="_blank") Ir a superama		
 					
 			+sectionLeyend('receta-leyend', '')
 				img.wk-margin-y-20(src=url + "img/icon-consejo.png" alt="Consejo de Abuelita - Nestle")

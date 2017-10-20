@@ -154,7 +154,7 @@
 .ui-btn,
 .ui-button {
 	color: $secondaryColor;
-	font-weight: 800;
+	font-weight: 700;
 	font-size: 16px;
 	text-transform: uppercase;
 	padding: 18px 60px;
@@ -258,7 +258,7 @@ $btnfaMargin: 10px;
 				&:hover {
 					color: $mainColor;
 					transition-delay: 0s;
-					background-color: $secondaryColorHover;
+					//background-color: $secondaryColorHover;
 				}
 			}
 		}

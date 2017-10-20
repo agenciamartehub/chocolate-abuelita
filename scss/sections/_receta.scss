@@ -36,9 +36,12 @@
 		margin: 20px 0;
 	}
 	.ui-btn {
-		padding: 18px 20px;
 		height: 68px;
 		width: 100%;
+		&:not(.ui-btn-share) {
+			padding: 18px 20px;
+
+		}
 		@media #{$onlyMobile} {
 			margin: 20px 0;
 		}

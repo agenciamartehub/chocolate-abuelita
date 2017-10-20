@@ -1,5 +1,18 @@
 #main-slider {
-
+	#slide1 {
+		[class*="ui-btn"] {
+			@media #{$onlyMobile} {
+				bottom: 3%;
+			}
+		}
+	}
+	#slide2 {
+		[class*="ui-btn"] {
+			@media #{$onlyMobile} {
+				bottom: 11%;
+			}
+		}
+	}
 }
 
 

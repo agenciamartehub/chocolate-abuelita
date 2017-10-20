@@ -87,10 +87,21 @@
 		.ui-timeline-line-before {
 			@extend .ui-timeline-line;
 			height: 200px;
+			@media #{$onlyiPhone5} {
+				height: 120px;
+			}
 		}
 		.ui-timeline-line-after {
 			@extend .ui-timeline-line;
 			height: 100px;
+			@media #{$onlyiPhone5} {
+				height: 230px;
+			}
+		}
+	}
+	#timeline-date-1973 {
+		.ui-timeline-line-after {
+			height: 330px;
 		}
 	}
 }

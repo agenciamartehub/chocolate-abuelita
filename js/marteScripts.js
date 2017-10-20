@@ -16,7 +16,8 @@ jQuery(document).ready(function($){
 		adaptiveHeight: true,
 		fade: true,
 		// asNavFor: '.da-slider-nav',
-		//autoplay: true,
+		autoplay: true,
+		autoplaySpeed: 4000,
 		responsive: [
 			{
 			  breakpoint: 770,

@@ -15,7 +15,7 @@ html(lang="es_ES" dir="ltr" last-update="10-12-17")
 			title Chocolate Abuelita
 		block description
 		meta(name="description" content=description)
-		//- Device & Browser -->
+		//- Device & Browser
 		meta(name="HandheldFriendly" content="True")
 		meta(name="MobileOptimized" content="756")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
@@ -23,40 +23,33 @@ html(lang="es_ES" dir="ltr" last-update="10-12-17")
 		meta(name="format-detection" content="telephone=no")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 		meta(http-equiv="X-UA-Compatible" content="IE=EmulateIE10")
-		//- Icons & theme -->
+		//- Icons & theme
 		link(rel="icon" type="image/ico" href= url + 'img/favicon.png')
 		meta(name="theme-color" content="#ffb500")
 		meta(name="apple-mobile-web-app-status-bar-style" content="#ffb500")
-		//- Links -->
+		//- Links
 		meta(name="fragment" content="!")
-		//- Scripts -->
+		//- Scripts
 		script(type="text/javascript" src=url + 'js/jquery-3.1.1.min.js')
-		//- Angular 
-			script(type="text/javascript" src="http://code.angularjs.org/1.2.13/angular.js")
-			script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js")
-			script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js")
 		//- Libraries -->
 		//- Fancybox
-		link(rel="stylesheet" href=url + "assets/fancybox/jquery.fancybox.min.css")
-		script(type="text/javascript" src=url + "assets/fancybox/jquery.fancybox.min.js")
+			link(rel="stylesheet" href=url + "assets/fancybox/jquery.fancybox.min.css")
+			script(async type="text/javascript" src=url + "assets/fancybox/jquery.fancybox.min.js")
 		//- WPKit ui
 		link(rel="stylesheet" href=url + "assets/wpkitui2/wpkitui.css")
 		link(rel="stylesheet" href=url + "assets/wpkitui2/wpkitui_segment.css")
-		script(type="text/javascript" src=url + "assets/wpkitui2/wpkitui.js")
-		//-slick
+		//- script(async type="text/javascript" src=url + "assets/wpkitui2/wpkitui.js")
+		//- slick
 		link(rel="stylesheet" href=url + "assets/slick/slick-theme.css")
 		link(rel="stylesheet" href=url + "assets/slick/slick.css")
-		script(type="text/javascript" src=url + "assets/slick/slick.min.js")
+		//- script(async type="text/javascript" src=url + "assets/slick/slick.min.js")
 		//- Fonts -->
 		link(href=url + "fonts/font-awesome/font-awesome.css" rel="stylesheet")
 		//- link(href="https://fonts.googleapis.com/css?family=Montserrat:300,400,900" rel="stylesheet")
-		link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet")
-		//- Tweenmax
-		script(type="text/javascript" src=url + 'assets/tweenmax/TweenMax.min.js')
-		script(type="text/javascript" src=url + 'assets/scrollto/ScrollToPlugin.min.js')
+		//- link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet")
 		//- Styles -->
 		link(rel="stylesheet" href=url + "css/style.css")
-		script(type="text/javascript" src=url + "js/marteScripts.min.js")
+		//- script(async type="text/javascript" src=url + "js/marteScripts.min.js")
 		//- Facebook open graph
 		meta(name="fb:page_id" content=facebookID)
 		meta(name="og:region" content="MX")

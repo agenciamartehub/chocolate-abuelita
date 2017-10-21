@@ -93,4 +93,4 @@ jQuery(document).ready(function($){
 // Oculta el preloading
 setTimeout(function(){
 	$(".wk-preloading").fadeOut("slow");
-}, 1500);
+}, 900);

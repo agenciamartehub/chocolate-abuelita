@@ -147,9 +147,10 @@ html(lang="es_ES" dir="ltr" last-update="10-12-17" srvr="mrt")
 				}
 			}
 
+	block bodyClass	
+		-var pageID = 'pagina'
 			
-
-	body.wk-wrap-1920
+	body.wk-wrap-1920(id=pageID)
 		style#antiClickjack body {display:none !important;}
 		script.
 			if (self === top) {

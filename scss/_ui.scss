@@ -121,6 +121,24 @@
 	background-color: $mainColor !important;
 }
 
+.ui-bg-brown,
+.ui-bg-cocoa {
+	background-color: $cocoadark;
+}
+
+.ui-bg-brown-important,
+.ui-bg-cocoa-important {
+	background-color: $cocoadark !important;
+}
+
+.ui-bg-cream {
+	background-color: $cream;
+}
+
+.ui-bg-cream-important {
+	background-color: $cream !important;
+}
+
 
 .ui-bg-pink {
 	background-color: $pink;

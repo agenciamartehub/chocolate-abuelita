@@ -18,6 +18,7 @@
 		}
 	}
 	.ui-timeline-row-left {
+
 		.ui-timeline-header {
 		    text-align: right;
 		}
@@ -93,15 +94,39 @@
 		}
 		.ui-timeline-line-after {
 			@extend .ui-timeline-line;
-			height: 100px;
+			height: 80px;
 			@media #{$onlyiPhone5} {
 				height: 230px;
 			}
 		}
 	}
+
+	// Fixes
+	@media #{$onlyDesktop} {
+		[class*="ui-timeline-row"]:not(:first-child) {
+			margin-top: -100px;
+		}
+	}
 	#timeline-date-1973 {
-		.ui-timeline-line-after {
-			height: 330px;
+		@media #{$onlyMobile} {
+			.ui-timeline-line-after {
+				height: 130px;
+			}
+		}
+		@media #{$onlyiPhone5} {
+			.ui-timeline-line-after {
+				height: 330px;
+			}
+		}
+		@media #{$onlyDesktop} {
+			.ui-timeline-line-after {
+				height: 160px;
+			}
+		}
+	}
+	#timeline-date-1995 {
+		@media #{$onlyDesktop} {
+			margin-top: -180px;
 		}
 	}
 }

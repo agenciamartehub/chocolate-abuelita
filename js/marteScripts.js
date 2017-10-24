@@ -1,3 +1,8 @@
+//@prepros-prepend jquery-3.1.1.min.js
+//@prepros-prepend ../assets/wpkitui2/wpkitui.js
+//@prepros-prepend ../assets/fancybox/jquery.fancybox.min.js
+//@prepros-prepend ../assets/slick/slick.min.js
+
 jQuery(document).ready(function($){
 
 	//! modernizr 3.5.0 (Custom Build) | MIT *
@@ -23,36 +28,6 @@ jQuery(document).ready(function($){
     link.href = 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800';
     document.head.appendChild(link);
 	}
-
-	//Inicia slick slider
-	$('.slider').slick({
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		dots: false,
-		arrows: true,
-		prevArrow: '<span class="ui-icon fa fa-chevron-left slick-arrow-left"></span>',
-		nextArrow: '<span class="ui-icon fa fa-chevron-right slick-arrow-right"></span>',
-		adaptiveHeight: true,
-		fade: true,
-		// asNavFor: '.da-slider-nav',
-		autoplay: true,
-		autoplaySpeed: 4000,
-		responsive: [
-			{
-			  breakpoint: 770,
-			  settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				infinite: true,
-				dots: false,
-				arrows: false,
-				prevArrow: '<span class="fa fa-chevron-left"></span>',
-				nextArrow: '<span class="fa fa-chevron-right"></span>',
-			  }
-			},
-		]
-	});
 
 	// Click en of canvas icon
 	$('.off-canvas-icon').click(function(){
@@ -105,12 +80,49 @@ jQuery(document).ready(function($){
 		// });
 
 	//}
-
-
-
 });
 
-// Oculta el preloading
-setTimeout(function(){
-	$(".wk-preloading").fadeOut("slow");
-}, 900);
+// optimize CSS delivery
+var loadDeferredStyles = function() {
+	var addStylesNode = document.getElementById("deferred-styles");
+	var replacement = document.createElement("div");
+	replacement.innerHTML = addStylesNode.textContent;
+	document.body.appendChild(replacement)
+	addStylesNode.parentElement.removeChild(addStylesNode);
+	setTimeout(function(){
+		// initialize global application
+		$('.slider').slick({
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			dots: false,
+			arrows: true,
+			prevArrow: '<span class="ui-icon fa fa-chevron-left slick-arrow-left"></span>',
+			nextArrow: '<span class="ui-icon fa fa-chevron-right slick-arrow-right"></span>',
+			adaptiveHeight: true,
+			fade: true,
+			// asNavFor: '.da-slider-nav',
+			autoplay: true,
+			autoplaySpeed: 4000,
+			responsive: [
+				{
+					breakpoint: 770,
+					settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: false,
+					arrows: false,
+					prevArrow: '<span class="fa fa-chevron-left"></span>',
+					nextArrow: '<span class="fa fa-chevron-right"></span>',
+					}
+				},
+			]
+		});
+		$(".wk-preloading").fadeOut("slow");
+	}, 900);
+};
+var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+webkitRequestAnimationFrame || msRequestAnimationFrame;
+if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+else window.addEventListener('load', loadDeferredStyles);

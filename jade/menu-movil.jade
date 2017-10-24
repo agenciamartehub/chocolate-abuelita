@@ -2,7 +2,7 @@ mixin menuItem( title, link )
 	li.menu-item.ui-subtitle-small.ui-title-ornament.ui-text-white.ui-box-model: a(href='' + link + '')!= title
 
 .off-canvas-menu.wk-m
-	ul.ui-menu 
+	ul.ui-menu
 		+menuItem( 'Inicio', url + 'index.html' )
 		+menuItem( 'Historia', url + 'historia.html' )
 		+menuItem( 'Productos', url + 'productos.html' )
@@ -12,10 +12,10 @@ mixin menuItem( title, link )
 		li.menu-item.ui-subtitle-small.ui-title-ornament.ui-text-white.ui-box-model: a(href='#')
 			span.icon.fa.fa-shopping-cart
 			| Comprar
-	
-	//- 
+
+	//-
 		Menú angular
-		
+
 		+menuItem( 'Inicio', '#' )
 		+menuItem( 'Historia', '#historia' )
 		+menuItem( 'Productos','#productos' )

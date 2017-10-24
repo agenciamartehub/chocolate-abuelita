@@ -7,3 +7,6 @@ tags.*
 # MacOS bullshit
 .DS_Store
 prepros-6.config
+
+# shell scripts
+*.sh

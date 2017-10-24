@@ -67,6 +67,10 @@
 }
 
 
-.gecko.win.no-supports #receta-buttons [class*="ui-btn"] {
+.gecko.win.no-supports #receta-buttons [class*="ui-btn"]:not(.ui-btn-share) {
 	padding-top: 18px;
+}
+
+.gecko.win.no-supports #receta-buttons .ui-btn-share {
+	padding-top: 0px;
 }

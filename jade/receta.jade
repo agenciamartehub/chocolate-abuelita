@@ -20,20 +20,20 @@ block twitterCards
 	meta(name="twitter:title" content="Chocolate ABUELITA<sup>®</sup>")
 	meta(name="twitter:description" content="Los mejores momentos se viven con la familia, por eso Chocolate ABUELITA<sup>®</sup> hace más ricos los instantes que pasamos con nuestros seres queridos.")
 	meta(name="twitter:image" content=url + 'img/twitter-card-chocolate-abuelita-nestle.png')
-		
+
 block content
 
-	//- 
+	//-
 		Instrucciones para botón de compartir
-		
-		Abajo encontrarás la variable mensajeDeTwitter, simplemente introduce 
+
+		Abajo encontrarás la variable mensajeDeTwitter, simplemente introduce
 		el texto que aparecerá al compartir en twitter
-		
-		EL botón se genera desde un mixin en jade/_mixins.jade 
-		
+
+		EL botón se genera desde un mixin en jade/_mixins.jade
+
 		El mensaje se puede introducir directamente en el mixin como string pero para practicidad
 		se ha incluido en la variable mencionada.
-		
+
 		+btnShare( 'ElMensajeDeTwitter' )
 
 	-var mensajeDeTwitter = 'Receta de Chocolate abuelita'
@@ -42,11 +42,11 @@ block content
 	main#receta(role="main")
 
 		+sectionHeader(
-				'receta-banner', 
-				'ui-bg-bold', 
-				'Receta', 
-				'Cómo preparar chocolate abuelita<sup>®</sup>', 
-				url + 'img/banner-recetas-pan.jpg', 
+				'receta-banner',
+				'ui-bg-bold',
+				'Receta',
+				'Cómo preparar chocolate abuelita<sup>®</sup>',
+				url + 'img/banner-recetas-pan.jpg',
 				url + 'img/icon-recetas.png'
 			)
 
@@ -56,11 +56,11 @@ block content
 					iframe(src="https://www.youtube.com/embed/ng8QwoqBnNA?rel=0&amp;start=4" frameborder="0" allowfullscreen)
 			aside#receta-ingredientes.wk-wrap-1100.wk-margin-y-40.ui-box-model
 				.wk-section-wrap
-					
+
 					h6.ui-title
 						img(src= url + "img/icon-ingredientes.png")
 						| Ingredientes
-					
+
 					ul
 						li 4 cucharadas de levadura en polvo
 						li 1 taza de azucar
@@ -71,35 +71,35 @@ block content
 						li 3 cucharadas de ralladura de naranja
 						li 90g de mantequilla
 						li 1 barra de chocolate para mesa ABUELITA&reg;
-						
+
 						.ui-title
 							img(src= url + "img/icon-hornear.png")
 							| Horno precalentado a 180°C
-					
+
 					h6.ui-title
 						img(src= url + "img/icon-preparacion.png")
 						| Preparación
-					
+
 			section#receta-content.wk-wrap-1100.ui-box-model.wk-m-text-center
 				.wk-section-wrap
 					.wk-cols
-						.wk-col-1.wk-text-center 
+						.wk-col-1.wk-text-center
 							.ui-icon: i 1
 						.wk-col-11
 							| Mezcla la levadura con el azúcar y el agua tibia y espera hasta que doble su volumen. Forma una fuente con el harina y la azucar vierte en el centro la levadura, la Leche Evaporada CARNATION&reg; CLAVEL&reg;, el huevo, la yema, la ralladura y la mantequilla. Mezcla todos los Ingredientes  hasta formar una pasta. Amásala y golpéala contra la mesa hasta que esté tersa, elástica y no se pegue en los dedos. Déjala reposar en un lugar tibio hasta que doble su volumen.
-							
+
 					.wk-cols
 						.wk-col-1.wk-text-center
 							.ui-icon: i 2
 						.wk-col-11
 							| Reserva una cuarta parte de la masa para formar los huesos. Agrega el Chocolate para Mesa ABUELITA&reg; troceando el resto de la masa. Divide en 10 partes iguales y forma bolas, colócalas en charolas previamente engrasadas y enharinadas. Con la masa que reservaste forma 20 tiras para los huesitos y colócalas cruzadas sobre los panes que formaste y en la parte superior coloca una bolita muy pequeña. Deja reposar hasta que esponje.
-							
+
 					.wk-cols
 						.wk-col-1.wk-text-center
 							.ui-icon: i 3
 						.wk-col-11
 							| Barniza con huevo y hornea durante 30 minutos. Retira del horno, barniza con la mantequilla y espolvorea con azúcar.
-							
+
 			section#receta-buttons.wk-wrap-1100.wk-text-center.ui-d-row-padding
 				.wk-section-wrap
 					.wk-cols
@@ -107,25 +107,25 @@ block content
 							a.ui-btn(href="#" onclick="window.print()")
 								img(src= url + "img/icon-imprimir.png" alt="Imprimir")
 								span Imprimir
-								
+
 						.wk-col-3.ui-box-model.no-print
 							+btnShare( mensajeDeTwitter, receta )
-							
+
 						.wk-col-3.ui-box-model.no-print
-							a.ui-btn(href="/recetas.html") 
+							a.ui-btn(href="/recetas.html")
 								img(src=url +"img/icon-conoce-mas-recetas.png" alt="Más recetas")
-								span Conoce más recetas	
-								
+								span Conoce más recetas
+
 						.wk-col-3.ui-box-model.no-print
-							a.ui-btn(href="#") 
+							a.ui-btn(href="#")
 								span.icon.fa.fa-shopping-cart.ui-text-gold
-								span Comprar			
-					
+								span Comprar
+
 			+sectionLeyend('receta-leyend', '')
 				img.wk-margin-y-20(src= url + "img/icon-consejo.png" alt="Consejo de Abuelita - Nestle")
 				h3.ui-title.ui-text-gold Consejo de Abuelita&reg;
 				p
 					span.ui-text-gold Lorem ipsum dolor sit amet, consectetur adipsicing.
 					span Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-													
+
 	include footer.jade

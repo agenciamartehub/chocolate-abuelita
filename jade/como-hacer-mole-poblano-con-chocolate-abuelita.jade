@@ -21,20 +21,20 @@ block twitterCards
 	meta(name="twitter:title" content="Cómo hacer mole poblano con Chocolate Abuelita®  - Nestlé")
 	meta(name="twitter:description" content="Descubre cómo hacer mole poblano con Chocolate Abuelita® y otras deliciosas recetas en https://www.abuelita.com.mx/")
 	meta(name="twitter:image" content=url + 'img/compartir-receta-mole-abuelita-nestle.png')
-		
+
 block content
 
-	//- 
+	//-
 		Instrucciones para botón de compartir
-		
-		Abajo encontrarás la variable mensajeDeTwitter, simplemente introduce 
+
+		Abajo encontrarás la variable mensajeDeTwitter, simplemente introduce
 		el texto que aparecerá al compartir en twitter
-		
-		EL botón se genera desde un mixin en jade/_mixins.jade 
-		
+
+		EL botón se genera desde un mixin en jade/_mixins.jade
+
 		El mensaje se puede introducir directamente en el mixin como string pero para practicidad
 		se ha incluido en la variable mencionada.
-		
+
 		+btnShare( 'ElMensajeDeTwitter' )
 
 	-var mensajeDeTwitter = ' Descubre cómo hacer mole poblano con Chocolate Abuelita® y otras deliciosas recetas en www.abuelita.com.mx'
@@ -43,11 +43,11 @@ block content
 	main#receta(role="main")
 
 		+sectionHeader(
-				'receta-banner', 
-				'ui-bg-bold', 
-				'Receta', 
-				'Cómo hacer Mole Poblano con Chocolate Abuelita<sup>®</sup>', 
-				url + 'img/receta-banner-como-prepearar-mole-poblano-chocolate-abuelita-nestle.jpg', 
+				'receta-banner',
+				'ui-bg-bold',
+				'Receta',
+				'Cómo hacer Mole Poblano con Chocolate Abuelita<sup>®</sup>',
+				url + 'img/receta-banner-como-prepearar-mole-poblano-chocolate-abuelita-nestle.jpg',
 				url + 'img/icon-recetas.png'
 			)
 
@@ -59,11 +59,11 @@ block content
 						img.wk-img-responsive.wk-m(src=url + "img/video-play-receta-mole-poblano-chocolate-abuelita-nestle-mobile.jpg" alt="Video Cómo hacer mole poblano con de Chocolate Abuelita®  - Nestlé")
 			aside#receta-ingredientes.wk-wrap-1100.wk-margin-y-40.ui-box-model
 				.wk-section-wrap
-					
+
 					h6.ui-title
 						img(src=url + "img/icon-ingredientes.png")
 						| Ingredientes
-					
+
 					ul
 						li 4 Cucharaditas aceite de maíz 24 ml
 						li 1/2 Taza nuez 125 g
@@ -87,28 +87,28 @@ block content
 						li 1 Tabletas Chocolate ABUELITA<sup>®</sup> Para Mesa, picado 90 g
 						li 8 piezas de pechuga de pollo medias pechugas, cocidas
 						li 1 Cucharada ajonjolí tostado 10 g
-						
+
 					//-
 						h6.ui-title
 							img(src=url + "img/icon-hornear.png")
 							| Horno precalentado a 180°C
-						
+
 					h6.ui-title
 						img(src=url + "img/icon-preparacion.png")
 						| Preparación
-					
+
 			section#receta-content.wk-wrap-1100.ui-box-model.wk-m-text-center
 				.wk-section-wrap
-				
+
 					//
 						+recetaPaso ( 'numeroDePaso', 'Contenido' )
-					
+
 					+recetaPaso('1','En una cacerola o cazuela calienta la mitad del aceite y fríe los 8 ingredientes siguientes; espolvorea los DADITOS DE SAZÓN<sup>®</sup> MAGGI<sup>®</sup> Sazonador Sabor Ajo y agrega el ajonjolí con las tortillas. Cocina por 5 minutos.')
 					+recetaPaso('2','Licua lo anterior con el agua, los jitomates, los clavos, la pimienta, el anís, la canela y el MAGGI<sup>®</sup> Caldo de Tomate y Pollo 40% Menos Grasa; cuela. ')
 					+recetaPaso('3','Aparte, calienta el aceite restante, vacía la mezcla anterior y agrega el Chocolate ABUELITA<sup>®</sup> para Mesa; cocina durante 10 minutos moviendo constantemente. ')
 					+recetaPaso('4','Ofrece caliente con las piezas de pollo y decora con ajonjolí.')
 					+recetaPaso( '', 'Tiempo de preparación: 40 minutos.' )
-					
+
 			section#receta-buttons.wk-wrap-1100.wk-text-center.ui-d-row-padding
 				.wk-section-wrap
 					.wk-cols
@@ -116,33 +116,33 @@ block content
 							a.ui-btn(href=url + 'docs/receta-mole-poblano-chocolate-abuelita-neslte.pdf' target="_blank")
 								img(src=url + "img/icon-imprimir.png" alt="Imprimir")
 								span Imprimir
-								
+
 						.wk-col-3.ui-box-model.no-print
 							+btnShare( mensajeDeTwitter, receta )
-							
+
 						.wk-col-3.ui-box-model.no-print
-							a.ui-btn(href="/recetas.html") 
+							a.ui-btn(href="/recetas.html")
 								img(src=url + "img/icon-conoce-mas-recetas.png" alt="Más recetas")
 								span Más recetas
-								
+
 						.wk-col-3.ui-box-model.no-print
 							a.ui-btn(href="javascript:;" data-fancybox data-src="#comprar-en-superama")
 								span.icon.fa.fa-shopping-cart.ui-text-gold
 								span Comprar en superama
-							+modal( 
+							+modal(
 								'',
-								'comprar-en-superama', 
-								'Aviso', 
-								'' 
+								'comprar-en-superama',
+								'Aviso',
+								''
 								)
 								.wk-text-center.wk-d-padding-x-40
-									
-									p.wk-margin-y-40 Serás redireccionado a un sitio externo. Por favor revisa sus términos y condiciones. Nestlé<sup>®</sup> no es responsable del contenido y funcionamiento de dicho sitio.			
-									a.ui-btn.wk-margin-y-40(href="#" target="_blank") Ir a superama		
-					
+
+									p.wk-margin-y-40 Serás redireccionado a un sitio externo. Por favor revisa sus términos y condiciones. Nestlé<sup>®</sup> no es responsable del contenido y funcionamiento de dicho sitio.
+									a.ui-btn.wk-margin-y-40(href="#" target="_blank") Ir a superama
+
 			+sectionLeyend('receta-leyend', '')
 				img.wk-margin-y-20(src=url + "img/icon-consejo.png" alt="Consejo de Abuelita - Nestle")
 				h3.ui-title.ui-text-gold Consejo de Abuelita<sup>®</sup>
 				p Puedes agregar un poco de agua para hacerlo más ligero.
-												
+
 	include footer.jade

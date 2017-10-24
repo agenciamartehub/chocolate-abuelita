@@ -12,3 +12,10 @@
 .wk-wrap-1100 > .wk-section > .wk-section-wrap {
   max-width: 1100px;
 }
+
+
+.safari9.ipad {
+	.wk-cols {
+		display: block !important;
+	}
+}

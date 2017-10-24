@@ -52,9 +52,10 @@ mixin producto( id, title, description, image, modalContent, btnlink )
 	.ui-modal-productos.ui-modal.ui-block-texture.ui-bg-gold-important(id=id)
 		h2.ui-modal-header.ui-title-big.ui-title-ornament.wk-text-center(data-selectable="true") Preparación
 		.ui-modal-content.ui-box-model.wk-margin-y-20(data-selectable="true")!= modalContent
-		p.wk-text-center.wk-margin-bottom-0: a.ui-btn(href=btnlink) 
-			span.icon.fa.fa-shopping-cart
-			span Comprar	
+		if btnlink
+			p.wk-text-center.wk-margin-bottom-0: a.ui-btn(href=btnlink) 
+				span.icon.fa.fa-shopping-cart
+				span Comprar	
 
 
 //-

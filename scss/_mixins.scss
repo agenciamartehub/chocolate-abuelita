@@ -32,11 +32,11 @@
 
 @mixin ui-font-model-times-new-roman {
 	font-family: $mainFont;
-	font-weight: 800;
+	font-weight: 700;
 	font-style: italic;
 }
 
 @mixin ui-font-model-montserrat {
 	font-family: $secondaryfont;
-	font-weight: 100;
+	font-weight: 400;
 }

@@ -1,39 +1,72 @@
-#plan-cacao-banner {
+#cocoa-plan {
+	// Cocoa plan identidad
+	background-color: $cream;
+	color: $cocoalight;
+	.ui-icon {
+		background-color: $cocoalight;
+	}
+	.ui-title-ornament:before {
+		background-image: url(../img/text-ornament-brown-a.png);
+	}
+	.ui-title-ornament:after {
+	    background-image: url(../img/text-ornament-brown-b.png);
+	}
 
-}
+	.ui-bg-gold-important,
+	.ui-bg-yellow-important {
+		@extend .ui-bg-cream-important;
+	}
 
-#plan-cacao {
-	@media #{$onlyDesktop} {
-		.ui-title {
-			min-height: 100px;
-			@include flex( column, center, center );
+
+	#plan-cacao-banner {
+
+	}
+
+	#plan-cacao {
+		@media #{$onlyDesktop} {
+			.ui-title {
+				min-height: 100px;
+				display: flex;
+				align-items: flex-start;
+				justify-content: center;
+			}
+		}
+		@media #{$onlyMobile} {
+			h3.ui-title {
+				font-size: 27px;
+			}
+		}
+		.ui-icon {
+			margin-bottom: 10px;
+		}
+		[class*="wk-col-"] {
+			padding-top: 0 !important;
 		}
 	}
-	.ui-icon {
-		margin-bottom: 10px;
+
+	#plan-cacao-gallery {
+		img {
+			width: 100%;
+			height: auto;
+		}
 	}
-	[class*="wk-col-"] {
-		padding-top: 0 !important;
+
+	#plan-cacao-leyend {
+
 	}
-}
 
-#plan-cacao-gallery {
-	img {
-		width: 100%;
-		height: auto;
+	#plan-cacao-logo {
+		background-image: url(../img/cocoa-plan-pleca-texture.png);
+		img {
+			max-width: 300px;
+		}
 	}
-}
 
-#plan-cacao-leyend {
-
-}
-
-#plan-cacao-logo {
-	img {
-		max-width: 300px;
+	#plan-cacao-mas-informacion {
+		background-image: initial !important;
+		.ui-title-big {
+			font-size: 60px;
+		}
 	}
-}
 
-#plan-cacao-mas-informacion {
-	background-image: initial !important;
 }

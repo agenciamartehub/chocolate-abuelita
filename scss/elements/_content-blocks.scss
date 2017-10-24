@@ -21,6 +21,11 @@
 		[class*="ui-title"] {
 		    text-shadow: 3px 3px 4px rgba(0, 0, 0, .7);
 		}
+		.ui-section-header-modal {
+		    display: block;
+		    width: 100%;
+		    height: 100%;
+		}
 		.ui-section-icon {
 			width: 80px;
 			height: auto;
@@ -30,6 +35,15 @@
 			position: absolute;
 			bottom: 40px;
 			left: 0;
+		}
+	}
+}
+
+.ui-section-leyend {
+	.ui-section-leyend-title {
+		font-size: 25px;
+		span {
+			font-size: 35px;
 		}
 	}
 }
@@ -177,4 +191,13 @@
 .ui-modal {
 	display: none;
 	max-width: 900px;
+}
+
+// Páginas con solo texto
+
+.ui-plain-page {
+    padding-top: 210px;
+    padding-bottom: 100px;
+    font-family: 'open sans', 'helvetica', 'arial', sans-serif;
+    font-size: 14px;
 }

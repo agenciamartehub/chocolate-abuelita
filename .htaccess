@@ -1,0 +1,52 @@
+# remove directory listing
+Options All -Indexes
+
+# global error handling
+ErrorDocument 400 /error.html
+ErrorDocument 401 /error.html
+ErrorDocument 402 /error.html
+ErrorDocument 403 /error.html
+ErrorDocument 404 /error.html
+ErrorDocument 405 /error.html
+ErrorDocument 406 /error.html
+ErrorDocument 407 /error.html
+ErrorDocument 408 /error.html
+ErrorDocument 409 /error.html
+ErrorDocument 410 /error.html
+ErrorDocument 411 /error.html
+ErrorDocument 412 /error.html
+ErrorDocument 413 /error.html
+ErrorDocument 414 /error.html
+ErrorDocument 415 /error.html
+ErrorDocument 416 /error.html
+ErrorDocument 417 /error.html
+ErrorDocument 500 /error.html
+ErrorDocument 501 /error.html
+ErrorDocument 502 /error.html
+ErrorDocument 503 /error.html
+ErrorDocument 504 /error.html
+ErrorDocument 505 /error.html
+ErrorDocument 506 /error.html
+
+# xss protection
+Header set X-Frame-Options DENY
+Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+Header set Pragma "no-cache"
+Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+
+#RewriteEngine On
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE image/png
+AddOutputFilterByType DEFLATE image/jpeg
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript

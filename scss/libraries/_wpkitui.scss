@@ -1,3 +1,21 @@
 .wk-margin-bottom-40-i {
 	margin-bottom: 40px !important;
 }
+
+.wk-wrap-1920 .wk-section-wrap,
+.wk-wrap-1920 > .wk-section > .wk-section-wrap {
+  max-width: 1920px;
+}
+
+
+.wk-wrap-1100 .wk-section-wrap,
+.wk-wrap-1100 > .wk-section > .wk-section-wrap {
+  max-width: 1100px;
+}
+
+
+.safari9.ipad {
+	.wk-cols {
+		display: block !important;
+	}
+}

@@ -1,0 +1,89 @@
+//- productos.jade
+extends header.jade
+
+block title
+	title Cocoa Plan - Nestlé
+
+block description
+	meta(name="description" content="Cocoa Plan Nestlé")
+
+//-
+	Block bodClass debe ir inmediatamente después de block description
+	por default se imprimirá el id #pagina indicado en header.jade
+block bodyClass
+	-var pageID = 'cocoa-plan'
+
+block content
+	main(role="main")
+		+sectionHeader(
+				'plan-cacao-banner',
+				'ui-bg-gold',
+				'',
+				'',
+				url + 'img/plan-cacao-video-poster-nestle.jpg',
+				''
+			)
+			a.ui-section-header-modal(href="https://www.youtube.com/watch?v=V8UPG6ef5no" data-fancybox)
+			.container.ui-box-model
+				a.ui-btn(href="javascript:;" data-fancybox data-src="#plan-cacao-mas-informacion") Más información
+				+modal(
+					'<img class="wk-block wk-margin-auto" src="/img/icon-cocoa-plan-alt.png">',
+					'plan-cacao-mas-informacion',
+					'Nestlé Cocoa Plan<sup>®</sup>',
+					''
+					)
+					.wk-text-center
+
+						p Nestlé<sup>®</sup> lanza en 2013 el Nestlé Cocoa Plan<sup>®</sup> en México como parte del compromiso global de mejorar la vida de los productores, sus comunidades y el compromiso de apoyar la recuperación del cacao originario de México.
+						p Nestlé Cocoa Plan<sup>®</sup> es una iniciativa que busca apoyar y acelerar el desarrollo de los agricultores para asegurar una producción de cacao sustentable, conservar el medio ambiente y mejorar su calidad de vida.
+						p Nuestro objetivo es reactivar al sector cacaotero de México, triplicando la productividad por hectárea, mejorando las condiciones de vida de los productores y la calidad del producto final.
+
+		section#plan-cacao.wk-wrap-1100.wk-children-text-center
+			.wk-section-wrap
+				.ui-block-padding
+					img.ui-section-icon.ui-align-center.wk-padding-y-40(width="100" src=url + "img/icon-cocoa-plan-alt.png")
+					h1.ui-title-big.ui-title-ornament Nestlé Cocoa Plan<sup>®</sup>
+				.wk-cols
+					.wk-col-4.ui-block-padding
+						span.ui-icon
+							i 1
+						h3.ui-title CADENA DE ABASTECIMIENTO:
+						p.ui-subtitle-small Los productores son capacitados y motivados a organizarse en sociedad para acopiar, fermentar y comercializar el cacao bajo una visión empresarial responsable.
+					.wk-col-4.ui-block-padding
+						span.ui-icon
+							i 2
+						h3.ui-title RENTABILIDAD:
+						p.ui-subtitle-small Aumentar la productividad de cacao por hectárea con investigación y transferencia de tecnología, reduciendo el impacto ambiental y mejorando los ingresos directos.
+					.wk-col-4.ui-block-padding
+						span.ui-icon
+							i 3
+						h3.ui-title DESARROLLO SOCIAL:
+						p.ui-subtitle-small Por medio de las escuelas de campo brindamos capacitación en técnicas de producción sostenibles directamente en las parcelas. Además, al habilitar a  los productores para producir más y mejor estamos influyendo en la mejora de sus condiciones de vida y su economía familiar.
+
+		section#plan-cacao-gallery.wk-section
+			.wk-section-wrap
+				.wk-cols
+					.wk-col
+						.wk-cols-m
+							.wk-col
+								img(src= url + "img/plan-cacao-1-nestle.jpg" alt="Cocoa Plan Nestle")
+							.wk-col
+								img(src= url + "img/plan-cacao-2-nestle.jpg" alt="Cocoa Plan Nestle")
+					.wk-col
+						.wk-cols-m
+							.wk-col
+								img(src= url + "img/plan-cacao-3-nestle.jpg" alt="Cocoa Plan Nestle")
+							.wk-col
+								img(src= url + "img/plan-cacao-4-nestle.jpg" alt="Cocoa Plan Nestle")
+
+		+sectionLeyend('plan-cacao-leyend', '')
+			strong Juntos trabajamos para incrementar la productividad del campo y recuperar la  <span class="ui-title-xx-larger ui-text-gold"> identidad de México </span> como país netamente cacaotero.
+
+		section#plan-cacao-logo.wk-section.wk-wrap-1100.wk-text-center
+			.wk-section-wrap
+				.ui-block-padding
+					img.wk-img-responsive.wk-padding-y-40(src= url + "img/logo-cocoa-plan.png" alt="Cocoa Plan Nestle Logo")
+					//-
+						h2.ui-subtitle 70% mayor productividad en las parcelas y las cooperativas generaron una derrama económica superior a los 12 millones por el valor agregado a su producto.
+
+	include footer.jade

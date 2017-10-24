@@ -1,3 +1,30 @@
+#nuestros-productos-banner {
+	// [class*="ui-btn"] {
+	// 	@media #{$onlyDesktop} {
+	// 		transform: scale(1.35);
+	// 		transform-origin: top;
+	// 	}
+	// 	border-bottom: 6px solid $mainColorSpecial;
+	// 	box-shadow: 1px 1px 18px rgba(0, 0, 0, 0.5);
+	// 	font-weight: 800;
+	// }
+	[class*="ui-btn"] {
+		overflow: hidden;
+		padding: 0;
+		img {
+			transition: all .25s linear;
+			@media #{$onlyPhone} {
+				width: 250px;
+			}
+		}
+		&:hover {
+			img {
+				opacity: .8;
+				transform: scale(1.025);
+			}
+		}
+	}
+}
 #productos-leyend {
 
 }
@@ -12,6 +39,7 @@
 	}
 	.producto {
 		width: 100%;
+		max-width: 320px;
 		height: auto;
 		transition: all .25s linear;
 	}

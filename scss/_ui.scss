@@ -55,6 +55,15 @@
 	text-transform: uppercase;
 }
 
+// Text underline
+.ui-text-underline {
+	text-decoration: underline;
+}
+
+.ui-text-underline-important {
+	text-decoration: underline !important;
+}
+
 // BLoques
 .ui-align-center {
 	display: block;
@@ -112,6 +121,24 @@
 	background-color: $mainColor !important;
 }
 
+.ui-bg-brown,
+.ui-bg-cocoa {
+	background-color: $cocoadark;
+}
+
+.ui-bg-brown-important,
+.ui-bg-cocoa-important {
+	background-color: $cocoadark !important;
+}
+
+.ui-bg-cream {
+	background-color: $cream;
+}
+
+.ui-bg-cream-important {
+	background-color: $cream !important;
+}
+
 
 .ui-bg-pink {
 	background-color: $pink;
@@ -145,7 +172,7 @@
 .ui-btn,
 .ui-button {
 	color: $secondaryColor;
-	font-weight: 800;
+	font-weight: 700;
 	font-size: 16px;
 	text-transform: uppercase;
 	padding: 18px 60px;
@@ -160,11 +187,6 @@
 	@include transition;
 	&:hover {
 	    background-color: $secondaryColorHover;
-	}
-	img {
-		vertical-align: middle;
-		margin: 0 20px;
-		width: 14px
 	}
 }
 
@@ -185,6 +207,29 @@
 	&:hover {
 		background-color: $pinkHover;
 	}
+}
+
+.ui-btn-product {
+    min-height: initial;
+    padding: 14px 24px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+// iExplorer
+.gecko.win.no-supports [class*="ui-btn"] {
+	padding-top: 26px;
+}
+
+
+$btnfaMargin: 10px;
+
+[class*="ui-btn"] .icon {
+    margin: {
+	    //left: $btnfaMargin;
+	    right: $btnfaMargin;
+    }
+    font-size: 120%;
 }
 
 // btn share
@@ -222,7 +267,7 @@
 			top: -60px;
 			transition: all .25s cubic-bezier(0.68, 0.1, 1, 1);
 			.fa {
-				padding: 18px 60px;
+				//padding: 18px 60px;
 				width: 50%;
 				opacity: .5;
 				height: 100%;
@@ -233,7 +278,7 @@
 				&:hover {
 					color: $mainColor;
 					transition-delay: 0s;
-					background-color: $secondaryColorHover;
+					//background-color: $secondaryColorHover;
 				}
 			}
 		}
@@ -276,6 +321,12 @@
 
 
 // Títulos
+
+/*
+	Las propiedades de peso y estílo se
+	especifican en scss/_mixins.scss / @mixin ui-font-model-times-new-roman
+*/
+
 [class*="ui-title"] {
 	@include ui-font-model-times-new-roman;
 }
@@ -307,6 +358,12 @@
 	font-size: xx-large;
 }
 
+
+/*
+	Las propiedades de peso y estílo se
+	especifican en scss/_mixins.scss / @mixin ui-font-model-montserrat
+*/
+
 [class*="ui-subtitle"] {
 	@include ui-font-model-montserrat;
 
@@ -318,6 +375,11 @@
 
 .ui-subtitle-small {
 	font-size: 18px;
+}
+
+.mobile [class*="ui-subtitle"] {
+	font-weight: 400;
+
 }
 
 .ui-title-ornament:after,

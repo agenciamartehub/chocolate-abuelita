@@ -31,6 +31,38 @@ jQuery(document).ready(function($){
     document.head.appendChild(link);
 	}
 
+	// initialize global application
+	$('.slider').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		prevArrow: '<span class="ui-icon fa fa-chevron-left slick-arrow-left"></span>',
+		nextArrow: '<span class="ui-icon fa fa-chevron-right slick-arrow-right"></span>',
+		adaptiveHeight: true,
+		fade: true,
+		// lazyLoad: 'ondemand',
+		// asNavFor: '.da-slider-nav',
+		// autoplay: true,
+		autoplaySpeed: 4000,
+		responsive: [
+			{
+				breakpoint: 770,
+				settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true,
+				dots: false,
+				arrows: false,
+				// lazyLoad: 'ondemand',
+				prevArrow: '<span class="fa fa-chevron-left"></span>',
+				nextArrow: '<span class="fa fa-chevron-right"></span>',
+				}
+			},
+		]
+	});
+
 	// Click en of canvas icon
 	$('.off-canvas-icon').click(function(){
 		$('body').toggleClass('off-canvas-is-active');
@@ -89,40 +121,13 @@ var loadDeferredStyles = function() {
 	var addStylesNode = document.getElementById("deferred-styles");
 	var replacement = document.createElement("div");
 	replacement.innerHTML = addStylesNode.textContent;
-	document.body.appendChild(replacement)
-	addStylesNode.parentElement.removeChild(addStylesNode);
-	setTimeout(function(){
-		// initialize global application
-		$('.slider').slick({
-			infinite: true,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			dots: false,
-			arrows: true,
-			prevArrow: '<span class="ui-icon fa fa-chevron-left slick-arrow-left"></span>',
-			nextArrow: '<span class="ui-icon fa fa-chevron-right slick-arrow-right"></span>',
-			adaptiveHeight: true,
-			fade: true,
-			// asNavFor: '.da-slider-nav',
-			autoplay: true,
-			autoplaySpeed: 4000,
-			responsive: [
-				{
-					breakpoint: 770,
-					settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					infinite: true,
-					dots: false,
-					arrows: false,
-					prevArrow: '<span class="fa fa-chevron-left"></span>',
-					nextArrow: '<span class="fa fa-chevron-right"></span>',
-					}
-				},
-			]
-		});
+	replacement.firstChild.onload = function(){
 		$(".wk-preloading").fadeOut("slow");
-	}, 900);
+		$('.slider').slick('refresh');
+		$('.slider').slick('slickPlay');
+	};
+	document.body.appendChild(replacement);
+	addStylesNode.parentElement.removeChild(addStylesNode);
 };
 var raf = requestAnimationFrame || mozRequestAnimationFrame ||
 webkitRequestAnimationFrame || msRequestAnimationFrame;

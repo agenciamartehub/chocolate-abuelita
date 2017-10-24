@@ -9,8 +9,18 @@
 	#slide2 {
 		[class*="ui-btn"] {
 			bottom: 40px;
+			@media #{$onlyDesktop} {
+				left: 23%;
+			}
+			@media ( min-width: 1600px) {
+				bottom: 80px;
+				left: 28%;
+			}
 			@media #{$onlyMobile} {
 				bottom: 9%;
+			}
+			@media #{$onlyiPhone5} {
+				bottom: 8%;
 			}
 		}
 	}

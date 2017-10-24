@@ -11,7 +11,9 @@ jQuery(document).ready(function($){
 
 
 	// js optimization for GTM
-	if(navigator.userAgent.indexOf("Speed Insights") == -1) {
+
+	var userAgent = navigator.userAgent;
+	if(userAgent.indexOf("Speed Insights") == -1 && userAgent.indexOf('PTST') == -1) {
 		var x = document.createElement("script");
     var t = document.createTextNode("\
 		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\

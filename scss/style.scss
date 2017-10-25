@@ -34,7 +34,12 @@ body {
 	line-height: 1.25;
 	color: $secondaryColor;
 	background-color: $mainColor;
-	padding-top: 85px;
+	@media #{$onlyDesktop} {
+		padding-top: 85px;
+	}
+	@media #{$onlyMobile} {
+		padding-top: 48px;
+	}
 	-webkit-font-smoothing: antialiased;
 }
 

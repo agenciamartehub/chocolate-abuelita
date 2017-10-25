@@ -12,6 +12,14 @@ mixin menuItem( title, link )
 		li.menu-item.ui-subtitle-small.ui-title-ornament.ui-text-white.ui-box-model: a(href='#')
 			span.icon.fa.fa-shopping-cart
 			| Comprar
+		li#social-nav.menu-item
+			//-
+				Las variables con urls de redes sociales
+				se encuentran en jade/_vars.jade
+			span.menu-item: a(href=facebookURL target="_blank"): i.ui-icon.fa.fa-facebook
+			span.menu-item: a(href=instagramURL target="_blank"): i.ui-icon.fa.fa-instagram
+			span.menu-item: a(href=twitterURL target="_blank"): i.ui-icon.fa.fa-twitter
+			span.menu-item: a(href=youtubeURL target="_blank"): i.ui-icon.fa.fa-youtube
 
 	//-
 		Menú angular

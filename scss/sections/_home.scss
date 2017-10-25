@@ -58,7 +58,7 @@
 			}
 		}
 		.container {
-			@include absoluted( 100px, 100% );
+			@include absoluted( 110px, 100% );
 			text-align: center;
 			color: $white;
 			@include transition;

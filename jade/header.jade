@@ -72,11 +72,11 @@ html(lang="es_ES" dir="ltr" last-update="10-12-17" srvr="mrt")
 			span.wk-preloading-loader
 		header#main-header.wk-section.no-print
 			section.wk-section-wrap
-				#site-logo
+				#site-logo.wk-d
 					a(href=url): img.logo(src= url + "img/logo-abuelita-nestle.png" alt="Chocolate Abuelita")
 				.wk-cols-m
 					.wk-col.ui-box-model
-						nav#social-nav
+						nav#social-nav.wk-d
 							ul.menu
 								//-
 									Las variables con urls de redes sociales
@@ -85,6 +85,9 @@ html(lang="es_ES" dir="ltr" last-update="10-12-17" srvr="mrt")
 								li.menu-item: a(href=instagramURL target="_blank"): i.ui-icon.fa.fa-instagram
 								li.menu-item: a(href=twitterURL target="_blank"): i.ui-icon.fa.fa-twitter
 								li.menu-item: a(href=youtubeURL target="_blank"): i.ui-icon.fa.fa-youtube
+						a#mobile-logo(href=url).wk-m
+							img(width="70" src=url + "img/logo-abuelita-footer-nestle.png" alt="Logo Chocolate Abuelita")
+							
 					.wk-col.wk-d.ui-box-model
 						nav#site-nav
 							ul.menu
@@ -106,7 +109,7 @@ html(lang="es_ES" dir="ltr" last-update="10-12-17" srvr="mrt")
 									li.menu-item: a(href="#recetas") Recetas
 									li.menu-item: a(href="#plan-cacao") Cocoa Plan<sup>®</sup>
 
-					.wk-col-1.wk-m.wk-flex.wk-flex-justify-end
+					.wk-col.wk-m.wk-flex.wk-flex-justify-end
 						.off-canvas-icon
 							.wk-icon
 

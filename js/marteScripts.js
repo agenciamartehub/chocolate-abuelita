@@ -32,36 +32,36 @@ jQuery(document).ready(function($){
 	}
 
 	// initialize global application
-	$('.slider').slick({
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		dots: false,
-		arrows: true,
-		prevArrow: '<span class="ui-icon fa fa-chevron-left slick-arrow-left"></span>',
-		nextArrow: '<span class="ui-icon fa fa-chevron-right slick-arrow-right"></span>',
-		adaptiveHeight: true,
-		fade: true,
-		// lazyLoad: 'ondemand',
-		// asNavFor: '.da-slider-nav',
-		// autoplay: true,
-		autoplaySpeed: 4000,
-		responsive: [
-			{
-				breakpoint: 770,
-				settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				infinite: true,
-				dots: false,
-				arrows: false,
-				// lazyLoad: 'ondemand',
-				prevArrow: '<span class="fa fa-chevron-left"></span>',
-				nextArrow: '<span class="fa fa-chevron-right"></span>',
-				}
-			},
-		]
-	});
+	// $('.slider').slick({
+	// 	infinite: true,
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	dots: false,
+	// 	arrows: true,
+	// 	prevArrow: '<span class="ui-icon fa fa-chevron-left slick-arrow-left"></span>',
+	// 	nextArrow: '<span class="ui-icon fa fa-chevron-right slick-arrow-right"></span>',
+	// 	adaptiveHeight: true,
+	// 	fade: true,
+	// 	// lazyLoad: 'ondemand',
+	// 	// asNavFor: '.da-slider-nav',
+	// 	// autoplay: true,
+	// 	autoplaySpeed: 4000,
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 770,
+	// 			settings: {
+	// 			slidesToShow: 1,
+	// 			slidesToScroll: 1,
+	// 			infinite: true,
+	// 			dots: false,
+	// 			arrows: false,
+	// 			// lazyLoad: 'ondemand',
+	// 			prevArrow: '<span class="fa fa-chevron-left"></span>',
+	// 			nextArrow: '<span class="fa fa-chevron-right"></span>',
+	// 			}
+	// 		},
+	// 	]
+	// });
 
 	// Click en of canvas icon
 	$('.off-canvas-icon').click(function(){

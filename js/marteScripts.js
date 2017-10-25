@@ -122,12 +122,19 @@ var loadDeferredStyles = function() {
 	var replacement = document.createElement("div");
 	replacement.innerHTML = addStylesNode.textContent;
 	replacement.firstChild.onload = function(){
+		// debugger;
 		$(".wk-preloading").fadeOut("slow");
 		$('.slider').slick('refresh');
 		$('.slider').slick('slickPlay');
 	};
 	document.body.appendChild(replacement);
 	addStylesNode.parentElement.removeChild(addStylesNode);
+	// setTimeout(function(){
+	//
+	// }, 100);
+	// setTimeout(function(){
+	//
+	// }, 900);
 };
 var raf = requestAnimationFrame || mozRequestAnimationFrame ||
 webkitRequestAnimationFrame || msRequestAnimationFrame;

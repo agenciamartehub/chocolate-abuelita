@@ -20,8 +20,8 @@ block content
 							span.icon.fa.fa-shopping-cart
 							span COMPRAR
 					.slide#slide2
-						img.slide-img.wk-d(data-lazy=url + "img/banner-promo-abuelita-nestle.jpg")
-						img.slide-img.wk-m(data-lazy=url + "img/banner-movil-promo-abuelita-nestle-btn.jpg")
+						img.slide-img.wk-d(src=url + "img/banner-promo-abuelita-nestle.jpg")
+						img.slide-img.wk-m(src=url + "img/banner-movil-promo-abuelita-nestle-btn.jpg")
 						a.ui-btn-pink.animate-left(href="#") 
 							span.icon.fa.fa-shopping-cart
 							span COMPRAR
@@ -31,26 +31,35 @@ block content
 					.wk-col
 						a.main-icon-nav-wrap(href="historia.html")
 							img.main-icon-nav-img.wk-img-responsive(src= url + "img/01-image-historia-abuelita-nestle.jpg")
+
 							.container
-								img.main-icon-nav-icon(src= url + "img/icon-historia.png" alt="Historia")
+								//img.main-icon-nav-icon(src= url + "img/icon-historia.png" alt="Historia")
+								//- 
+									+iconHistoria, +iconProductos +iconRecetas +iconCacaoPlan
+									Mixins, se generan en _svgs.jade 
+								
+								+iconHistoria
 								span.content Historia
 					.wk-col
 						a.main-icon-nav-wrap(href="productos.html")
 							img.main-icon-nav-img.wk-img-responsive(src= url + "img/02-image-productos-abuelita-nestle.jpg")
 							.container
-								img.main-icon-nav-icon(src= url + "img/icon-productos.png" alt="Productos")
+								//img.main-icon-nav-icon(src= url + "img/icon-productos.png" alt="Productos")
+								+iconProductos
 								span.content Productos
 					.wk-col
 						a.main-icon-nav-wrap(href="recetas.html")
 							img.main-icon-nav-img.wk-img-responsive(src= url + "img/03-image-recetas-abuelita-nestle.jpg")
 							.container
-								img.main-icon-nav-icon(src= url + "img/icon-recetas.png" alt="Recentas")
+								//img.main-icon-nav-icon(src= url + "img/icon-recetas.png" alt="Recentas")
+								+iconRecetas
 								span.content Recetas
 					.wk-col
 						a.main-icon-nav-wrap(href="cocoa-plan.html")
 							img.main-icon-nav-img.wk-img-responsive(src= url + "img/04-image-cocoa-plan-nestle.jpg")
 							.container
-								img.main-icon-nav-icon(src= url + "img/icon-cocoa-plan.png" alt="Cocoa Plan")
+								//img.main-icon-nav-icon(src= url + "img/icon-cocoa-plan.png" alt="Cocoa Plan")
+								+iconCacaoPlan
 								span
 									img.wk-img-responsive(src= url + "img/logo-cocoa-plan.png" alt="Cocoa Plan Logo")
 

@@ -22,6 +22,11 @@
 	}
 }
 
+@media #{$onlyMobile} {
+	.slide {
+		width: 100vw !important;
+	}	
+}
 
 // Animación
 .slick-active .animate {

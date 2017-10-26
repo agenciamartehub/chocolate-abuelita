@@ -126,7 +126,7 @@ var loadDeferredStyles = function() {
 	replacement.firstChild.onload = function(){
 		$(".wk-preloading").fadeOut("slow");
 		$('.slider').slick('refresh');
-		//$('.slider').slick('slickPlay');
+		$('.slider').slick('slickPlay');
 	};
 	document.body.appendChild(replacement);
 	addStylesNode.parentElement.removeChild(addStylesNode);

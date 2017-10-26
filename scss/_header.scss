@@ -1,7 +1,8 @@
 
 .is-scrolled #main-header {
+	// box-shadow: 0px 6px 23px -7px rgba(0,0,0,0.37);
 	@media #{$onlyDesktop} {
-		box-shadow: 0px 6px 23px -7px rgba(0,0,0,0.37);
+
 	}
 	.menu li a {
 		padding: 10px 0;
@@ -20,10 +21,11 @@
 	left: 0;
 	z-index: 10;
 	position: fixed;
+	box-shadow: 0px 6px 23px -7px rgba(0,0,0,0.37);
 	@include transitionMenu;
-	@media #{$onlyMobile} {
-		box-shadow: 0px 6px 23px -7px rgba(0,0,0,0.37);
-	}
+	// @media #{$onlyMobile} {
+	// 	box-shadow: 0px 6px 23px -7px rgba(0,0,0,0.37);
+	// }
 
 	.menu li a {
 		display: inline-block;

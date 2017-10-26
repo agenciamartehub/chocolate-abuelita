@@ -15,6 +15,10 @@
 	transition: all .25s linear;
 }
 
+@mixin transitionMenu {
+	transition: all .5s ease-in-out;
+}
+
 .transition {
 	@include transition;
 }

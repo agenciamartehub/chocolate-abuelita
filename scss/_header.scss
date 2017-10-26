@@ -1,6 +1,6 @@
 
 .is-scrolled #main-header {
-	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+	box-shadow: 0px 6px 23px -7px rgba(0,0,0,0.37);
 	.menu li a {
 		padding: 10px 0;
 	}
@@ -17,13 +17,9 @@
 	top: 0;
 	left: 0;
 	z-index: 10;
-	@media #{$onlyDesktop} {
-		position: fixed;
-	}
-	@media #{$onlyMobile} {
-		position: absolute;
+	position: fixed;
+	@include transitionMenu;
 
-	}
 	.menu li a {
 		display: inline-block;
 		padding: 24px 0;

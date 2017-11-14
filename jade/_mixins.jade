@@ -39,13 +39,13 @@ mixin sectionLeyend( id, classes )
 
 mixin producto( btnid, id, title, description, image, modalContent, btnlink )
 	.ui-block-padding
-		a(id=btnid href='javascript:;' data-fancybox data-src='#' + id): img.producto(src='' + image + '' alt='' + title + '' )
+		a(href='javascript:;' data-fancybox data-src='#' + id): img.producto(src='' + image + '' alt='' + title + '' )
 		span.wk-block!= title
 		if description
 			strong!= description
 		if btnlink
 			div
-				a.ui-btn.ui-btn-product(href=btnlink target="_blank")
+				a.ui-btn.ui-btn-product(id=btnid href=btnlink target="_blank")
 					span.icon.fa.fa-shopping-cart
 					span Comprar
 

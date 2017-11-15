@@ -90,6 +90,8 @@ jQuery(document).ready(function($){
 		$(this).toggleClass('is-active');
 	});
 
+$("#lightbox-call-to-action-0, #lightbox-call-to-action-1, #lightbox-call-to-action-2, #lightbox-call-to-action-3, #lightbox-call-to-action-4, #lightbox-call-to-action-5, #lightbox-call-to-action-6").click(function(e){e.preventDefault();});
+
 	//Smooth scroll, depende de tweenmax y de ScrollToPlugin
 
 	//if ($(window).width() > 771) {
@@ -115,7 +117,7 @@ jQuery(document).ready(function($){
 		// 		});
 		// });
 
-	//}
+	//} 
 });
 
 // optimize CSS delivery
@@ -135,3 +137,13 @@ var raf = requestAnimationFrame || mozRequestAnimationFrame ||
 webkitRequestAnimationFrame || msRequestAnimationFrame;
 if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
 else window.addEventListener('load', loadDeferredStyles);
+
+$(window).on("load",function(){
+	$(".slick-arrow-right").click();
+	$(".slick-arrow-right").click();
+	$("#main-slider .slider").css("height", "500px");
+	$("#main-slider .slider .slide.slick-slide").css("width", "100vw!important");
+	setTimeout(function(){
+		$(".wk-preloading").fadeOut("slow");
+	}, 1000);	
+});

@@ -45,7 +45,7 @@ mixin producto( btnid, id, title, description, image, modalContent, btnlink )
 			strong!= description
 		if btnlink
 			div
-				a.ui-btn.ui-btn-product(id=btnid href=btnlink target="_blank")
+				a.ui-btn.ui-btn-product(id=btnid href=btnlink)
 					span.icon.fa.fa-shopping-cart
 					span Comprar
 
@@ -104,7 +104,7 @@ mixin modalPromocion( id, header, content, link )
 		h2.ui-modal-header.ui-title-big.ui-title-ornament.wk-text-center(data-selectable="true") Promoción
 		.ui-modal-content.ui-box-model.wk-margin-y-20(data-selectable="true")!= content
 		p.wk-text-center.wk-margin-bottom-0
-			a#lightbox-call-to-action-6.ui-btn(href=link target="_blank")
+			a#lightbox-call-to-action-6.ui-btn(href="#")
 				span.icon.fa.fa-shopping-cart
 				span Comprar
 

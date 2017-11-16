@@ -90,7 +90,74 @@ jQuery(document).ready(function($){
 		$(this).toggleClass('is-active');
 	});
 
+	lightbox_0=new fusepump.lightbox.buynow(20282);
+	var callToActionElement_0=document.getElementById("lightbox-call-to-action-0");
+	callToActionElement_0.addEventListener("click",function(){
+		lightbox_0.show();
+	});
+	lightbox_20=new fusepump.lightbox.buynow(20282);
+	var callToActionElement_20=document.getElementById("lightbox-call-to-action-20");
+	callToActionElement_20.addEventListener("click",function(){
+		lightbox_20.show();
+	});
+	lightbox_10=new fusepump.lightbox.buynow(20184);
+	var callToActionElement_10=document.getElementById("lightbox-call-to-action-10");
+	callToActionElement_10.addEventListener("click",function(){
+		lightbox_10.show();
+	});
+		lightbox_1=new fusepump.lightbox.buynow(19452);
+	var callToActionElement_1=document.getElementById("lightbox-call-to-action-1");
+	callToActionElement_1.addEventListener("click",function(){
+		lightbox_1.show();
+	});
+	lightbox_2=new fusepump.lightbox.buynow(20183);
+	var callToActionElement_2=document.getElementById("lightbox-call-to-action-2");
+	callToActionElement_2.addEventListener("click",function(){
+		lightbox_2.show();
+	});
+	lightbox_3=new fusepump.lightbox.buynow(19453);
+	var callToActionElement_3=document.getElementById("lightbox-call-to-action-3");
+	callToActionElement_3.addEventListener("click",function(){
+		lightbox_3.show();
+	});
+	lightbox_4=new fusepump.lightbox.buynow(19450);
+	var callToActionElement_4=document.getElementById("lightbox-call-to-action-4");
+	callToActionElement_4.addEventListener("click",function(){
+		lightbox_4.show();
+	});
+	/*lightbox_5=new fusepump.lightbox.buynow(19499);
+	var callToActionElement_5=document.getElementById("lightbox-call-to-action-5");
+	callToActionElement_5.addEventListener("click",function(){
+		lightbox_5.show();
+	});*/
+	lightbox_11=new fusepump.lightbox.buynow(19452);
+	var callToActionElement_11=document.getElementById("lightbox-call-to-action-11");
+	callToActionElement_11.addEventListener("click",function(){
+		lightbox_11.show();
+	});
+	lightbox_12=new fusepump.lightbox.buynow(20183);
+	var callToActionElement_12=document.getElementById("lightbox-call-to-action-12");
+	callToActionElement_12.addEventListener("click",function(){
+		lightbox_12.show();
+	});
+	lightbox_13=new fusepump.lightbox.buynow(19453);
+	var callToActionElement_13=document.getElementById("lightbox-call-to-action-13");
+	callToActionElement_13.addEventListener("click",function(){
+		lightbox_13.show();
+	});
+	lightbox_14=new fusepump.lightbox.buynow(19450);
+	var callToActionElement_14=document.getElementById("lightbox-call-to-action-14");
+	callToActionElement_14.addEventListener("click",function(){
+		lightbox_14.show();
+	});
+	/*lightbox_15=new fusepump.lightbox.buynow(19499);
+	var callToActionElement_15=document.getElementById("lightbox-call-to-action-15");
+	callToActionElement_15.addEventListener("click",function(){
+		lightbox_15.show();
+	});*/
+	
 $("#lightbox-call-to-action-0, #lightbox-call-to-action-1, #lightbox-call-to-action-2, #lightbox-call-to-action-3, #lightbox-call-to-action-4, #lightbox-call-to-action-5, #lightbox-call-to-action-6").click(function(e){e.preventDefault();});
+$("#lightbox-call-to-action-20, #lightbox-call-to-action-11, #lightbox-call-to-action-12, #lightbox-call-to-action-13, #lightbox-call-to-action-14, #lightbox-call-to-action-15, #lightbox-call-to-action-16, #lightbox-call-to-action-20").click(function(e){e.preventDefault();});
 
 	//Smooth scroll, depende de tweenmax y de ScrollToPlugin
 

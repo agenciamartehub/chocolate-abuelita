@@ -125,11 +125,11 @@ jQuery(document).ready(function($){
 	callToActionElement_4.addEventListener("click",function(){
 		lightbox_4.show();
 	});
-	/*lightbox_5=new fusepump.lightbox.buynow(19499);
+	lightbox_5=new fusepump.lightbox.buynow(19449);
 	var callToActionElement_5=document.getElementById("lightbox-call-to-action-5");
 	callToActionElement_5.addEventListener("click",function(){
 		lightbox_5.show();
-	});*/
+	});
 	lightbox_11=new fusepump.lightbox.buynow(19452);
 	var callToActionElement_11=document.getElementById("lightbox-call-to-action-11");
 	callToActionElement_11.addEventListener("click",function(){
@@ -150,11 +150,11 @@ jQuery(document).ready(function($){
 	callToActionElement_14.addEventListener("click",function(){
 		lightbox_14.show();
 	});
-	/*lightbox_15=new fusepump.lightbox.buynow(19499);
+	lightbox_15=new fusepump.lightbox.buynow(19449);
 	var callToActionElement_15=document.getElementById("lightbox-call-to-action-15");
 	callToActionElement_15.addEventListener("click",function(){
 		lightbox_15.show();
-	});*/
+	});
 	
 $("#lightbox-call-to-action-0, #lightbox-call-to-action-1, #lightbox-call-to-action-2, #lightbox-call-to-action-3, #lightbox-call-to-action-4, #lightbox-call-to-action-5, #lightbox-call-to-action-6").click(function(e){e.preventDefault();});
 $("#lightbox-call-to-action-20, #lightbox-call-to-action-11, #lightbox-call-to-action-12, #lightbox-call-to-action-13, #lightbox-call-to-action-14, #lightbox-call-to-action-15, #lightbox-call-to-action-16, #lightbox-call-to-action-20").click(function(e){e.preventDefault();});

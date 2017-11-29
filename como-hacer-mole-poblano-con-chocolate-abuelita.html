@@ -176,17 +176,22 @@
                   <div class="ui-btn-share-content"><span class="ui-btn-copy"><img src="/img/icon-compartir.png" alt="Comparte"/><span>Compartir</span></span><span class="ui-btn-icons"><a class="fa fa-twitter" href="https://twitter.com/home?status=Chocolateabuelita" onclick="window.open('https://twitter.com/home?status=@abuelitamx  Descubre cómo hacer mole poblano con Chocolate Abuelita® y otras deliciosas recetas en www.abuelita.com.mx','pagename','resizable,height=400,width=480'); return false;"></a><a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.abuelita.com.mx/como-hacer-mole-poblano-con-chocolate-abuelita.html" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://www.abuelita.com.mx/como-hacer-mole-poblano-con-chocolate-abuelita.html','pagename','resizable,height=400,width=480'); return false;"></a></span></div></span>
               </div>
               <div class="wk-col-3 ui-box-model no-print"><a class="ui-btn" href="/recetas.html"><img src="/img/icon-conoce-mas-recetas.png" alt="Más recetas"><span>Más recetas</span></a></div>
-              <div class="wk-col-3 ui-box-model no-print"><a class="ui-btn" href="javascript:;" data-fancybox data-src="#comprar-en-superama"><span class="icon fa fa-shopping-cart ui-text-gold"></span><span>Comprar en superama</span></a>
-                <div class="ui-modal ui-block-texture ui-bg-gold-important" id="comprar-en-superama">
-                  <div class="ui-modal-pre-title"></div>
-                  <h2 class="ui-title-big ui-title-ornament wk-text-center" data-selectable="true">Aviso</h2>
-                  <p data-selectable="true">
-                    <div class="wk-text-center wk-d-padding-x-40">
-                      <p class="wk-margin-y-40">Serás redireccionado a un sitio externo. Por favor revisa sus términos y condiciones. Nestlé<sup>®</sup> no es responsable del contenido y funcionamiento de dicho sitio.</p><a class="ui-btn wk-margin-y-40" href="https://www.superama.com.mx/micrositio/mundo-nestle/chocolates?utm_source=facebook&amp;utm_medium=display&amp;utm_campaign=fb_pros_website-abuelita_171123&amp;utm_content=recetas-abuelita&amp;utm_term=despensa" target="_blank">Ir a superama</a>
-                    </div>
-                  </p>
-                </div>
-              </div>
+              <!--.wk-col-3.ui-box-model.no-print
+              a.ui-btn(href="javascript:;" data-fancybox data-src="#comprar-en-superama")
+              	span.icon.fa.fa-shopping-cart.ui-text-gold
+              	span Comprar en superama
+              +modal(
+              	'',
+              	'comprar-en-superama',
+              	'Aviso',
+              	''
+              	)
+              	.wk-text-center.wk-d-padding-x-40
+              
+              		p.wk-margin-y-40 Serás redireccionado a un sitio externo. Por favor revisa sus términos y condiciones. Nestlé<sup>®</sup> no es responsable del contenido y funcionamiento de dicho sitio.
+              		a.ui-btn.wk-margin-y-40(href="https://www.superama.com.mx/micrositio/mundo-nestle/chocolates?utm_source=facebook&utm_medium=display&utm_campaign=fb_pros_website-abuelita_171123&utm_content=recetas-abuelita&utm_term=despensa" target="_blank") Ir a superama
+              
+              -->
             </div>
           </div>
         </section>

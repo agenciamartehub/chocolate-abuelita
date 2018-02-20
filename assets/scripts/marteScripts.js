@@ -14,7 +14,7 @@ jQuery(document).ready(function($){
 
 	var userAgent = navigator.userAgent;
 	if(userAgent.indexOf("Speed Insights") == -1 && userAgent.indexOf('PTST') == -1) {
-		var x = document.createElement("script");
+	/*	var x = document.createElement("script");
     var t = document.createTextNode("\
 		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\
 	 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\
@@ -23,7 +23,7 @@ jQuery(document).ready(function($){
  		})(window,document,'script','dataLayer','GTM-NBJJC6');\
 		");
     x.appendChild(t);
-    document.head.appendChild(x);
+    document.head.appendChild(x);*/
 
 		var link = document.createElement('link');
     link.rel = 'stylesheet';
@@ -95,17 +95,31 @@ jQuery(document).ready(function($){
 	callToActionElement_0.addEventListener("click",function(){
 		lightbox_0.show();
 	});
+	lightbox_30=new fusepump.lightbox.buynow(20282);
+	var callToActionElement_30=document.getElementById("lightbox-call-to-action-30");
+	callToActionElement_30.addEventListener("click",function(){
+		lightbox_30.show();
+	});
 	lightbox_20=new fusepump.lightbox.buynow(20282);
 	var callToActionElement_20=document.getElementById("lightbox-call-to-action-20");
 	callToActionElement_20.addEventListener("click",function(){
 		lightbox_20.show();
 	});
-	lightbox_10=new fusepump.lightbox.buynow(20184);
-	var callToActionElement_10=document.getElementById("lightbox-call-to-action-10");
-	callToActionElement_10.addEventListener("click",function(){
-		lightbox_10.show();
-	});
-		lightbox_1=new fusepump.lightbox.buynow(19452);
+	if($("#lightbox-call-to-action-10").length){
+		lightbox_10=new fusepump.lightbox.buynow(20184);
+		var callToActionElement_10=document.getElementById("lightbox-call-to-action-10");
+		callToActionElement_10.addEventListener("click",function(){
+			lightbox_10.show();
+		});
+	}
+	if($("#lightbox-call-to-action-40").length){
+		lightbox_40=new fusepump.lightbox.buynow(20184);
+		var callToActionElement_40=document.getElementById("lightbox-call-to-action-40");
+		callToActionElement_40.addEventListener("click",function(){
+			lightbox_40.show();
+		});
+	}
+	lightbox_1=new fusepump.lightbox.buynow(19452);
 	var callToActionElement_1=document.getElementById("lightbox-call-to-action-1");
 	callToActionElement_1.addEventListener("click",function(){
 		lightbox_1.show();
@@ -157,7 +171,7 @@ jQuery(document).ready(function($){
 	});
 	
 $("#lightbox-call-to-action-0, #lightbox-call-to-action-1, #lightbox-call-to-action-2, #lightbox-call-to-action-3, #lightbox-call-to-action-4, #lightbox-call-to-action-5, #lightbox-call-to-action-6").click(function(e){e.preventDefault();});
-$("#lightbox-call-to-action-20, #lightbox-call-to-action-11, #lightbox-call-to-action-12, #lightbox-call-to-action-13, #lightbox-call-to-action-14, #lightbox-call-to-action-15, #lightbox-call-to-action-16, #lightbox-call-to-action-20").click(function(e){e.preventDefault();});
+$("#lightbox-call-to-action-20, #lightbox-call-to-action-11, #lightbox-call-to-action-12, #lightbox-call-to-action-13, #lightbox-call-to-action-14, #lightbox-call-to-action-15, #lightbox-call-to-action-16, #lightbox-call-to-action-20, #lightbox-call-to-action-40").click(function(e){e.preventDefault();});
 
 	//Smooth scroll, depende de tweenmax y de ScrollToPlugin
 
@@ -208,7 +222,6 @@ else window.addEventListener('load', loadDeferredStyles);
 $(window).on("load",function(){
 	$(".slick-arrow-right").click();
 	$(".slick-arrow-right").click();
-	$("#main-slider .slider").css("height", "500px");
 	$("#main-slider .slider .slide.slick-slide").css("width", "100vw!important");
 	setTimeout(function(){
 		$(".wk-preloading").fadeOut("slow");

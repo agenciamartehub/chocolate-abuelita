@@ -66,8 +66,8 @@ html(lang="es_ES" dir="ltr" last-update="10-12-17")
 		script.
 			if(self===top){var antiClickjack=document.getElementById("antiClickjack");antiClickjack.parentNode.removeChild(antiClickjack)}else top.location=self.location;
 		//- Tag manager no script
-		noscript
-			iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-NBJJC6" height="0" width="0" style="display:none;visibility:hidden")
+		//- noscript
+		//- iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-NBJJC6" height="0" width="0" style="display:none;visibility:hidden")
 		.wk-preloading
 			span.wk-preloading-loader
 		header#main-header.wk-section.no-print
@@ -96,7 +96,7 @@ html(lang="es_ES" dir="ltr" last-update="10-12-17")
 								li.menu-item: a(href=url + "el-ritual-abuelita.html") Ritual
 								li.menu-item: a(href=url + "recetas.html") Recetas
 								li.menu-item: a(href=url + "cocoa-plan.html") Cocoa Plan<sup>®</sup>
-								li#lightbox-call-to-action-0.menu-item.menu-item-shopping-cart: a(href="#")
+								li.menu-item.menu-item-shopping-cart: a#lightbox-call-to-action-0(href="#")
 									span.icon.fa.fa-shopping-cart
 									| Comprar
 
@@ -108,6 +108,9 @@ html(lang="es_ES" dir="ltr" last-update="10-12-17")
 									li.menu-item: a(href="#ritual-abuelita") Ritual
 									li.menu-item: a(href="#recetas") Recetas
 									li.menu-item: a(href="#plan-cacao") Cocoa Plan<sup>®</sup>
+									li.menu-item.menu-item-shopping-cart: a#lightbox-call-to-action-0(href="#")
+										span.icon.fa.fa-shopping-cart
+										| Comprar
 
 					.wk-col.wk-m.wk-flex.wk-flex-justify-end
 						.off-canvas-icon
